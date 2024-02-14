@@ -8,7 +8,8 @@ set(WS_TESTS_TARGET "ws_tests")
 
 find_package(Boost 1.82 REQUIRED 
     COMPONENTS 
-        system)
+        system
+        program_options)
 find_package(GTest REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC)
@@ -20,6 +21,8 @@ add_executable(${WS_TESTS_TARGET}
 target_sources(${PROJECT_NAME}
     PRIVATE
         src/web_server.cpp
+        src/ws_options.cpp
+        src/ws_logger.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -39,6 +42,8 @@ target_include_directories(${WS_TESTS_TARGET}
 # without it public headers won't get installed
 set(PUBLIC_HEADERS
     include/web_server.hpp
+    include/ws_options.hpp
+    include/ws_logger.hpp
 )
 
 set_target_properties(${PROJECT_NAME} 
