@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_7',['README.md',['../README_8md.html',1,'']]],
-  ['run_8',['run',['../namespacews.html#af28f66f236054fd44cb11398f3781e34',1,'ws']]]
+  ['log_18',['log',['../classws_1_1WSLogger.html#a582a9806423eb5bbf9dea97d42e773ae',1,'ws::WSLogger']]],
+  ['loghelp_19',['logHelp',['../classws_1_1WSLogger.html#a19e4cb2d35d880c816847d465850f80e',1,'ws::WSLogger']]]
 ];

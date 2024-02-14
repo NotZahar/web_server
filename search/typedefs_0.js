@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tcp_29',['tcp',['../namespacews.html#a94811433e99d39fe3aa6a6de715f3b92',1,'ws']]],
-  ['tcp_5fstream_30',['tcp_stream',['../namespacews.html#af6c1c171611e76032d3ebdba91d194d7',1,'ws']]]
+  ['options_5fdescription_118',['options_description',['../classws_1_1WSOptions.html#ad2e1352cd0d490a32d621a4c1d7cc8d7',1,'ws::WSOptions']]]
 ];

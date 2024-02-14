@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handle_5frequest_2',['handle_request',['../namespacews.html#a9edea702529ade995665418246d332bc',1,'ws']]]
+  ['do_5flisten_5',['do_listen',['../namespacews.html#a45b666204d6e69553e93e83a102b7572',1,'ws']]],
+  ['do_5fsession_6',['do_session',['../namespacews.html#a4e801995dc9bdbb208bc030c13e01fc9',1,'ws']]]
 ];

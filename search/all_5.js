@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['tcp_9',['tcp',['../namespacews.html#a94811433e99d39fe3aa6a6de715f3b92',1,'ws']]],
-  ['tcp_5fstream_10',['tcp_stream',['../namespacews.html#af6c1c171611e76032d3ebdba91d194d7',1,'ws']]],
-  ['test_11',['TEST',['../libs_2WebServer_2tests_2main_8cpp.html#a2ada77e3f6f930b400a5617b64120088',1,'main.cpp']]]
+  ['main_20',['main',['../libs_2WebServer_2tests_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
+  ['main_2ecpp_21',['main.cpp',['../libs_2WebServer_2tests_2main_8cpp.html',1,'(Глобальное пространство имён)'],['../src_2main_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['messages_22',['messages',['../structws_1_1messages.html',1,'ws']]],
+  ['mime_5ftype_23',['mime_type',['../namespacews.html#aa2f734408c164696a639713a4e7ae8c5',1,'ws']]]
 ];

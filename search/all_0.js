@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['do_5flisten_0',['do_listen',['../namespacews.html#a45b666204d6e69553e93e83a102b7572',1,'ws']]],
-  ['do_5fsession_1',['do_session',['../namespacews.html#a4e801995dc9bdbb208bc030c13e01fc9',1,'ws']]]
+  ['address_0',['address',['../structws_1_1WSOptions_1_1Options.html#ab51dc74e8886c6c600d247fa4d064c48',1,'ws::WSOptions::Options']]],
+  ['address_1',['ADDRESS',['../structws_1_1messages_1_1options.html#a16bccc0894a686838dd4df9e32c1916b',1,'ws::messages::options']]],
+  ['address_5fdescr_2',['ADDRESS_DESCR',['../structws_1_1messages_1_1options.html#a7d952c1588fed471596c1589828ee516',1,'ws::messages::options']]],
+  ['address_5ff_3',['ADDRESS_F',['../structws_1_1messages_1_1options.html#a63fd25b5cf24b699d6619b47135394c3',1,'ws::messages::options']]],
+  ['address_5fs_4',['ADDRESS_S',['../structws_1_1messages_1_1options.html#a6c930f66a61f198e0ff0c7a92405d405',1,'ws::messages::options']]]
 ];
