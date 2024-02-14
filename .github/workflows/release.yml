@@ -32,8 +32,8 @@ jobs:
         env:
             BOOST_ROOT: ${{ steps.install_boost.outputs.BOOST_ROOT }}
       - run: cmake --build . --target install
-      - run: cd libs/WebServer && ctest
-      - run: cd ../.. && cpack
+      - run: cd libs/WebServer/ && ctest .
+      - run: cd ../../. && cpack .
       
       - name: Create Release
         id: create_release
