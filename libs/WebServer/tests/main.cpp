@@ -3,8 +3,7 @@
 #include "../include/web_server.hpp"
 
 TEST(WebServer, main) {
-    
-    EXPECT_EQ(true, true);
+    EXPECT_EQ(ws::mime_type("path/to/file.txt"), "text/plain");
 }
 
 int main(int argc, char** argv) {

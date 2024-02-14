@@ -49,7 +49,7 @@ target_link_libraries(${PROJECT_NAME}
         ${Boost_LIBRARIES})
 target_link_libraries(${WS_TESTS_TARGET}
     PRIVATE 
-        ${GTEST_BOTH_LIBRARIES})
+        ${GTEST_BOTH_LIBRARIES} ${PROJECT_NAME})
 
 if(CMAKE_COMPILER_IS_GNUCXX)
     target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Werror -pedantic)
