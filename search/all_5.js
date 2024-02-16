@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['main_20',['main',['../libs_2WebServer_2tests_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['main_2ecpp_21',['main.cpp',['../libs_2WebServer_2tests_2main_8cpp.html',1,'(Глобальное пространство имён)'],['../src_2main_8cpp.html',1,'(Глобальное пространство имён)']]],
-  ['messages_22',['messages',['../structws_1_1messages.html',1,'ws']]],
-  ['mime_5ftype_23',['mime_type',['../namespacews.html#aa2f734408c164696a639713a4e7ae8c5',1,'ws']]]
+  ['general_14',['general',['../structws_1_1messages_1_1general.html',1,'ws::messages']]],
+  ['getoptions_15',['getOptions',['../classws_1_1WSOptions.html#ac3646aee3a7b72238e4164c0d2b7ab52',1,'ws::WSOptions']]]
 ];

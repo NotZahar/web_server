@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['root_108',['ROOT',['../structws_1_1messages_1_1options.html#af4b081edc8d33f4bd80a7ef57afd20dd',1,'ws::messages::options']]],
-  ['root_109',['root',['../structws_1_1WSOptions_1_1Options.html#aa906fee4fe75d1c5b2fa8e1e4651e50b',1,'ws::WSOptions::Options']]],
-  ['root_5fdescr_110',['ROOT_DESCR',['../structws_1_1messages_1_1options.html#af93ac139abd3d122a7ba9d79bc9c17dc',1,'ws::messages::options']]],
-  ['root_5ff_111',['ROOT_F',['../structws_1_1messages_1_1options.html#ab400f6fb328f4295503d13aabf723efe',1,'ws::messages::options']]],
-  ['root_5fs_112',['ROOT_S',['../structws_1_1messages_1_1options.html#a83af008eb4e54b98503d2ce2e5ba37ef',1,'ws::messages::options']]]
+  ['help_130',['HELP',['../structws_1_1messages_1_1options.html#aa7a42ff82c64fe5d3443ee398fceb10e',1,'ws::messages::options']]],
+  ['help_131',['help',['../structws_1_1WSOptions_1_1Options.html#ac61c2fc362af5bd0aa246d8351b58aa5',1,'ws::WSOptions::Options']]],
+  ['help_5fdescr_132',['HELP_DESCR',['../structws_1_1messages_1_1options.html#a1f0430efe848e23fc9ebb6569376b5e0',1,'ws::messages::options']]],
+  ['help_5ff_133',['HELP_F',['../structws_1_1messages_1_1options.html#aaba37a735ebdd2f1e8e0b05e1fb5c5fa',1,'ws::messages::options']]],
+  ['help_5fheader_134',['HELP_HEADER',['../structws_1_1messages_1_1general.html#a6aa05963457e1691b721d62d13cc53a9',1,'ws::messages::general']]],
+  ['help_5fmessage_135',['HELP_MESSAGE',['../structws_1_1messages_1_1general.html#acdaf7512a0447294b75274fd547e8aed',1,'ws::messages::general']]],
+  ['help_5fs_136',['HELP_S',['../structws_1_1messages_1_1options.html#a343848bc5422e53c386d631c845fbd2c',1,'ws::messages::options']]]
 ];

@@ -74,19 +74,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1WebServer.html">WebServer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1WSLogger.html">WSLogger</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1WSOptions.html">WSOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1RequestHandler.html">RequestHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1config.html">config</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1messages.html">messages</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a94811433e99d39fe3aa6a6de715f3b92"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a94811433e99d39fe3aa6a6de715f3b92">tcp</a> = boost::asio::ip::tcp</td></tr>
-<tr class="separator:a94811433e99d39fe3aa6a6de715f3b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6c1c171611e76032d3ebdba91d194d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#af6c1c171611e76032d3ebdba91d194d7">tcp_stream</a> = typename beast::tcp_stream::rebind_executor&lt; net::use_awaitable_t&lt;&gt;::executor_with_default&lt; net::any_io_executor &gt; &gt;::other</td></tr>
-<tr class="separator:af6c1c171611e76032d3ebdba91d194d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8887e5489f805ae91ac94218ef8ef5fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a8887e5489f805ae91ac94218ef8ef5fe">options_description</a> = boost::program_options::options_description</td></tr>
+<tr class="separator:a8887e5489f805ae91ac94218ef8ef5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19dae42a043b32d593fefbe73a903900"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a19dae42a043b32d593fefbe73a903900">tcp_stream</a> = typename beast::tcp_stream::rebind_executor&lt; asio::use_awaitable_t&lt;&gt;::executor_with_default&lt; asio::any_io_executor &gt; &gt;::other</td></tr>
+<tr class="separator:a19dae42a043b32d593fefbe73a903900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
@@ -94,39 +100,30 @@ $(function() {
 <tr class="separator:aa2f734408c164696a639713a4e7ae8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28154c9b640ca277924f494a55985aed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a28154c9b640ca277924f494a55985aed">path_cat</a> (beast::string_view base, beast::string_view path)</td></tr>
 <tr class="separator:a28154c9b640ca277924f494a55985aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9edea702529ade995665418246d332bc"><td class="memTemplParams" colspan="2">template&lt;class Body , class Allocator &gt; </td></tr>
-<tr class="memitem:a9edea702529ade995665418246d332bc"><td class="memTemplItemLeft" align="right" valign="top">http::message_generator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacews.html#a9edea702529ade995665418246d332bc">handle_request</a> (beast::string_view doc_root, http::request&lt; Body, http::basic_fields&lt; Allocator &gt;&gt; &amp;&amp;req)</td></tr>
-<tr class="separator:a9edea702529ade995665418246d332bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e801995dc9bdbb208bc030c13e01fc9"><td class="memItemLeft" align="right" valign="top">net::awaitable&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a4e801995dc9bdbb208bc030c13e01fc9">do_session</a> (<a class="el" href="namespacews.html#af6c1c171611e76032d3ebdba91d194d7">tcp_stream</a> stream, std::shared_ptr&lt; std::string const &gt; doc_root)</td></tr>
-<tr class="separator:a4e801995dc9bdbb208bc030c13e01fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45b666204d6e69553e93e83a102b7572"><td class="memItemLeft" align="right" valign="top">net::awaitable&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a45b666204d6e69553e93e83a102b7572">do_listen</a> (tcp::endpoint endpoint, std::shared_ptr&lt; std::string const &gt; doc_root)</td></tr>
-<tr class="separator:a45b666204d6e69553e93e83a102b7572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af28f66f236054fd44cb11398f3781e34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#af28f66f236054fd44cb11398f3781e34">run</a> (int argc, char *argv[])</td></tr>
-<tr class="separator:af28f66f236054fd44cb11398f3781e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
-<a id="a94811433e99d39fe3aa6a6de715f3b92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94811433e99d39fe3aa6a6de715f3b92">&#9670;&nbsp;</a></span>tcp</h2>
+<a id="a8887e5489f805ae91ac94218ef8ef5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8887e5489f805ae91ac94218ef8ef5fe">&#9670;&nbsp;</a></span>options_description</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacews.html#a94811433e99d39fe3aa6a6de715f3b92">ws::tcp</a> = typedef boost::asio::ip::tcp</td>
+          <td class="memname">using <a class="el" href="namespacews.html#a8887e5489f805ae91ac94218ef8ef5fe">ws::options_description</a> = typedef boost::program_options::options_description</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af6c1c171611e76032d3ebdba91d194d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6c1c171611e76032d3ebdba91d194d7">&#9670;&nbsp;</a></span>tcp_stream</h2>
+<a id="a19dae42a043b32d593fefbe73a903900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19dae42a043b32d593fefbe73a903900">&#9670;&nbsp;</a></span>tcp_stream</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacews.html#af6c1c171611e76032d3ebdba91d194d7">ws::tcp_stream</a> = typedef typename beast::tcp_stream::rebind_executor&lt; net::use_awaitable_t&lt;&gt;::executor_with_default&lt;net::any_io_executor&gt; &gt;::other</td>
+          <td class="memname">using <a class="el" href="namespacews.html#a19dae42a043b32d593fefbe73a903900">ws::tcp_stream</a> = typedef typename beast::tcp_stream::rebind_executor&lt; asio::use_awaitable_t&lt;&gt;::executor_with_default&lt;asio::any_io_executor&gt; &gt;::other</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -134,108 +131,6 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
-<a id="a45b666204d6e69553e93e83a102b7572"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45b666204d6e69553e93e83a102b7572">&#9670;&nbsp;</a></span>do_listen()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">net::awaitable&lt;void&gt; ws::do_listen </td>
-          <td>(</td>
-          <td class="paramtype">tcp::endpoint&#160;</td>
-          <td class="paramname"><em>endpoint</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::shared_ptr&lt; std::string const &gt;&#160;</td>
-          <td class="paramname"><em>doc_root</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4e801995dc9bdbb208bc030c13e01fc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e801995dc9bdbb208bc030c13e01fc9">&#9670;&nbsp;</a></span>do_session()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">net::awaitable&lt;void&gt; ws::do_session </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacews.html#af6c1c171611e76032d3ebdba91d194d7">tcp_stream</a>&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::shared_ptr&lt; std::string const &gt;&#160;</td>
-          <td class="paramname"><em>doc_root</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9edea702529ade995665418246d332bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9edea702529ade995665418246d332bc">&#9670;&nbsp;</a></span>handle_request()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Body , class Allocator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">http::message_generator ws::handle_request </td>
-          <td>(</td>
-          <td class="paramtype">beast::string_view&#160;</td>
-          <td class="paramname"><em>doc_root</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">http::request&lt; Body, http::basic_fields&lt; Allocator &gt;&gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>req</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa2f734408c164696a639713a4e7ae8c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2f734408c164696a639713a4e7ae8c5">&#9670;&nbsp;</a></span>mime_type()</h2>
 
@@ -282,42 +177,6 @@ template&lt;class Body , class Allocator &gt; </div>
           <td></td>
           <td class="paramtype">beast::string_view&#160;</td>
           <td class="paramname"><em>path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af28f66f236054fd44cb11398f3781e34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af28f66f236054fd44cb11398f3781e34">&#9670;&nbsp;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ws::run </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
         </tr>
         <tr>
           <td></td>

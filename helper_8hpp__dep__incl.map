@@ -1,5 +1,4 @@
-<map id="libs/WebServer/src/helper.hpp" name="libs/WebServer/src/helper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="88,5,231,47"/>
+<map id="libs/WebServer/src/utility/helper.hpp" name="libs/WebServer/src/utility/helper.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,148,47"/>
 <area shape="rect" id="node2" href="$ws__logger_8cpp.html" title=" " alt="" coords="5,95,148,136"/>
-<area shape="rect" id="node3" href="$ws__options_8cpp.html" title=" " alt="" coords="172,95,315,136"/>
 </map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['do_5flisten_76',['do_listen',['../namespacews.html#a45b666204d6e69553e93e83a102b7572',1,'ws']]],
-  ['do_5fsession_77',['do_session',['../namespacews.html#a4e801995dc9bdbb208bc030c13e01fc9',1,'ws']]]
+  ['err_102',['err',['../classws_1_1WSLogger.html#ac87ff05a0278234c030f38a4ad7cade4',1,'ws::WSLogger']]]
 ];

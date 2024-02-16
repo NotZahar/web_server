@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['tcp_40',['tcp',['../namespacews.html#a94811433e99d39fe3aa6a6de715f3b92',1,'ws']]],
-  ['tcp_5fstream_41',['tcp_stream',['../namespacews.html#af6c1c171611e76032d3ebdba91d194d7',1,'ws']]],
-  ['test_42',['TEST',['../libs_2WebServer_2tests_2main_8cpp.html#a2ada77e3f6f930b400a5617b64120088',1,'main.cpp']]],
-  ['threads_43',['THREADS',['../structws_1_1messages_1_1options.html#a20a573cf0a1f37d47adf56d5a770d391',1,'ws::messages::options']]],
-  ['threads_44',['threads',['../structws_1_1WSOptions_1_1Options.html#a8c29132db3d5dfcf039c505ee016d6b3',1,'ws::WSOptions::Options']]],
-  ['threads_5fdescr_45',['THREADS_DESCR',['../structws_1_1messages_1_1options.html#acabe4b2e840be21486e2fd3ff5b0411e',1,'ws::messages::options']]],
-  ['threads_5ff_46',['THREADS_F',['../structws_1_1messages_1_1options.html#a49598fe0807812b7a8c200a87a82288f',1,'ws::messages::options']]],
-  ['threads_5fs_47',['THREADS_S',['../structws_1_1messages_1_1options.html#a179c68b78d2490b311e918cbbe59bc08',1,'ws::messages::options']]]
+  ['main_28',['main',['../libs_2WebServer_2tests_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
+  ['main_2ecpp_29',['main.cpp',['../libs_2WebServer_2tests_2main_8cpp.html',1,'(Глобальное пространство имён)'],['../src_2main_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['makeresponse_30',['makeResponse',['../classws_1_1RequestHandler.html#a8230ca826385a9e0c8c91a203e89c848',1,'ws::RequestHandler']]],
+  ['messages_31',['messages',['../structws_1_1messages.html',1,'ws']]],
+  ['messages_2ehpp_32',['messages.hpp',['../messages_8hpp.html',1,'']]],
+  ['mime_5ftype_33',['mime_type',['../namespacews.html#aa2f734408c164696a639713a4e7ae8c5',1,'ws']]]
 ];
