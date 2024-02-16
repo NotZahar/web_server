@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 #include <format>
 
 namespace ws {
@@ -14,7 +13,7 @@ namespace ws {
             inline static const std::string ADDRESS_F = "address";
             inline static const std::string ADDRESS_S = "a";
             inline static const std::string ADDRESS = std::format("{},{}", ADDRESS_F, ADDRESS_S);
-            inline static const std::string ADDRESS_DESCR = "ipv4 адрес";
+            inline static const std::string ADDRESS_DESCR = "ipv4 или ipv6 адрес";
 
             inline static const std::string PORT_F = "port";
             inline static const std::string PORT_S = "p";
@@ -33,21 +32,28 @@ namespace ws {
         };
 
         struct general {
-            inline static const std::string HELP_HEADER = "Парамеры";
+            inline static const std::string HELP_HEADER = "Параметры";
             inline static const std::string HELP_MESSAGE = std::format(
-    "Парамеры:\n \
+    "{}:\n \
     -{} [ --{:8} ]        {}\n \
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
                 ",
+                HELP_HEADER,
                 options::HELP_S, options::HELP_F, options::HELP_DESCR,
                 options::ADDRESS_S, options::ADDRESS_F, options::ADDRESS_DESCR,
                 options::PORT_S, options::PORT_F, options::PORT_DESCR,
                 options::ROOT_S, options::ROOT_F, options::ROOT_DESCR,
                 options::THREADS_S, options::THREADS_F, options::THREADS_DESCR
             );
+        };
+
+        struct server {
+            // errors
+            inline static const std::string INVALID_METHOD = "Недопустимый HTTP-метод";
+            inline static const std::string INVALID_PATH = "Недопустимый путь";
         };
     };
 }

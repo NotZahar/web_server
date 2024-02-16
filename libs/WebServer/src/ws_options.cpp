@@ -1,6 +1,6 @@
 #include "ws_options.hpp"
 
-#include "helper.hpp"
+#include "utility/messages.hpp"
 
 namespace ws {
     namespace po = boost::program_options;

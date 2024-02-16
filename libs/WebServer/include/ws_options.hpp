@@ -1,24 +1,22 @@
 #pragma once
 
-#include <string>
-
-#include <boost/program_options.hpp>
+#include "../src/utility/types.hpp"
+#include "../src/utility/config.hpp"
 
 namespace ws {
     class WSOptions {
     public:
-        using options_description = boost::program_options::options_description;
-
         struct Options {
             bool help = false;
-            std::string address = "127.0.0.1";
-            unsigned int port = 3000;
-            std::string root = ".";
-            unsigned int threads = 1;
+            std::string address = config::defaultAddress;
+            unsigned short port = config::defaultPort;
+            std::string root = config::defaultRoot;
+            int threads = config::defaultThreads;
         };
 
         WSOptions() = delete;
         WSOptions(int argc, char** argv);
+        
         ~WSOptions() = default;
 
         Options getOptions() const;

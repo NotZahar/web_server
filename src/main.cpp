@@ -10,6 +10,8 @@ int main(int argc, char** argv) {
         return 0;
     }
 
-    ws::run(argc, argv);
+    ws::WebServer webServer(options.address, options.port, options.root, options.threads);
+    webServer.run();
+
     return 0;
 }
