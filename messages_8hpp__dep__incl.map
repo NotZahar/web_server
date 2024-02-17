@@ -1,6 +1,7 @@
 <map id="libs/WebServer/src/utility/messages.hpp" name="libs/WebServer/src/utility/messages.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="78,5,241,47"/>
-<area shape="rect" id="node2" href="$helper_8hpp.html" title=" " alt="" coords="5,95,148,136"/>
-<area shape="rect" id="node4" href="$ws__options_8cpp.html" title=" " alt="" coords="172,95,315,136"/>
-<area shape="rect" id="node3" href="$ws__logger_8cpp.html" title=" " alt="" coords="5,184,148,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="260,5,423,47"/>
+<area shape="rect" id="node2" href="$request__handler_8cpp.html" title=" " alt="" coords="5,95,163,136"/>
+<area shape="rect" id="node3" href="$web__server_8cpp.html" title=" " alt="" coords="187,95,330,136"/>
+<area shape="rect" id="node4" href="$ws__logger_8cpp.html" title=" " alt="" coords="354,95,497,136"/>
+<area shape="rect" id="node5" href="$ws__options_8cpp.html" title=" " alt="" coords="521,95,663,136"/>
 </map>

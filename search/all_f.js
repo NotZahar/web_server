@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['web_5fserver_2ecpp_63',['web_server.cpp',['../web__server_8cpp.html',1,'']]],
-  ['web_5fserver_2ehpp_64',['web_server.hpp',['../web__server_8hpp.html',1,'']]],
-  ['webserver_65',['WebServer',['../classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726',1,'ws::WebServer::WebServer()=delete'],['../classws_1_1WebServer.html#a82eee5f386edf9a078378266daa6efa1',1,'ws::WebServer::WebServer(std::string address, unsigned short port, std::string root, int threads)'],['../classws_1_1WebServer.html',1,'ws::WebServer']]],
-  ['ws_66',['ws',['../namespacews.html',1,'']]],
-  ['ws_5flogger_2ecpp_67',['ws_logger.cpp',['../ws__logger_8cpp.html',1,'']]],
-  ['ws_5flogger_2ehpp_68',['ws_logger.hpp',['../ws__logger_8hpp.html',1,'']]],
-  ['ws_5foptions_2ecpp_69',['ws_options.cpp',['../ws__options_8cpp.html',1,'']]],
-  ['ws_5foptions_2ehpp_70',['ws_options.hpp',['../ws__options_8hpp.html',1,'']]],
-  ['wslogger_71',['WSLogger',['../classws_1_1WSLogger.html',1,'ws::WSLogger'],['../classws_1_1WSLogger.html#af3bf68c79e43983f282a8b68a758e09b',1,'ws::WSLogger::WSLogger()']]],
-  ['wsoptions_72',['WSOptions',['../classws_1_1WSOptions.html',1,'ws::WSOptions'],['../classws_1_1WSOptions.html#a4ec55459ed122972d75db7646db5b760',1,'ws::WSOptions::WSOptions()=delete'],['../classws_1_1WSOptions.html#aa2da7d8847d2973c6eff78b698de29f8',1,'ws::WSOptions::WSOptions(int argc, char **argv)']]]
+  ['tcp_5fstream_70',['tcp_stream',['../namespacews.html#a19dae42a043b32d593fefbe73a903900',1,'ws']]],
+  ['test_71',['TEST',['../libs_2WebServer_2tests_2main_8cpp.html#a2ada77e3f6f930b400a5617b64120088',1,'main.cpp']]],
+  ['text_5fcss_72',['text_css',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba2ba1c6cfc87174ee022a67218f0a44ec',1,'ws::netHelper']]],
+  ['text_5fhtml_73',['text_html',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba00f895259051ae49a3ba95e8ee0d140e',1,'ws::netHelper']]],
+  ['text_5fplain_74',['text_plain',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba427cfc2135b0aaaf280894602bd9f534',1,'ws::netHelper']]],
+  ['threads_75',['THREADS',['../structws_1_1messages_1_1options.html#a20a573cf0a1f37d47adf56d5a770d391',1,'ws::messages::options']]],
+  ['threads_76',['threads',['../structws_1_1WSOptions_1_1Options.html#a6daf5a69fe511969d727032c291be683',1,'ws::WSOptions::Options']]],
+  ['threads_5fdescr_77',['THREADS_DESCR',['../structws_1_1messages_1_1options.html#acabe4b2e840be21486e2fd3ff5b0411e',1,'ws::messages::options']]],
+  ['threads_5ff_78',['THREADS_F',['../structws_1_1messages_1_1options.html#a49598fe0807812b7a8c200a87a82288f',1,'ws::messages::options']]],
+  ['threads_5fs_79',['THREADS_S',['../structws_1_1messages_1_1options.html#a179c68b78d2490b311e918cbbe59bc08',1,'ws::messages::options']]],
+  ['types_2ehpp_80',['types.hpp',['../types_8hpp.html',1,'']]]
 ];

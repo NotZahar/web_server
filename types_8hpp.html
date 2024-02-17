@@ -69,6 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
 <a href="#typedef-members">Определения типов</a>  </div>
   <div class="headertitle">
 <div class="title">Файл types.hpp</div>  </div>
@@ -99,17 +100,17 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="types_8hpp__dep__incl.png" border="0" usemap="#alibs_2WebServer_2src_2utility_2types_8hppdep" alt=""/></div>
 <map name="alibs_2WebServer_2src_2utility_2types_8hppdep" id="alibs_2WebServer_2src_2utility_2types_8hppdep">
-<area shape="rect" title=" " alt="" coords="466,5,609,47"/>
-<area shape="rect" href="web__server_8hpp.html" title=" " alt="" coords="355,95,525,136"/>
-<area shape="rect" href="ws__options_8hpp.html" title=" " alt="" coords="549,95,720,136"/>
-<area shape="rect" href="request__handler_8hpp.html" title=" " alt="" coords="171,95,330,136"/>
-<area shape="rect" href="helper_8hpp.html" title=" " alt="" coords="791,95,934,136"/>
+<area shape="rect" title=" " alt="" coords="427,5,570,47"/>
+<area shape="rect" href="web__server_8hpp.html" title=" " alt="" coords="511,95,681,136"/>
+<area shape="rect" href="ws__logger_8hpp.html" title=" " alt="" coords="316,95,487,136"/>
+<area shape="rect" href="ws__options_8hpp.html" title=" " alt="" coords="705,95,876,136"/>
+<area shape="rect" href="request__handler_8hpp.html" title=" " alt="" coords="133,95,291,136"/>
 <area shape="rect" href="web__server_8cpp.html" title=" " alt="" coords="187,184,330,225"/>
-<area shape="rect" href="libs_2WebServer_2tests_2main_8cpp.html" title=" " alt="" coords="355,184,509,225"/>
-<area shape="rect" href="src_2main_8cpp.html" title=" " alt="" coords="534,191,639,218"/>
-<area shape="rect" href="ws__options_8cpp.html" title=" " alt="" coords="663,184,806,225"/>
+<area shape="rect" href="libs_2WebServer_2tests_2main_8cpp.html" title=" " alt="" coords="649,184,804,225"/>
+<area shape="rect" href="src_2main_8cpp.html" title=" " alt="" coords="521,191,626,218"/>
+<area shape="rect" href="ws__logger_8cpp.html" title=" " alt="" coords="354,184,497,225"/>
+<area shape="rect" href="ws__options_8cpp.html" title=" " alt="" coords="829,184,971,225"/>
 <area shape="rect" href="request__handler_8cpp.html" title=" " alt="" coords="5,184,163,225"/>
-<area shape="rect" href="ws__logger_8cpp.html" title=" " alt="" coords="830,184,973,225"/>
 </map>
 </div>
 </div>
@@ -120,6 +121,11 @@ $(function() {
 <tr class="memitem:namespacews"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html">ws</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a27f7f75a43f59dd484ccce2b7377f1fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a27f7f75a43f59dd484ccce2b7377f1fe">WS_NCM</a>(T)</td></tr>
+<tr class="separator:a27f7f75a43f59dd484ccce2b7377f1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Определения типов</h2></td></tr>
 <tr class="memitem:a8887e5489f805ae91ac94218ef8ef5fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a8887e5489f805ae91ac94218ef8ef5fe">ws::options_description</a> = boost::program_options::options_description</td></tr>
@@ -127,6 +133,29 @@ $(function() {
 <tr class="memitem:a19dae42a043b32d593fefbe73a903900"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a19dae42a043b32d593fefbe73a903900">ws::tcp_stream</a> = typename beast::tcp_stream::rebind_executor&lt; asio::use_awaitable_t&lt;&gt;::executor_with_default&lt; asio::any_io_executor &gt; &gt;::other</td></tr>
 <tr class="separator:a19dae42a043b32d593fefbe73a903900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a27f7f75a43f59dd484ccce2b7377f1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27f7f75a43f59dd484ccce2b7377f1fe">&#9670;&nbsp;</a></span>WS_NCM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WS_NCM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">        T(<span class="keyword">const</span> T&amp;) = <span class="keyword">delete</span>; \</div>
+<div class="line">        T&amp; operator=(<span class="keyword">const</span> T&amp;) = <span class="keyword">delete</span>;    \</div>
+<div class="line">        T(T&amp;&amp;) = <span class="keyword">delete</span>;                    \</div>
+<div class="line">        T&amp; operator=(T&amp;&amp;) = <span class="keyword">delete</span>;</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

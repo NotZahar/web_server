@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['defaultaddress_124',['defaultAddress',['../structws_1_1config.html#a811e8c9c022994975c28881a485396c3',1,'ws::config']]],
-  ['defaultport_125',['defaultPort',['../structws_1_1config.html#a45cd10dad5eaec3cabf83c7437a89a81',1,'ws::config']]],
-  ['defaultroot_126',['defaultRoot',['../structws_1_1config.html#a500e606fc2298b7d748ba073487428ce',1,'ws::config']]],
-  ['defaultsessiontimeout_127',['defaultSessionTimeout',['../structws_1_1config.html#aded04d080a0631798594cfcdd9a5766b',1,'ws::config']]],
-  ['defaultthreads_128',['defaultThreads',['../structws_1_1config.html#ac2ab2ffed1054f3592697c522db3d7e3',1,'ws::config']]]
+  ['defaultaddress_144',['defaultAddress',['../structws_1_1config.html#a811e8c9c022994975c28881a485396c3',1,'ws::config']]],
+  ['defaultport_145',['defaultPort',['../structws_1_1config.html#a45cd10dad5eaec3cabf83c7437a89a81',1,'ws::config']]],
+  ['defaultsessiontimeout_146',['defaultSessionTimeout',['../structws_1_1config.html#aded04d080a0631798594cfcdd9a5766b',1,'ws::config']]],
+  ['defaultstaticrootpath_147',['defaultStaticRootPath',['../structws_1_1config.html#a7e9cab0b41e20f330fb4e86501284eda',1,'ws::config']]],
+  ['defaultthreads_148',['defaultThreads',['../structws_1_1config.html#ac2ab2ffed1054f3592697c522db3d7e3',1,'ws::config']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['err_102',['err',['../classws_1_1WSLogger.html#ac87ff05a0278234c030f38a4ad7cade4',1,'ws::WSLogger']]]
+  ['appendcharset_124',['appendCharset',['../namespacews_1_1netHelper.html#a8ed8a2a04e40046b52e92717b687ede5',1,'ws::netHelper']]]
 ];

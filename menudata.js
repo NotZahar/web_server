@@ -30,7 +30,8 @@ var menudata={children:[
 {text:"Члены пространств имен",url:"namespacemembers.html",children:[
 {text:"Указатель",url:"namespacemembers.html"},
 {text:"Функции",url:"namespacemembers_func.html"},
-{text:"Определения типов",url:"namespacemembers_type.html"}]}]},
+{text:"Определения типов",url:"namespacemembers_type.html"},
+{text:"Перечисления",url:"namespacemembers_enum.html"}]}]},
 {text:"Классы",url:"annotated.html",children:[
 {text:"Классы",url:"annotated.html"},
 {text:"Алфавитный указатель классов",url:"classes.html"},
@@ -66,4 +67,5 @@ var menudata={children:[
 {text:"Файлы",url:"files.html"},
 {text:"Список членов всех файлов",url:"globals.html",children:[
 {text:"Указатель",url:"globals.html"},
-{text:"Функции",url:"globals_func.html"}]}]}]}
+{text:"Функции",url:"globals_func.html"},
+{text:"Макросы",url:"globals_defs.html"}]}]}]}

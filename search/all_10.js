@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7ewebserver_73',['~WebServer',['../classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217',1,'ws::WebServer']]],
-  ['_7ewslogger_74',['~WSLogger',['../classws_1_1WSLogger.html#a3e1eec324241879283b4113ff3b95e16',1,'ws::WSLogger']]],
-  ['_7ewsoptions_75',['~WSOptions',['../classws_1_1WSOptions.html#a67fe02f469141753c6f5091cf1e1338e',1,'ws::WSOptions']]]
+  ['video_5fx_5fflv_81',['video_x_flv',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba547c9acbd9bbbeffd3c8b73806c558f2',1,'ws::netHelper']]],
+  ['video_5fx_5fmatroska_82',['video_x_matroska',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebaed4b2d83fc069e3fbf8290c0831ccb10',1,'ws::netHelper']]]
 ];

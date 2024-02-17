@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WebServer: Файл libs/WebServer/src/utility/net_helper.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WebServer
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Веб-сервер по раздаче статического контента</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_0e0c626ef3028694fb78051a84da3f3b.html">WebServer</a></li><li class="navelem"><a class="el" href="dir_77bda34846fc5ae483ac1a422702bfba.html">src</a></li><li class="navelem"><a class="el" href="dir_3ec317bfd9a32b9bf3f8ffb270fa0b49.html">utility</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл net_helper.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;boost/bimap.hpp&gt;</code><br />
+<code>#include &lt;boost/assign.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для net_helper.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="net__helper_8hpp__incl.png" border="0" usemap="#alibs_2WebServer_2src_2utility_2net__helper_8hpp" alt=""/></div>
+<map name="alibs_2WebServer_2src_2utility_2net__helper_8hpp" id="alibs_2WebServer_2src_2utility_2net__helper_8hpp">
+<area shape="rect" title=" " alt="" coords="145,5,309,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,64,121"/>
+<area shape="rect" title=" " alt="" coords="89,95,213,121"/>
+<area shape="rect" title=" " alt="" coords="237,95,368,121"/>
+<area shape="rect" title=" " alt="" coords="393,95,525,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="net__helper_8hpp__dep__incl.png" border="0" usemap="#alibs_2WebServer_2src_2utility_2net__helper_8hppdep" alt=""/></div>
+<map name="alibs_2WebServer_2src_2utility_2net__helper_8hppdep" id="alibs_2WebServer_2src_2utility_2net__helper_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,169,47"/>
+<area shape="rect" href="request__handler_8cpp.html" title=" " alt="" coords="9,95,166,136"/>
+</map>
+</div>
+</div>
+<p><a href="net__helper_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespacews"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html">ws</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacews_1_1netHelper"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews_1_1netHelper.html">ws::netHelper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:abf1d932d31f33b686e213dfef5cdc2eb"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eb">ws::netHelper::MIME</a> { <br />
+&#160;&#160;<a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba00f895259051ae49a3ba95e8ee0d140e">ws::netHelper::text_html</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba2ba1c6cfc87174ee022a67218f0a44ec">ws::netHelper::text_css</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba427cfc2135b0aaaf280894602bd9f534">ws::netHelper::text_plain</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba2f556edd0f900c109be5b8b08041ad86">ws::netHelper::application_javascript</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba8bad3ad011d8d51bf9559945ee1ee61c">ws::netHelper::application_json</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebad7ca99d2c1c2ba5bb6e0af419e9b260d">ws::netHelper::application_xml</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba547c9acbd9bbbeffd3c8b73806c558f2">ws::netHelper::video_x_flv</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebaed4b2d83fc069e3fbf8290c0831ccb10">ws::netHelper::video_x_matroska</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebae7931445e4655a20759268e069d30e87">ws::netHelper::image_png</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebade5c6b858e319e2576458a1794abc375">ws::netHelper::image_jpeg</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebab6f4befa5f96d704fb8627eec2f53b14">ws::netHelper::image_gif</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba0e722426e39212a6e3ce94cb3d25d58d">ws::netHelper::image_bmp</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebac701247d1812ea30563e8a8779d43f4e">ws::netHelper::image_vnd_microsoft_icon</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebaf91f71026f86fd8060b61129d7d6cec6">ws::netHelper::image_tiff</a>
+, <a class="el" href="namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba3ca4a7f623ca3021e5e681aefbcc3b51">ws::netHelper::image_svg_xml</a>
+<br />
+ }</td></tr>
+<tr class="separator:abf1d932d31f33b686e213dfef5cdc2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8ed8a2a04e40046b52e92717b687ede5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews_1_1netHelper.html#a8ed8a2a04e40046b52e92717b687ede5">ws::netHelper::appendCharset</a> (std::string_view contentType)</td></tr>
+<tr class="separator:a8ed8a2a04e40046b52e92717b687ede5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
