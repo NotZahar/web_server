@@ -48,12 +48,18 @@ namespace ws {
                 options::ROOT_S, options::ROOT_F, options::ROOT_DESCR,
                 options::THREADS_S, options::THREADS_F, options::THREADS_DESCR
             );
+
+            // errors
+            inline static const std::string INVALID_STATIC_ROOT = "Недопустимый путь к папке";
         };
 
         struct server {
-            // errors
+            // http error responses
             inline static const std::string INVALID_METHOD = "Недопустимый HTTP-метод";
             inline static const std::string INVALID_PATH = "Недопустимый путь";
+            inline static const std::string INVALID_TARGET = "Ресурс не был найден: ";
+            inline static const std::string INTERNAL_ERROR_GENERAL = "Возникла ошибка";
+            inline static const std::string INTERNAL_ERROR = "Возникла ошибка: ";
         };
     };
 }

@@ -1,43 +1,31 @@
 #include "web_server.hpp"
 
-#include <algorithm>
-#include <boost/asio/this_coro.hpp>
-#include <boost/filesystem/file_status.hpp>
-#include <chrono>
-#include <cstdlib>
-#include <filesystem>
-#include <iostream>
-#include <memory>
-#include <string>
-#include <system_error>
-#include <thread>
-#include <vector>
+#include <stdexcept>
 
-#include <boost/beast/version.hpp>
-#include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/co_spawn.hpp>
-#include <boost/asio/use_awaitable.hpp>
-#include <boost/config.hpp>
 
 #include "ws_logger.hpp"
 #include "request_handler.hpp"
 #include "utility/config.hpp"
+#include "utility/messages.hpp"
 
 namespace ws {
     WebServer::WebServer(
         std::string address, 
         unsigned short port, 
-        std::string root, 
+        std::string staticRootPath, 
         int threads) 
         : _address{ ip::make_address(address) },
           _port{ port },
-          _root{ root },
+          _staticRootPath{ staticRootPath },
           _threads{ threads }
     {}
 
     void WebServer::run() {
-        if (std::error_code code; !fs::is_directory(_root, code))
+        if (std::error_code code; !fs::is_directory(_staticRootPath, code))
             throw code;
+        if (_staticRootPath.string().ends_with('/'))
+            throw std::runtime_error{ messages::general::INVALID_STATIC_ROOT };
 
         asio::io_context context{ _threads };
         asio::co_spawn(
@@ -50,18 +38,17 @@ namespace ws {
                 try {
                     std::rethrow_exception(exceptionPtr);
                 } catch(const std::exception& exception) {
-                    WSLogger::err(exception.what());
+                    WSLogger::instance().err(exception.what());
                 }
             }
         );
 
         asio::detail::thread_group contextRunners;
-        for (int i = 0; i < _threads; ++i)
+        for (int i = 0; i < _threads - 1; ++i)
             contextRunners.create_thread([&context] { context.run(); });
         context.run();
     }
 
-    // Handles an HTTP server connection
     asio::awaitable<void> WebServer::makeSession(tcp_stream stream) {
         // Need to be persist across reads
         beast::flat_buffer buffer;
@@ -74,11 +61,11 @@ namespace ws {
                 co_await http::async_read(stream, buffer, request);
                 
                 RequestHandler handler{ std::move(request) };
-                auto response = handler.makeResponse(_root);
+                auto response = handler.makeResponse(_staticRootPath);
+                const auto keepAlive = response.keep_alive();
 
                 co_await beast::async_write(stream, std::move(response), asio::use_awaitable);
-
-                if(!response.keep_alive())
+                if(!keepAlive)
                     break;
             }
         } catch (const sm::system_error& error) {
@@ -87,12 +74,10 @@ namespace ws {
         }
 
         beast::error_code errorCode;
-        stream.socket().shutdown(ip::tcp::socket::shutdown_send, errorCode);
-    
+        stream.socket().shutdown(ip::tcp::socket::shutdown_send, errorCode);    
         // Ignore error
     }
 
-    // Accepts incoming connections and launches the sessions
     asio::awaitable<void> WebServer::makeListener() {
         auto executor = co_await asio::this_coro::executor;
         auto acceptor = 
@@ -115,7 +100,7 @@ namespace ws {
                     try {
                         std::rethrow_exception(exceptionPtr);
                     } catch (const std::exception& exception) {
-                        WSLogger::err(exception.what());
+                        WSLogger::instance().err(exception.what());
                     }
                 }
             );

@@ -23,6 +23,7 @@ target_sources(${PROJECT_NAME}
         src/web_server.cpp
         src/ws_options.cpp
         src/ws_logger.cpp
+        src/request_handler.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -69,5 +70,5 @@ include(Installing)
 enable_testing()
 add_test(NAME ${WS_TESTS_TARGET} COMMAND ${WS_TESTS_TARGET})
 
-# test files
+# test files after deploy
 file(COPY resources/test DESTINATION ${CMAKE_BINARY_DIR})

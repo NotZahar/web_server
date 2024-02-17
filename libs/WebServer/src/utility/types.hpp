@@ -20,4 +20,9 @@ namespace ws {
     using options_description = boost::program_options::options_description;
     using tcp_stream = typename beast::tcp_stream::rebind_executor<
         asio::use_awaitable_t<>::executor_with_default<asio::any_io_executor>>::other;
+
+    #define WS_NCM(T) T(const T&) = delete; \
+        T& operator=(const T&) = delete;    \
+        T(T&&) = delete;                    \
+        T& operator=(T&&) = delete;
 }

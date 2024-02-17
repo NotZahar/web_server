@@ -2,9 +2,14 @@
 
 #include <iostream>
 
-#include "utility/helper.hpp"
+#include "utility/messages.hpp"
 
 namespace ws {
+    WSLogger& WSLogger::instance() {
+        static WSLogger instance;
+        return instance;
+    }
+
     void WSLogger::log(std::string_view log) {
         std::cout << log << '\n';
     }

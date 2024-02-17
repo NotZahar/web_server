@@ -34,7 +34,7 @@ namespace ws {
             )
             (
                 messages::options::ROOT.c_str(),
-                po::value<decltype(Options::root)>(),
+                po::value<decltype(Options::staticRootPath)>(),
                 messages::options::ROOT_DESCR.c_str()
             )
             (
@@ -67,8 +67,8 @@ namespace ws {
                 variablesMap[messages::options::PORT_F].as<decltype(Options::port)>();
 
         if (variablesMap.count(messages::options::ROOT_F))
-            options.root = 
-                variablesMap[messages::options::ROOT_F].as<decltype(Options::root)>();
+            options.staticRootPath = 
+                variablesMap[messages::options::ROOT_F].as<decltype(Options::staticRootPath)>();
 
         if (variablesMap.count(messages::options::THREADS_F))
             options.threads = 

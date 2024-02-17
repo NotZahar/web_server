@@ -10,7 +10,7 @@ namespace ws {
             bool help = false;
             std::string address = config::defaultAddress;
             unsigned short port = config::defaultPort;
-            std::string root = config::defaultRoot;
+            std::string staticRootPath = config::defaultStaticRootPath;
             int threads = config::defaultThreads;
         };
 
