@@ -31,7 +31,8 @@ namespace ws {
             std::string content;
             content.resize(size);
 
-            std::fread(&content[0], 1u, size, filePtr);
+            [[maybe_unused]] const auto read 
+                = std::fread(&content[0], 1u, size, filePtr);
             std::fclose(filePtr);
             return content;
         }
