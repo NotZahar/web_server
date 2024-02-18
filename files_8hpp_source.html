@@ -104,12 +104,13 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            std::string content;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            content.resize(size);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            std::fread(&amp;content[0], 1u, size, filePtr);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            std::fclose(filePtr);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> content;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            [[maybe_unused]] <span class="keyword">const</span> <span class="keyword">auto</span> read </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                = std::fread(&amp;content[0], 1u, size, filePtr);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            std::fclose(filePtr);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> content;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
 <div class="ttc" id="astructws_1_1files_html"><div class="ttname"><a href="structws_1_1files.html">ws::files</a></div><div class="ttdef"><b>Definition:</b> files.hpp:21</div></div>
 <div class="ttc" id="astructws_1_1files_html_aa3ef90895b777e5628df466087832daa"><div class="ttname"><a href="structws_1_1files.html#aa3ef90895b777e5628df466087832daa">ws::files::getContent</a></div><div class="ttdeci">static std::string getContent(const fs::path &amp;path)</div><div class="ttdef"><b>Definition:</b> files.hpp:22</div></div>
