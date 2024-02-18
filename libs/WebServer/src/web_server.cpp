@@ -49,6 +49,35 @@ namespace ws {
         context.run();
     }
 
+    asio::awaitable<void> WebServer::makeListener() {
+        auto executor = co_await asio::this_coro::executor;
+        auto acceptor = 
+            asio::use_awaitable.as_default_on(ip::tcp::acceptor{ executor });
+        const auto endpoint = ip::tcp::endpoint{ _address, _port };
+        
+        acceptor.open(endpoint.protocol());
+        acceptor.set_option(asio::socket_base::reuse_address(true));
+        acceptor.bind(endpoint);
+        acceptor.listen();
+
+        while (true) {
+            asio::co_spawn(
+                acceptor.get_executor(),
+                makeSession(tcp_stream(co_await acceptor.async_accept())),
+                [](std::exception_ptr exceptionPtr) {
+                    if (!exceptionPtr)
+                        return;
+
+                    try {
+                        std::rethrow_exception(exceptionPtr);
+                    } catch (const std::exception& exception) {
+                        WSLogger::instance().err(exception.what());
+                    }
+                }
+            );
+        }
+    }
+
     asio::awaitable<void> WebServer::makeSession(tcp_stream stream) {
         // Need to be persist across reads
         beast::flat_buffer buffer;
@@ -76,34 +105,5 @@ namespace ws {
         beast::error_code errorCode;
         stream.socket().shutdown(ip::tcp::socket::shutdown_send, errorCode);    
         // Ignore error
-    }
-
-    asio::awaitable<void> WebServer::makeListener() {
-        auto executor = co_await asio::this_coro::executor;
-        auto acceptor = 
-            asio::use_awaitable.as_default_on(ip::tcp::acceptor{ executor });
-        const auto endpoint = ip::tcp::endpoint{ _address, _port };
-        
-        acceptor.open(endpoint.protocol());
-        acceptor.set_option(asio::socket_base::reuse_address(true));
-        acceptor.bind(endpoint);
-        acceptor.listen();
-
-        while (true)
-            asio::co_spawn(
-                acceptor.get_executor(),
-                makeSession(tcp_stream(co_await acceptor.async_accept())),
-                [](std::exception_ptr exceptionPtr) {
-                    if (!exceptionPtr)
-                        return;
-
-                    try {
-                        std::rethrow_exception(exceptionPtr);
-                    } catch (const std::exception& exception) {
-                        WSLogger::instance().err(exception.what());
-                    }
-                }
-            );
-
     }
 }
