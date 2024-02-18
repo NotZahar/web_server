@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['server_104',['server',['../structws_1_1messages_1_1server.html',1,'ws::messages']]]
+  ['paths_119',['paths',['../structws_1_1paths.html',1,'ws']]]
 ];

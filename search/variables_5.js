@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['port_163',['port',['../structws_1_1WSOptions_1_1Options.html#a919ede6e5ca1819471a0b52a1c9fa525',1,'ws::WSOptions::Options']]],
-  ['port_164',['PORT',['../structws_1_1messages_1_1options.html#ad1ac6bc935e01cec9f9a6536bb5cae22',1,'ws::messages::options']]],
-  ['port_5fdescr_165',['PORT_DESCR',['../structws_1_1messages_1_1options.html#afe77d3649b59f25fb6529a07213cdef5',1,'ws::messages::options']]],
-  ['port_5ff_166',['PORT_F',['../structws_1_1messages_1_1options.html#af26aafae35fcc4e0e165f400a4738498',1,'ws::messages::options']]],
-  ['port_5fs_167',['PORT_S',['../structws_1_1messages_1_1options.html#a24dd42f062e5f73c591b493310c8a861',1,'ws::messages::options']]]
+  ['internal_5ferror_185',['INTERNAL_ERROR',['../structws_1_1messages_1_1server.html#a452e152584aa1b2765bc8515817cb516',1,'ws::messages::server']]],
+  ['internal_5ferror_5fgeneral_186',['INTERNAL_ERROR_GENERAL',['../structws_1_1messages_1_1server.html#ac22e70a4c574076a9dc10a34fa3dfc9d',1,'ws::messages::server']]],
+  ['invalid_5fmethod_187',['INVALID_METHOD',['../structws_1_1messages_1_1server.html#a0eeeb80f9eaf934cded47b35e70e2951',1,'ws::messages::server']]],
+  ['invalid_5fpath_188',['INVALID_PATH',['../structws_1_1messages_1_1server.html#ac4e17646cf75dd6dfc1bd8458a813520',1,'ws::messages::server']]],
+  ['invalid_5fstatic_5froot_189',['INVALID_STATIC_ROOT',['../structws_1_1messages_1_1general.html#a8ab1a1f8e8bb6a26af916604800a75a2',1,'ws::messages::general']]],
+  ['invalid_5ftarget_190',['INVALID_TARGET',['../structws_1_1messages_1_1server.html#a70acbc5613852219276147b9bc003d29',1,'ws::messages::server']]]
 ];

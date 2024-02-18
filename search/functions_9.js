@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7ewebserver_137',['~WebServer',['../classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217',1,'ws::WebServer']]],
-  ['_7ewsoptions_138',['~WSOptions',['../classws_1_1WSOptions.html#a67fe02f469141753c6f5091cf1e1338e',1,'ws::WSOptions']]]
+  ['test_159',['TEST',['../libs_2WebServer_2tests_2main_8cpp.html#a2ada77e3f6f930b400a5617b64120088',1,'main.cpp']]]
 ];

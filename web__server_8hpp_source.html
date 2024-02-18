@@ -73,41 +73,34 @@ $(function() {
 <div class="contents">
 <a href="web__server_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../src/utility/types.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespacews.html">    5</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classws_1_1WebServer.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1WebServer.html">WebServer</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">    8</a></span>&#160;        <a class="code" href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">WebServer</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">WebServer</a>(</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            std::string address, </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port, </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            std::string staticRootPath, </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordtype">int</span> threads);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217">   15</a></span>&#160;        <a class="code" href="classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217">~WebServer</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classws_1_1WebServer.html#a7fe76d2e189a2828830f59e75d66f55f">run</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// Accepts incoming connections and launches the sessions</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        asio::awaitable&lt;void&gt; makeListener();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// Handles an HTTP server connection</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        asio::awaitable&lt;void&gt; makeSession(<a class="code" href="namespacews.html#a19dae42a043b32d593fefbe73a903900">tcp_stream</a> stream);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">const</span> ip::address _address;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> _port;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">const</span> fs::path _staticRootPath;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> _threads;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="ttc" id="aclassws_1_1WebServer_html"><div class="ttname"><a href="classws_1_1WebServer.html">ws::WebServer</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ws__options_8hpp.html">ws_options.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../src/utility/types.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacews.html">    6</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classws_1_1WebServer.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1WebServer.html">WebServer</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">    9</a></span>&#160;        <a class="code" href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">WebServer</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">WebServer</a>(<a class="code" href="classws_1_1WSOptions.html">WSOptions</a> wsOption) noexcept;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217">   12</a></span>&#160;        <a class="code" href="classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217">~WebServer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classws_1_1WebServer.html#a7fe76d2e189a2828830f59e75d66f55f">run</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// Accepts incoming connections and launches the sessions</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        asio::awaitable&lt;void&gt; startListen(ssl::context&amp; sslContext) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// Handles an HTTP server connection</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        asio::awaitable&lt;void&gt; makeSession(beast::ssl_stream&lt;tcp_stream&gt; stream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="aclassws_1_1WSOptions_html"><div class="ttname"><a href="classws_1_1WSOptions.html">ws::WSOptions</a></div><div class="ttdef"><b>Definition:</b> ws_options.hpp:7</div></div>
+<div class="ttc" id="aclassws_1_1WebServer_html"><div class="ttname"><a href="classws_1_1WebServer.html">ws::WebServer</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:7</div></div>
 <div class="ttc" id="aclassws_1_1WebServer_html_a6e87b19ad576d7dfae2da03f632e6726"><div class="ttname"><a href="classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726">ws::WebServer::WebServer</a></div><div class="ttdeci">WebServer()=delete</div></div>
 <div class="ttc" id="aclassws_1_1WebServer_html_a7fe76d2e189a2828830f59e75d66f55f"><div class="ttname"><a href="classws_1_1WebServer.html#a7fe76d2e189a2828830f59e75d66f55f">ws::WebServer::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> web_server.cpp:24</div></div>
 <div class="ttc" id="aclassws_1_1WebServer_html_a91cb73893679c90bffa83ffac9691217"><div class="ttname"><a href="classws_1_1WebServer.html#a91cb73893679c90bffa83ffac9691217">ws::WebServer::~WebServer</a></div><div class="ttdeci">~WebServer()=default</div></div>
-<div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:5</div></div>
-<div class="ttc" id="anamespacews_html_a19dae42a043b32d593fefbe73a903900"><div class="ttname"><a href="namespacews.html#a19dae42a043b32d593fefbe73a903900">ws::tcp_stream</a></div><div class="ttdeci">typename beast::tcp_stream::rebind_executor&lt; asio::use_awaitable_t&lt;&gt;::executor_with_default&lt; asio::any_io_executor &gt; &gt;::other tcp_stream</div><div class="ttdef"><b>Definition:</b> types.hpp:22</div></div>
+<div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
+<div class="ttc" id="aws__options_8hpp_html"><div class="ttname"><a href="ws__options_8hpp.html">ws_options.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

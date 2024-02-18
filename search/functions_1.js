@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['err_125',['err',['../classws_1_1WSLogger.html#ac87ff05a0278234c030f38a4ad7cade4',1,'ws::WSLogger']]]
+  ['configure_147',['configure',['../classws_1_1SSL.html#abbc0a9bbed3e7ee517d8e4033cb9d7d3',1,'ws::SSL']]]
 ];

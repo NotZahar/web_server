@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['log_41',['log',['../classws_1_1WSLogger.html#a582a9806423eb5bbf9dea97d42e773ae',1,'ws::WSLogger']]],
-  ['loghelp_42',['logHelp',['../classws_1_1WSLogger.html#a19e4cb2d35d880c816847d465850f80e',1,'ws::WSLogger']]]
+  ['keypath_47',['keyPath',['../structws_1_1paths_1_1ssl.html#aa9c9342403edd29f8e64881d469e765d',1,'ws::paths::ssl']]]
 ];
