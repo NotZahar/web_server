@@ -1,0 +1,39 @@
+#pragma once
+
+#include <filesystem>
+#include <fstream>
+#include <cassert>
+#include <cstdio>
+
+#include "types.hpp"
+
+namespace ws {
+    struct paths {
+        inline static const fs::path resourcesPath = fs::current_path() / "resources";
+
+        struct ssl {
+            inline static const fs::path certPath = resourcesPath / "ssl/cert.pem";
+            inline static const fs::path keyPath = resourcesPath / "ssl/key.pem";
+            inline static const fs::path dhPath = resourcesPath / "ssl/dh.pem";
+        };
+    };
+
+    struct files {
+        static std::string getContent(const fs::path& path) {
+            auto filePtr = std::fopen(path.c_str(), "rb");
+            if (filePtr == nullptr)
+                return {};
+
+            std::fseek(filePtr, 0u, SEEK_END);
+            const auto size = std::ftell(filePtr);
+            std::fseek(filePtr, 0u, SEEK_SET);
+
+            std::string content;
+            content.resize(size);
+
+            std::fread(&content[0], 1u, size, filePtr);
+            std::fclose(filePtr);
+            return content;
+        }
+    };
+}

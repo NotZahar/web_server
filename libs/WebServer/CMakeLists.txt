@@ -10,6 +10,7 @@ find_package(Boost 1.82 REQUIRED
     COMPONENTS 
         system
         program_options)
+find_package(OpenSSL REQUIRED)
 find_package(GTest REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC)
@@ -24,6 +25,7 @@ target_sources(${PROJECT_NAME}
         src/ws_options.cpp
         src/ws_logger.cpp
         src/request_handler.cpp
+        src/ssl.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -52,7 +54,9 @@ set_target_properties(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME} 
     PUBLIC 
-        ${Boost_LIBRARIES})
+        ${Boost_LIBRARIES} 
+        OpenSSL::Crypto
+        OpenSSL::SSL)
 target_link_libraries(${WS_TESTS_TARGET}
     PRIVATE 
         ${GTEST_BOTH_LIBRARIES} ${PROJECT_NAME})
@@ -71,4 +75,4 @@ enable_testing()
 add_test(NAME ${WS_TESTS_TARGET} COMMAND ${WS_TESTS_TARGET})
 
 # test files after deploy
-file(COPY resources/test DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY resources DESTINATION ${CMAKE_BINARY_DIR})

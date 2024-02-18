@@ -7,6 +7,7 @@
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/asio/use_awaitable.hpp>
+#include <boost/beast/ssl.hpp>
 
 namespace ws {
     namespace sm = boost::system;
@@ -16,6 +17,7 @@ namespace ws {
     namespace fs = std::filesystem;
     namespace beast = boost::beast;
     namespace http = beast::http;
+    namespace ssl = asio::ssl;
 
     using options_description = boost::program_options::options_description;
     using tcp_stream = typename beast::tcp_stream::rebind_executor<

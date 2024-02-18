@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
         return 0;
     }
 
-    ws::WebServer webServer(options.address, options.port, options.staticRootPath, options.threads);
+    ws::WebServer webServer{ std::move(wsOptions) };
     webServer.run();
 
     return 0;

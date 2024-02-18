@@ -3,34 +3,37 @@
 #include <stdexcept>
 
 #include <boost/asio/co_spawn.hpp>
+#include <boost/asio/as_tuple.hpp>
 
 #include "ws_logger.hpp"
+#include "ssl.hpp"
 #include "request_handler.hpp"
 #include "utility/config.hpp"
 #include "utility/messages.hpp"
 
 namespace ws {
-    WebServer::WebServer(
-        std::string address, 
-        unsigned short port, 
-        std::string staticRootPath, 
-        int threads) 
-        : _address{ ip::make_address(address) },
-          _port{ port },
-          _staticRootPath{ staticRootPath },
-          _threads{ threads }
-    {}
+    WebServer::WebServer(WSOptions wsOption) noexcept
+    {
+        const auto options = wsOption.getOptions();
+        config::address = ip::make_address(options.address);
+        config::port = options.port;
+        config::staticRootPath = options.staticRootPath;
+        config::threads = options.threads;
+    }
 
     void WebServer::run() {
-        if (std::error_code code; !fs::is_directory(_staticRootPath, code))
+        if (std::error_code code; !fs::is_directory(config::staticRootPath, code))
             throw code;
-        if (_staticRootPath.string().ends_with('/'))
+        if (config::staticRootPath.string().ends_with('/'))
             throw std::runtime_error{ messages::general::INVALID_STATIC_ROOT };
 
-        asio::io_context context{ _threads };
+        asio::io_context ioContext{ config::threads };
+        ssl::context sslContext{ ssl::context::tlsv12_server };
+        SSL::configure(sslContext);
+
         asio::co_spawn(
-            context,
-            makeListener(),
+            ioContext,
+            startListen(sslContext),
             [](std::exception_ptr exceptionPtr) {
                 if (!exceptionPtr)
                     return;
@@ -44,26 +47,28 @@ namespace ws {
         );
 
         asio::detail::thread_group contextRunners;
-        for (int i = 0; i < _threads - 1; ++i)
-            contextRunners.create_thread([&context] { context.run(); });
-        context.run();
+        for (int i = 0; i < config::threads - 1; ++i)
+            contextRunners.create_thread([&ioContext] { ioContext.run(); });
+        ioContext.run();
     }
 
-    asio::awaitable<void> WebServer::makeListener() {
+    asio::awaitable<void> WebServer::startListen(ssl::context& sslContext) const {
         auto executor = co_await asio::this_coro::executor;
         auto acceptor = 
             asio::use_awaitable.as_default_on(ip::tcp::acceptor{ executor });
-        const auto endpoint = ip::tcp::endpoint{ _address, _port };
+        const auto endpoint = ip::tcp::endpoint{ config::address, config::port };
         
         acceptor.open(endpoint.protocol());
         acceptor.set_option(asio::socket_base::reuse_address(true));
         acceptor.bind(endpoint);
         acceptor.listen();
 
+        co_await acceptor.async_accept();
         while (true) {
             asio::co_spawn(
                 acceptor.get_executor(),
-                makeSession(tcp_stream(co_await acceptor.async_accept())),
+                makeSession(beast::ssl_stream<tcp_stream>(
+                    co_await acceptor.async_accept(), sslContext)),
                 [](std::exception_ptr exceptionPtr) {
                     if (!exceptionPtr)
                         return;
@@ -78,19 +83,24 @@ namespace ws {
         }
     }
 
-    asio::awaitable<void> WebServer::makeSession(tcp_stream stream) {
-        // Need to be persist across reads
+    asio::awaitable<void> WebServer::makeSession(beast::ssl_stream<tcp_stream> stream) const {
+        try {
+            co_await stream.async_handshake(ssl::stream_base::server);
+        } catch (const std::exception& exception) {
+            WSLogger::instance().err(exception.what());
+        }
+        
         beast::flat_buffer buffer;
 
         try {
             while (true) {
-                stream.expires_after(config::sessionTimeout);
+                beast::get_lowest_layer(stream).expires_after(config::sessionTimeout);
                 
                 http::request<http::string_body> request;
                 co_await http::async_read(stream, buffer, request);
                 
                 RequestHandler handler{ std::move(request) };
-                auto response = handler.makeResponse(_staticRootPath);
+                auto response = handler.makeResponse(config::staticRootPath);
                 const auto keepAlive = response.keep_alive();
 
                 co_await beast::async_write(stream, std::move(response), asio::use_awaitable);
@@ -102,8 +112,13 @@ namespace ws {
                 throw;
         }
 
-        beast::error_code errorCode;
-        stream.socket().shutdown(ip::tcp::socket::shutdown_send, errorCode);    
-        // Ignore error
+        beast::get_lowest_layer(stream).expires_after(config::sessionTimeout);
+        auto [ errorCode ] = 
+            co_await stream.async_shutdown(asio::as_tuple(asio::use_awaitable));
+        if (errorCode == asio::error::eof)
+            errorCode = {};
+
+        if (errorCode)
+            throw boost::system::system_error(errorCode);
     }
 }
