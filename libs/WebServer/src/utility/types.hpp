@@ -1,6 +1,7 @@
 #pragma once
 
 #include <filesystem>
+#include <unordered_map>
 
 #include <boost/program_options.hpp>
 #include <boost/asio/ip/tcp.hpp>
@@ -8,6 +9,7 @@
 #include <boost/beast/http.hpp>
 #include <boost/asio/use_awaitable.hpp>
 #include <boost/beast/ssl.hpp>
+#include <boost/url.hpp>
 
 namespace ws {
     namespace sm = boost::system;
@@ -18,6 +20,7 @@ namespace ws {
     namespace beast = boost::beast;
     namespace http = beast::http;
     namespace ssl = asio::ssl;
+    namespace urls = boost::urls;
 
     using options_description = boost::program_options::options_description;
     using tcp_stream = typename beast::tcp_stream::rebind_executor<

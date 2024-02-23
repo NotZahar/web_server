@@ -9,7 +9,8 @@ set(WS_TESTS_TARGET "ws_tests")
 find_package(Boost 1.82 REQUIRED 
     COMPONENTS 
         system
-        program_options)
+        program_options
+        url)
 find_package(OpenSSL REQUIRED)
 find_package(GTest REQUIRED)
 
@@ -24,7 +25,7 @@ target_sources(${PROJECT_NAME}
         src/web_server.cpp
         src/ws_options.cpp
         src/ws_logger.cpp
-        src/request_handler.cpp
+        src/router.cpp
         src/ssl.cpp
 )
 

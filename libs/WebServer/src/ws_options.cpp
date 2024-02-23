@@ -33,11 +33,6 @@ namespace ws {
                 messages::options::PORT_DESCR.c_str()
             )
             (
-                messages::options::ROOT.c_str(),
-                po::value<decltype(Options::staticRootPath)>(),
-                messages::options::ROOT_DESCR.c_str()
-            )
-            (
                 messages::options::THREADS.c_str(),
                 po::value<decltype(Options::threads)>(),
                 messages::options::THREADS_DESCR.c_str()
@@ -65,10 +60,6 @@ namespace ws {
         if (variablesMap.count(messages::options::PORT_F))
             options.port = 
                 variablesMap[messages::options::PORT_F].as<decltype(Options::port)>();
-
-        if (variablesMap.count(messages::options::ROOT_F))
-            options.staticRootPath = 
-                variablesMap[messages::options::ROOT_F].as<decltype(Options::staticRootPath)>();
 
         if (variablesMap.count(messages::options::THREADS_F))
             options.threads = 

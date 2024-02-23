@@ -68,7 +68,7 @@ namespace ws {
             { ".svgz", MIME::image_svg_xml }
         };
 
-        inline std::string appendCharset(std::string_view contentType) {
+        inline std::string inUTF8(std::string_view contentType) {
             std::string result{ contentType };
             result += "; charset=utf-8;";
             return result;

@@ -5,9 +5,9 @@
 
 namespace ws {
     void SSL::configure(ssl::context& sslContext) {
-        const std::string cert = files::getContent(paths::ssl::certPath);
-        const std::string key = files::getContent(paths::ssl::keyPath);
-        const std::string dh = files::getContent(paths::ssl::dhPath);
+        const std::string cert = files::getContent(paths::ssl::cert);
+        const std::string key = files::getContent(paths::ssl::key);
+        const std::string dh = files::getContent(paths::ssl::dh);
 
         sslContext.set_password_callback(
             [](

@@ -15,7 +15,7 @@ namespace ws {
     
     private:
         // Accepts incoming connections and launches the sessions
-        asio::awaitable<void> startListen(ssl::context& sslContext) const;
+        asio::awaitable<void> makeListener(ssl::context& sslContext) const;
         
         // Handles an HTTP server connection
         asio::awaitable<void> makeSession(beast::ssl_stream<tcp_stream> stream) const;

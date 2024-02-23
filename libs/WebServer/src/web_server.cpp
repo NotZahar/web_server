@@ -7,9 +7,10 @@
 
 #include "ws_logger.hpp"
 #include "ssl.hpp"
-#include "request_handler.hpp"
+#include "router.hpp"
 #include "utility/config.hpp"
 #include "utility/messages.hpp"
+#include "utility/files.hpp"
 
 namespace ws {
     WebServer::WebServer(WSOptions wsOption) noexcept
@@ -17,15 +18,14 @@ namespace ws {
         const auto options = wsOption.getOptions();
         config::address = ip::make_address(options.address);
         config::port = options.port;
-        config::staticRootPath = options.staticRootPath;
         config::threads = options.threads;
     }
 
     void WebServer::run() {
-        if (std::error_code code; !fs::is_directory(config::staticRootPath, code))
+        if (std::error_code code; !fs::is_directory(paths::resourcesPath, code))
             throw code;
-        if (config::staticRootPath.string().ends_with('/'))
-            throw std::runtime_error{ messages::general::INVALID_STATIC_ROOT };
+        if (std::error_code code; !fs::is_directory(paths::publicPath, code))
+            throw std::runtime_error{ messages::server::INVALID_PATH };
 
         asio::io_context ioContext{ config::threads };
         ssl::context sslContext{ ssl::context::tlsv12_server };
@@ -33,7 +33,7 @@ namespace ws {
 
         asio::co_spawn(
             ioContext,
-            startListen(sslContext),
+            makeListener(sslContext),
             [](std::exception_ptr exceptionPtr) {
                 if (!exceptionPtr)
                     return;
@@ -52,7 +52,7 @@ namespace ws {
         ioContext.run();
     }
 
-    asio::awaitable<void> WebServer::startListen(ssl::context& sslContext) const {
+    asio::awaitable<void> WebServer::makeListener(ssl::context& sslContext) const {
         auto executor = co_await asio::this_coro::executor;
         auto acceptor = 
             asio::use_awaitable.as_default_on(ip::tcp::acceptor{ executor });
@@ -99,9 +99,9 @@ namespace ws {
                 http::request<http::string_body> request;
                 co_await http::async_read(stream, buffer, request);
                 
-                RequestHandler handler{ std::move(request) };
-                auto response = handler.makeResponse(config::staticRootPath);
-                const auto keepAlive = response.keep_alive();
+                Router router{ std::move(request) };
+                auto response = router.makeResponse();
+                const bool keepAlive = response.keep_alive();
 
                 co_await beast::async_write(stream, std::move(response), asio::use_awaitable);
                 if(!keepAlive)

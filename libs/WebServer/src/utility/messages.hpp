@@ -13,17 +13,12 @@ namespace ws {
             inline static const std::string ADDRESS_F = "address";
             inline static const std::string ADDRESS_S = "a";
             inline static const std::string ADDRESS = std::format("{},{}", ADDRESS_F, ADDRESS_S);
-            inline static const std::string ADDRESS_DESCR = "ipv4 или ipv6 адрес";
+            inline static const std::string ADDRESS_DESCR = "ip-адрес";
 
             inline static const std::string PORT_F = "port";
             inline static const std::string PORT_S = "p";
             inline static const std::string PORT = std::format("{},{}", PORT_F, PORT_S);
             inline static const std::string PORT_DESCR = "порт";
-
-            inline static const std::string ROOT_F = "root";
-            inline static const std::string ROOT_S = "r";
-            inline static const std::string ROOT = std::format("{},{}", ROOT_F, ROOT_S);
-            inline static const std::string ROOT_DESCR = "путь к папке с контентом";
 
             inline static const std::string THREADS_F = "threads";
             inline static const std::string THREADS_S = "t";
@@ -39,23 +34,19 @@ namespace ws {
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
-    -{} [ --{:8} ] arg    {}\n \
                 ",
                 HELP_HEADER,
                 options::HELP_S, options::HELP_F, options::HELP_DESCR,
                 options::ADDRESS_S, options::ADDRESS_F, options::ADDRESS_DESCR,
                 options::PORT_S, options::PORT_F, options::PORT_DESCR,
-                options::ROOT_S, options::ROOT_F, options::ROOT_DESCR,
                 options::THREADS_S, options::THREADS_F, options::THREADS_DESCR
             );
-
-            // errors
-            inline static const std::string INVALID_STATIC_ROOT = "Недопустимый путь к папке";
         };
 
-        struct server {
+        struct errors {
             // http error responses
             inline static const std::string INVALID_METHOD = "Недопустимый HTTP-метод";
+            inline static const std::string INVALID_REQUEST = "Недопустимый запрос";
             inline static const std::string INVALID_PATH = "Недопустимый путь";
             inline static const std::string INVALID_TARGET = "Ресурс не был найден: ";
             inline static const std::string INTERNAL_ERROR_GENERAL = "Возникла ошибка";

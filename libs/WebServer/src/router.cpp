@@ -1,69 +1,72 @@
-#include "request_handler.hpp"
+#include "router.hpp"
 
+#include "responses/auth.hpp"
 #include "utility/messages.hpp"
 #include "utility/config.hpp"
 #include "utility/net_helper.hpp"
+#include "utility/url.hpp"
+#include "utility/params.hpp"
 
 namespace ws {
-    RequestHandler::RequestHandler(http::request<http::string_body> request)
+    Router::Router(http::request<http::string_body> request)
         : _request(std::move(request))
     {}
 
-    http::message_generator RequestHandler::makeResponse(const fs::path& staticRootPath) {
-        const auto requestMethod = _request.method();
-        const std::string requestTarget = _request.target();
+    http::message_generator Router::makeResponse() {
+        // std::cout << "base: " << _request.base() << '\n';
+        // std::cout << "body: " << _request.body() << '\n';
+        // std::cout << "method: " << _request.method() << '\n';
+        // std::cout << "target: " << _request.target() << '\n';
+
+        const auto requestMethod{ _request.method() };
+        const url requestURL{ _request.target() };
 
         if (!allowedMethod(requestMethod))
-            return badRequestResponse(messages::server::INVALID_METHOD);
-        if (!allowedPath(requestTarget))
-            return badRequestResponse(messages::server::INVALID_PATH);
-        
-        fs::path targetPath = makeTargetPath(staticRootPath, requestTarget);
-        if (!fs::is_regular_file(targetPath))
-            return notFoundResponse(requestTarget);
+            return badRequestResponse(messages::errors::INVALID_METHOD);
+        if (requestURL.isEmpty())
+            return badRequestResponse(messages::errors::INVALID_REQUEST);
 
-        beast::error_code targetErrorCode;
-        http::file_body::value_type targetBody;
-        targetBody.open(targetPath.c_str(), beast::file_mode::scan, targetErrorCode);
+        const auto requestParams = requestURL.getParams();
+        if (!requestParams.contains(params.left.find(param::auth)->second))
+            return AuthResponse().create();
         
-        if (targetErrorCode == beast::errc::no_such_file_or_directory)
-            return notFoundResponse(requestTarget);
-        if (targetErrorCode)
-            return serverErrorResponse(targetErrorCode.message());
+        // fs::path targetPath = makeTargetPath(config::staticRootPath, requestTarget);
+        // if (!fs::is_regular_file(targetPath))
+        //     return notFoundResponse(requestTarget);
+
+        // beast::error_code targetErrorCode;
+        // http::file_body::value_type targetBody;
+        // targetBody.open(targetPath.c_str(), beast::file_mode::scan, targetErrorCode);
+        
+        // if (targetErrorCode == beast::errc::no_such_file_or_directory)
+        //     return notFoundResponse(requestTarget);
+        // if (targetErrorCode)
+        //     return serverErrorResponse(targetErrorCode.message());
     
         switch (requestMethod) {
-            case http::verb::head:
-                return headResponse(targetBody.size(), targetPath);
-            case http::verb::get: 
-                return getResponse(targetBody.size(), targetPath, std::move(targetBody));    
+            // case http::verb::head:
+            //     return headResponse(targetBody.size(), targetPath);
+            // case http::verb::get: 
+            //     return getResponse(targetBody.size(), targetPath, std::move(targetBody));    
             default:
-                return serverErrorResponse(messages::server::INTERNAL_ERROR_GENERAL);
+                return serverErrorResponse(messages::errors::INTERNAL_ERROR_GENERAL);
         }
     }
 
-    bool RequestHandler::allowedMethod(const http::verb method) const {
-        return method == http::verb::get 
-            || method == http::verb::head;
+    bool Router::allowedMethod(const http::verb method) const {
+        switch (method) {
+            case http::verb::get:
+                [[fallthrough]];
+            case http::verb::head:
+                [[fallthrough]];
+            case http::verb::post:
+                return true;
+            default:
+                return false;
+        }
     }
 
-    bool RequestHandler::allowedPath(std::string_view targetPath) const {
-        return !targetPath.empty()
-            && targetPath[0] == '/'
-            && targetPath.find("..") == std::string_view::npos;
-    }
-
-    fs::path RequestHandler::makeTargetPath(
-            const fs::path& staticRootPath, 
-            std::string_view requestedPath) const {
-        fs::path target(staticRootPath);
-        target /= std::string_view{
-            requestedPath.cbegin() + 1, 
-            requestedPath.cend() 
-        };
-        return target;
-    }
-
-    http::response<http::empty_body> RequestHandler::headResponse(
+    http::response<http::empty_body> Router::headResponse(
         const std::uint64_t targetSize,
         const fs::path& targetPath) const {
         using namespace netHelper;
@@ -84,7 +87,7 @@ namespace ws {
         return response;
     }
 
-    http::response<http::file_body> RequestHandler::getResponse(
+    http::response<http::file_body> Router::getResponse(
         const std::uint64_t targetSize,
         const fs::path& targetPath,
         http::file_body::value_type targetBody) const {
@@ -107,7 +110,7 @@ namespace ws {
         return response;
     }
 
-    http::response<http::string_body> RequestHandler::badRequestResponse(
+    http::response<http::string_body> Router::badRequestResponse(
             std::string_view reason) const {
         using namespace netHelper;
         
@@ -128,7 +131,7 @@ namespace ws {
         return response;
     }
 
-    http::response<http::string_body> RequestHandler::notFoundResponse(
+    http::response<http::string_body> Router::notFoundResponse(
         std::string_view target) const {
         using namespace netHelper;
         
@@ -144,12 +147,12 @@ namespace ws {
         );
 
         response.keep_alive(_request.keep_alive());
-        response.body() = messages::server::INVALID_TARGET + std::string{ target };
+        response.body() = messages::errors::INVALID_TARGET + std::string{ target };
         response.prepare_payload();
         return response;
     }
     
-    http::response<http::string_body> RequestHandler::serverErrorResponse(
+    http::response<http::string_body> Router::serverErrorResponse(
         std::string_view what) const {
         using namespace netHelper;
 
@@ -165,7 +168,7 @@ namespace ws {
         );
         
         response.keep_alive(_request.keep_alive());
-        response.body() = messages::server::INTERNAL_ERROR + std::string{ what };
+        response.body() = messages::errors::INTERNAL_ERROR + std::string{ what };
         response.prepare_payload();
         return response;
     }

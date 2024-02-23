@@ -6,15 +6,21 @@
 #include <cstdio>
 
 #include "types.hpp"
+#include "config.hpp"
 
 namespace ws {
     struct paths {
         inline static const fs::path resourcesPath = fs::current_path() / "resources";
+        inline static const fs::path publicPath = resourcesPath / "public";
+
+        struct pages {
+            inline static const fs::path auth = publicPath / "auth.html";
+        };
 
         struct ssl {
-            inline static const fs::path certPath = resourcesPath / "ssl/cert.pem";
-            inline static const fs::path keyPath = resourcesPath / "ssl/key.pem";
-            inline static const fs::path dhPath = resourcesPath / "ssl/dh.pem";
+            inline static const fs::path cert = resourcesPath / "ssl/cert.pem";
+            inline static const fs::path key = resourcesPath / "ssl/key.pem";
+            inline static const fs::path dh = resourcesPath / "ssl/dh.pem";
         };
     };
 
