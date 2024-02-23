@@ -65,6 +65,16 @@ $(function() {
 <div class="contents">
 <div class="textblock">Список всех членов классов со ссылками на классы, к которым они принадлежат.</div>
 
+<h3><a id="index__5F"></a>- _ -</h3><ul>
+<li>_httpVersion
+: <a class="el" href="classws_1_1Response.html#acafd0f1d3ff5b4bbf2b6377194aaadc1">ws::Response</a>
+</li>
+<li>_keepAlive
+: <a class="el" href="classws_1_1Response.html#aee1956e36a60473ab9f09ec6bb5a867b">ws::Response</a>
+</li>
+</ul>
+
+
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>address
 : <a class="el" href="structws_1_1config.html#a6580dc2765cb9ad9419da7e6daa038fe">ws::config</a>
@@ -84,15 +94,26 @@ $(function() {
 <li>ADDRESS_S
 : <a class="el" href="structws_1_1messages_1_1options.html#a6c930f66a61f198e0ff0c7a92405d405">ws::messages::options</a>
 </li>
+<li>auth
+: <a class="el" href="structws_1_1paths_1_1pages.html#a25832c78003c426d73a4eb4f7357e8b9">ws::paths::pages</a>
+</li>
+<li>AuthResponse()
+: <a class="el" href="classws_1_1AuthResponse.html#ab80a80f46d69f87c8b53714328d205f8">ws::AuthResponse</a>
+</li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
-<li>certPath
-: <a class="el" href="structws_1_1paths_1_1ssl.html#a1648222a9d06954a58827b0155232e8b">ws::paths::ssl</a>
+<li>cert
+: <a class="el" href="structws_1_1paths_1_1ssl.html#a2e682e270bdab02991ccba08ea09f789">ws::paths::ssl</a>
 </li>
 <li>configure()
 : <a class="el" href="classws_1_1SSL.html#abbc0a9bbed3e7ee517d8e4033cb9d7d3">ws::SSL</a>
+</li>
+<li>create()
+: <a class="el" href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">ws::AuthResponse</a>
+, <a class="el" href="classws_1_1Response.html#ad701675c5437ac2e99045ca0eb652335">ws::Response</a>
+, <a class="el" href="classws_1_1ServerErrorResponse.html#aed05d34306b7ef97d10dae82bf106285">ws::ServerErrorResponse</a>
 </li>
 </ul>
 
@@ -107,14 +128,11 @@ $(function() {
 <li>defaultSessionTimeout
 : <a class="el" href="structws_1_1config.html#aded04d080a0631798594cfcdd9a5766b">ws::config</a>
 </li>
-<li>defaultStaticRootPath
-: <a class="el" href="structws_1_1config.html#a7e9cab0b41e20f330fb4e86501284eda">ws::config</a>
-</li>
 <li>defaultThreads
 : <a class="el" href="structws_1_1config.html#ac2ab2ffed1054f3592697c522db3d7e3">ws::config</a>
 </li>
-<li>dhPath
-: <a class="el" href="structws_1_1paths_1_1ssl.html#aedd4e0eef74212b18570e8b8a5cab62f">ws::paths::ssl</a>
+<li>dh
+: <a class="el" href="structws_1_1paths_1_1ssl.html#a065e80040836e56d910dbc4391ba6730">ws::paths::ssl</a>
 </li>
 </ul>
 
@@ -139,6 +157,9 @@ $(function() {
 </li>
 <li>getOptions()
 : <a class="el" href="classws_1_1WSOptions.html#ac3646aee3a7b72238e4164c0d2b7ab52">ws::WSOptions</a>
+</li>
+<li>getParams()
+: <a class="el" href="structws_1_1url.html#a13f26d3c772fdbeb8e2690e3d841968d">ws::url</a>
 </li>
 </ul>
 
@@ -165,6 +186,9 @@ $(function() {
 <li>HELP_S
 : <a class="el" href="structws_1_1messages_1_1options.html#a343848bc5422e53c386d631c845fbd2c">ws::messages::options</a>
 </li>
+<li>httpVersion
+: <a class="el" href="structws_1_1config.html#ab427083a178df8cf6c2a75cfb555b00c">ws::config</a>
+</li>
 </ul>
 
 
@@ -173,29 +197,35 @@ $(function() {
 : <a class="el" href="classws_1_1WSLogger.html#a21cd161db65fda568867799e789b541f">ws::WSLogger</a>
 </li>
 <li>INTERNAL_ERROR
-: <a class="el" href="structws_1_1messages_1_1server.html#a452e152584aa1b2765bc8515817cb516">ws::messages::server</a>
+: <a class="el" href="structws_1_1messages_1_1errors.html#ad69c98dd26319c63984e3851a20393a6">ws::messages::errors</a>
 </li>
 <li>INTERNAL_ERROR_GENERAL
-: <a class="el" href="structws_1_1messages_1_1server.html#ac22e70a4c574076a9dc10a34fa3dfc9d">ws::messages::server</a>
+: <a class="el" href="structws_1_1messages_1_1errors.html#a480381d0ec430eacfcb241d1d74dca63">ws::messages::errors</a>
 </li>
 <li>INVALID_METHOD
-: <a class="el" href="structws_1_1messages_1_1server.html#a0eeeb80f9eaf934cded47b35e70e2951">ws::messages::server</a>
+: <a class="el" href="structws_1_1messages_1_1errors.html#a0453ba138c01f845afddcb26371558fd">ws::messages::errors</a>
 </li>
 <li>INVALID_PATH
-: <a class="el" href="structws_1_1messages_1_1server.html#ac4e17646cf75dd6dfc1bd8458a813520">ws::messages::server</a>
+: <a class="el" href="structws_1_1messages_1_1errors.html#a6bd0aa026e56574d3f3e062c72913377">ws::messages::errors</a>
 </li>
-<li>INVALID_STATIC_ROOT
-: <a class="el" href="structws_1_1messages_1_1general.html#a8ab1a1f8e8bb6a26af916604800a75a2">ws::messages::general</a>
+<li>INVALID_REQUEST
+: <a class="el" href="structws_1_1messages_1_1errors.html#af41762cc4ef471b824547fb0d8b32541">ws::messages::errors</a>
 </li>
 <li>INVALID_TARGET
-: <a class="el" href="structws_1_1messages_1_1server.html#a70acbc5613852219276147b9bc003d29">ws::messages::server</a>
+: <a class="el" href="structws_1_1messages_1_1errors.html#a37a32388fcadf22c86e757b4875896ed">ws::messages::errors</a>
+</li>
+<li>isEmpty()
+: <a class="el" href="structws_1_1url.html#aa1060002042719efbbf3a8a782ed32ce">ws::url</a>
 </li>
 </ul>
 
 
 <h3><a id="index_k"></a>- k -</h3><ul>
-<li>keyPath
-: <a class="el" href="structws_1_1paths_1_1ssl.html#aa9c9342403edd29f8e64881d469e765d">ws::paths::ssl</a>
+<li>keepAlive
+: <a class="el" href="structws_1_1config.html#ace3d3ba04a446fbad683b6a9f14e9813">ws::config</a>
+</li>
+<li>key
+: <a class="el" href="structws_1_1paths_1_1ssl.html#a4ed1749bc7f3c4108b45994bd41a5af1">ws::paths::ssl</a>
 </li>
 </ul>
 
@@ -212,7 +242,7 @@ $(function() {
 
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>makeResponse()
-: <a class="el" href="classws_1_1RequestHandler.html#ade7a90affc99344fb1fdd7d5643fd088">ws::RequestHandler</a>
+: <a class="el" href="classws_1_1Router.html#ace621c2acc3c5e8adaaaaddf0680a596">ws::Router</a>
 </li>
 </ul>
 
@@ -236,27 +266,24 @@ $(function() {
 <li>PORT_S
 : <a class="el" href="structws_1_1messages_1_1options.html#a24dd42f062e5f73c591b493310c8a861">ws::messages::options</a>
 </li>
+<li>publicPath
+: <a class="el" href="structws_1_1paths.html#ad36b5c8022c043e77af869bafbb40a0d">ws::paths</a>
+</li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>RequestHandler()
-: <a class="el" href="classws_1_1RequestHandler.html#abbbd7cdabafcf333b7cae343cff5c46f">ws::RequestHandler</a>
+<li>rawUrl
+: <a class="el" href="structws_1_1url.html#acb936eb09f28f2e51e53e111faa8813b">ws::url</a>
 </li>
 <li>resourcesPath
 : <a class="el" href="structws_1_1paths.html#abf6d19f87e52bfa6ab6b751b3913eb4b">ws::paths</a>
 </li>
-<li>ROOT
-: <a class="el" href="structws_1_1messages_1_1options.html#af4b081edc8d33f4bd80a7ef57afd20dd">ws::messages::options</a>
+<li>Response()
+: <a class="el" href="classws_1_1Response.html#aae875a54dba62188f8d80aabeb6e42f3">ws::Response</a>
 </li>
-<li>ROOT_DESCR
-: <a class="el" href="structws_1_1messages_1_1options.html#af93ac139abd3d122a7ba9d79bc9c17dc">ws::messages::options</a>
-</li>
-<li>ROOT_F
-: <a class="el" href="structws_1_1messages_1_1options.html#ab400f6fb328f4295503d13aabf723efe">ws::messages::options</a>
-</li>
-<li>ROOT_S
-: <a class="el" href="structws_1_1messages_1_1options.html#a83af008eb4e54b98503d2ce2e5ba37ef">ws::messages::options</a>
+<li>Router()
+: <a class="el" href="classws_1_1Router.html#a58c0e3e62dd843c99d954fc53ee8c931">ws::Router</a>
 </li>
 <li>run()
 : <a class="el" href="classws_1_1WebServer.html#a7fe76d2e189a2828830f59e75d66f55f">ws::WebServer</a>
@@ -265,15 +292,14 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>ServerErrorResponse()
+: <a class="el" href="classws_1_1ServerErrorResponse.html#a010686ad56159288946a77a9b5d5432e">ws::ServerErrorResponse</a>
+</li>
 <li>sessionTimeout
 : <a class="el" href="structws_1_1config.html#ac1fe8f262bb824fadd1e84b568562291">ws::config</a>
 </li>
 <li>SSL()
 : <a class="el" href="classws_1_1SSL.html#ada261171d44c69097cd5904ac324e61e">ws::SSL</a>
-</li>
-<li>staticRootPath
-: <a class="el" href="structws_1_1config.html#a2ed51304e0be2cd49ca4b0cd5779801b">ws::config</a>
-, <a class="el" href="structws_1_1WSOptions_1_1Options.html#aedba047c53b65110facfa05911ce7aab">ws::WSOptions::Options</a>
 </li>
 </ul>
 
@@ -311,6 +337,15 @@ $(function() {
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~AuthResponse()
+: <a class="el" href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">ws::AuthResponse</a>
+</li>
+<li>~Response()
+: <a class="el" href="classws_1_1Response.html#ac229e8e1d22e0a3ed3ead03418ca529a">ws::Response</a>
+</li>
+<li>~ServerErrorResponse()
+: <a class="el" href="classws_1_1ServerErrorResponse.html#a6006a92e6407200deeb94f00bc8200ce">ws::ServerErrorResponse</a>
+</li>
 <li>~SSL()
 : <a class="el" href="classws_1_1SSL.html#aea14878daaa2b549f780078e968156b3">ws::SSL</a>
 </li>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['config_113',['config',['../structws_1_1config.html',1,'ws']]]
+  ['authresponse_136',['AuthResponse',['../classws_1_1AuthResponse.html',1,'ws']]]
 ];

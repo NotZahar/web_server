@@ -66,7 +66,8 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Пространства имен</a> &#124;
 <a href="#nested-classes">Классы</a> &#124;
-<a href="#typedef-members">Определения типов</a>  </div>
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a>  </div>
   <div class="headertitle">
 <div class="title">Пространство имен ws</div>  </div>
 </div><!--header-->
@@ -85,7 +86,13 @@ $(function() {
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1WSOptions.html">WSOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1RequestHandler.html">RequestHandler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1AuthResponse.html">AuthResponse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1ServerErrorResponse.html">ServerErrorResponse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html">Response</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html">Router</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1SSL.html">SSL</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +104,8 @@ $(function() {
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1messages.html">messages</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1url.html">url</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Определения типов</h2></td></tr>
@@ -104,6 +113,12 @@ $(function() {
 <tr class="separator:a8887e5489f805ae91ac94218ef8ef5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19dae42a043b32d593fefbe73a903900"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#a19dae42a043b32d593fefbe73a903900">tcp_stream</a> = typename beast::tcp_stream::rebind_executor&lt; asio::use_awaitable_t&lt;&gt;::executor_with_default&lt; asio::any_io_executor &gt; &gt;::other</td></tr>
 <tr class="separator:a19dae42a043b32d593fefbe73a903900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:affdfbd26275d2d7c4ab6de2ce90d9b60"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60">param</a> { <a class="el" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60afa53b91ccc1b78668d5af58e1ed3a485">auth</a>
+ }</td></tr>
+<tr class="separator:affdfbd26275d2d7c4ab6de2ce90d9b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a8887e5489f805ae91ac94218ef8ef5fe"></a>
@@ -131,6 +146,32 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a id="affdfbd26275d2d7c4ab6de2ce90d9b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affdfbd26275d2d7c4ab6de2ce90d9b60">&#9670;&nbsp;</a></span>param</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60">ws::param</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="affdfbd26275d2d7c4ab6de2ce90d9b60afa53b91ccc1b78668d5af58e1ed3a485"></a>auth&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>

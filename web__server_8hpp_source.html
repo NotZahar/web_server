@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// Accepts incoming connections and launches the sessions</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        asio::awaitable&lt;void&gt; startListen(ssl::context&amp; sslContext) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        asio::awaitable&lt;void&gt; makeListener(ssl::context&amp; sslContext) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// Handles an HTTP server connection</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        asio::awaitable&lt;void&gt; makeSession(beast::ssl_stream&lt;tcp_stream&gt; stream) <span class="keyword">const</span>;</div>

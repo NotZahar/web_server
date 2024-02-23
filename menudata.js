@@ -35,8 +35,10 @@ var menudata={children:[
 {text:"Классы",url:"annotated.html",children:[
 {text:"Классы",url:"annotated.html"},
 {text:"Алфавитный указатель классов",url:"classes.html"},
+{text:"Иерархия классов",url:"inherits.html"},
 {text:"Члены классов",url:"functions.html",children:[
 {text:"Указатель",url:"functions.html",children:[
+{text:"_",url:"functions.html#index__5F"},
 {text:"a",url:"functions.html#index_a"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
@@ -54,8 +56,20 @@ var menudata={children:[
 {text:"t",url:"functions.html#index_t"},
 {text:"w",url:"functions.html#index_w"},
 {text:"~",url:"functions.html#index__7E"}]},
-{text:"Функции",url:"functions_func.html"},
+{text:"Функции",url:"functions_func.html",children:[
+{text:"a",url:"functions_func.html#index_a"},
+{text:"c",url:"functions_func.html#index_c"},
+{text:"e",url:"functions_func.html#index_e"},
+{text:"g",url:"functions_func.html#index_g"},
+{text:"i",url:"functions_func.html#index_i"},
+{text:"l",url:"functions_func.html#index_l"},
+{text:"m",url:"functions_func.html#index_m"},
+{text:"r",url:"functions_func.html#index_r"},
+{text:"s",url:"functions_func.html#index_s"},
+{text:"w",url:"functions_func.html#index_w"},
+{text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Переменные",url:"functions_vars.html",children:[
+{text:"_",url:"functions_vars.html#index__5F"},
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"c",url:"functions_vars.html#index_c"},
 {text:"d",url:"functions_vars.html#index_d"},

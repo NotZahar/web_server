@@ -1,14 +1,13 @@
 var searchData=
 [
-  ['tcp_5fstream_84',['tcp_stream',['../namespacews.html#a19dae42a043b32d593fefbe73a903900',1,'ws']]],
-  ['test_85',['TEST',['../libs_2WebServer_2tests_2main_8cpp.html#a2ada77e3f6f930b400a5617b64120088',1,'main.cpp']]],
-  ['text_5fcss_86',['text_css',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba2ba1c6cfc87174ee022a67218f0a44ec',1,'ws::netHelper']]],
-  ['text_5fhtml_87',['text_html',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba00f895259051ae49a3ba95e8ee0d140e',1,'ws::netHelper']]],
-  ['text_5fplain_88',['text_plain',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba427cfc2135b0aaaf280894602bd9f534',1,'ws::netHelper']]],
-  ['threads_89',['threads',['../structws_1_1WSOptions_1_1Options.html#a6daf5a69fe511969d727032c291be683',1,'ws::WSOptions::Options::threads()'],['../structws_1_1config.html#a703bfcb2e47fc5f1a5fe9d713d6c7a81',1,'ws::config::threads()']]],
-  ['threads_90',['THREADS',['../structws_1_1messages_1_1options.html#a20a573cf0a1f37d47adf56d5a770d391',1,'ws::messages::options']]],
-  ['threads_5fdescr_91',['THREADS_DESCR',['../structws_1_1messages_1_1options.html#acabe4b2e840be21486e2fd3ff5b0411e',1,'ws::messages::options']]],
-  ['threads_5ff_92',['THREADS_F',['../structws_1_1messages_1_1options.html#a49598fe0807812b7a8c200a87a82288f',1,'ws::messages::options']]],
-  ['threads_5fs_93',['THREADS_S',['../structws_1_1messages_1_1options.html#a179c68b78d2490b311e918cbbe59bc08',1,'ws::messages::options']]],
-  ['types_2ehpp_94',['types.hpp',['../types_8hpp.html',1,'']]]
+  ['rawurl_83',['rawUrl',['../structws_1_1url.html#acb936eb09f28f2e51e53e111faa8813b',1,'ws::url']]],
+  ['readme_2emd_84',['README.md',['../README_8md.html',1,'']]],
+  ['resourcespath_85',['resourcesPath',['../structws_1_1paths.html#abf6d19f87e52bfa6ab6b751b3913eb4b',1,'ws::paths']]],
+  ['response_86',['Response',['../classws_1_1Response.html#aae875a54dba62188f8d80aabeb6e42f3',1,'ws::Response::Response()=delete'],['../classws_1_1Response.html#abc4488523aa46f724d5da75698732aa7',1,'ws::Response::Response(unsigned httpVersion, bool keepAlive)'],['../classws_1_1Response.html',1,'ws::Response']]],
+  ['response_2ecpp_87',['response.cpp',['../response_8cpp.html',1,'']]],
+  ['response_2ehpp_88',['response.hpp',['../response_8hpp.html',1,'']]],
+  ['router_89',['Router',['../classws_1_1Router.html#a58c0e3e62dd843c99d954fc53ee8c931',1,'ws::Router::Router()=delete'],['../classws_1_1Router.html#a5c8550bacc42fcafabe4ccc14a6db902',1,'ws::Router::Router(http::request&lt; http::string_body &gt; request)'],['../classws_1_1Router.html',1,'ws::Router']]],
+  ['router_2ecpp_90',['router.cpp',['../router_8cpp.html',1,'']]],
+  ['router_2ehpp_91',['router.hpp',['../router_8hpp.html',1,'']]],
+  ['run_92',['run',['../classws_1_1WebServer.html#a7fe76d2e189a2828830f59e75d66f55f',1,'ws::WebServer']]]
 ];

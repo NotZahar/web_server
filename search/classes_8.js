@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['webserver_124',['WebServer',['../classws_1_1WebServer.html',1,'ws']]],
-  ['wslogger_125',['WSLogger',['../classws_1_1WSLogger.html',1,'ws']]],
-  ['wsoptions_126',['WSOptions',['../classws_1_1WSOptions.html',1,'ws']]]
+  ['response_146',['Response',['../classws_1_1Response.html',1,'ws']]],
+  ['router_147',['Router',['../classws_1_1Router.html',1,'ws']]]
 ];

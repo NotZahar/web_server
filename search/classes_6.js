@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['requesthandler_120',['RequestHandler',['../classws_1_1RequestHandler.html',1,'ws']]]
+  ['options_142',['options',['../structws_1_1messages_1_1options.html',1,'ws::messages']]],
+  ['options_143',['Options',['../structws_1_1WSOptions_1_1Options.html',1,'ws::WSOptions']]]
 ];

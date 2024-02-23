@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['resourcespath_197',['resourcesPath',['../structws_1_1paths.html#abf6d19f87e52bfa6ab6b751b3913eb4b',1,'ws::paths']]],
-  ['root_198',['ROOT',['../structws_1_1messages_1_1options.html#af4b081edc8d33f4bd80a7ef57afd20dd',1,'ws::messages::options']]],
-  ['root_5fdescr_199',['ROOT_DESCR',['../structws_1_1messages_1_1options.html#af93ac139abd3d122a7ba9d79bc9c17dc',1,'ws::messages::options']]],
-  ['root_5ff_200',['ROOT_F',['../structws_1_1messages_1_1options.html#ab400f6fb328f4295503d13aabf723efe',1,'ws::messages::options']]],
-  ['root_5fs_201',['ROOT_S',['../structws_1_1messages_1_1options.html#a83af008eb4e54b98503d2ce2e5ba37ef',1,'ws::messages::options']]]
+  ['port_243',['PORT',['../structws_1_1messages_1_1options.html#ad1ac6bc935e01cec9f9a6536bb5cae22',1,'ws::messages::options']]],
+  ['port_244',['port',['../structws_1_1WSOptions_1_1Options.html#a919ede6e5ca1819471a0b52a1c9fa525',1,'ws::WSOptions::Options::port()'],['../structws_1_1config.html#ad61e2fe6506af4e0b76f831e4c6cb583',1,'ws::config::port()']]],
+  ['port_5fdescr_245',['PORT_DESCR',['../structws_1_1messages_1_1options.html#afe77d3649b59f25fb6529a07213cdef5',1,'ws::messages::options']]],
+  ['port_5ff_246',['PORT_F',['../structws_1_1messages_1_1options.html#af26aafae35fcc4e0e165f400a4738498',1,'ws::messages::options']]],
+  ['port_5fs_247',['PORT_S',['../structws_1_1messages_1_1options.html#a24dd42f062e5f73c591b493310c8a861',1,'ws::messages::options']]],
+  ['publicpath_248',['publicPath',['../structws_1_1paths.html#ad36b5c8022c043e77af869bafbb40a0d',1,'ws::paths']]]
 ];

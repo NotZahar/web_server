@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['internal_5ferror_185',['INTERNAL_ERROR',['../structws_1_1messages_1_1server.html#a452e152584aa1b2765bc8515817cb516',1,'ws::messages::server']]],
-  ['internal_5ferror_5fgeneral_186',['INTERNAL_ERROR_GENERAL',['../structws_1_1messages_1_1server.html#ac22e70a4c574076a9dc10a34fa3dfc9d',1,'ws::messages::server']]],
-  ['invalid_5fmethod_187',['INVALID_METHOD',['../structws_1_1messages_1_1server.html#a0eeeb80f9eaf934cded47b35e70e2951',1,'ws::messages::server']]],
-  ['invalid_5fpath_188',['INVALID_PATH',['../structws_1_1messages_1_1server.html#ac4e17646cf75dd6dfc1bd8458a813520',1,'ws::messages::server']]],
-  ['invalid_5fstatic_5froot_189',['INVALID_STATIC_ROOT',['../structws_1_1messages_1_1general.html#a8ab1a1f8e8bb6a26af916604800a75a2',1,'ws::messages::general']]],
-  ['invalid_5ftarget_190',['INVALID_TARGET',['../structws_1_1messages_1_1server.html#a70acbc5613852219276147b9bc003d29',1,'ws::messages::server']]]
+  ['help_227',['HELP',['../structws_1_1messages_1_1options.html#aa7a42ff82c64fe5d3443ee398fceb10e',1,'ws::messages::options']]],
+  ['help_228',['help',['../structws_1_1WSOptions_1_1Options.html#ac61c2fc362af5bd0aa246d8351b58aa5',1,'ws::WSOptions::Options']]],
+  ['help_5fdescr_229',['HELP_DESCR',['../structws_1_1messages_1_1options.html#a1f0430efe848e23fc9ebb6569376b5e0',1,'ws::messages::options']]],
+  ['help_5ff_230',['HELP_F',['../structws_1_1messages_1_1options.html#aaba37a735ebdd2f1e8e0b05e1fb5c5fa',1,'ws::messages::options']]],
+  ['help_5fheader_231',['HELP_HEADER',['../structws_1_1messages_1_1general.html#a6aa05963457e1691b721d62d13cc53a9',1,'ws::messages::general']]],
+  ['help_5fmessage_232',['HELP_MESSAGE',['../structws_1_1messages_1_1general.html#acdaf7512a0447294b75274fd547e8aed',1,'ws::messages::general']]],
+  ['help_5fs_233',['HELP_S',['../structws_1_1messages_1_1options.html#a343848bc5422e53c386d631c845fbd2c',1,'ws::messages::options']]],
+  ['httpversion_234',['httpVersion',['../structws_1_1config.html#ab427083a178df8cf6c2a75cfb555b00c',1,'ws::config']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['appendcharset_146',['appendCharset',['../namespacews_1_1netHelper.html#a8ed8a2a04e40046b52e92717b687ede5',1,'ws::netHelper']]]
+  ['authresponse_184',['AuthResponse',['../classws_1_1AuthResponse.html#ab80a80f46d69f87c8b53714328d205f8',1,'ws::AuthResponse']]]
 ];
