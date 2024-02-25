@@ -78,19 +78,22 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classws_1_1AuthResponse.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1AuthResponse.html">AuthResponse</a> final : <span class="keyword">public</span> <a class="code" href="classws_1_1Response.html">Response</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classws_1_1AuthResponse.html#ab80a80f46d69f87c8b53714328d205f8">    8</a></span>&#160;        <a class="code" href="classws_1_1AuthResponse.html#ab80a80f46d69f87c8b53714328d205f8">AuthResponse</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">    9</a></span>&#160;        <a class="code" href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">~AuthResponse</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        http::message_generator <a class="code" href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">create</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734">    8</a></span>&#160;        <a class="code" href="classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734">AuthResponse</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734">AuthResponse</a>(<a class="code" href="structws_1_1Response_1_1RequestInfo.html">RequestInfo</a> request);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">   11</a></span>&#160;        <a class="code" href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">~AuthResponse</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        http::message_generator <a class="code" href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">create</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="ttc" id="aclassws_1_1AuthResponse_html"><div class="ttname"><a href="classws_1_1AuthResponse.html">ws::AuthResponse</a></div><div class="ttdef"><b>Definition:</b> auth.hpp:6</div></div>
-<div class="ttc" id="aclassws_1_1AuthResponse_html_a2c18b844875f9de2eb378300283c30e4"><div class="ttname"><a href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">ws::AuthResponse::create</a></div><div class="ttdeci">http::message_generator create() const override</div><div class="ttdef"><b>Definition:</b> auth.cpp:10</div></div>
-<div class="ttc" id="aclassws_1_1AuthResponse_html_ab80a80f46d69f87c8b53714328d205f8"><div class="ttname"><a href="classws_1_1AuthResponse.html#ab80a80f46d69f87c8b53714328d205f8">ws::AuthResponse::AuthResponse</a></div><div class="ttdeci">AuthResponse()=default</div></div>
+<div class="ttc" id="aclassws_1_1AuthResponse_html_a2c18b844875f9de2eb378300283c30e4"><div class="ttname"><a href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">ws::AuthResponse::create</a></div><div class="ttdeci">http::message_generator create() const override</div><div class="ttdef"><b>Definition:</b> auth.cpp:14</div></div>
+<div class="ttc" id="aclassws_1_1AuthResponse_html_a5e29bfeb7be6e3f21f85f38d37819734"><div class="ttname"><a href="classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734">ws::AuthResponse::AuthResponse</a></div><div class="ttdeci">AuthResponse()=delete</div></div>
 <div class="ttc" id="aclassws_1_1AuthResponse_html_ae702e9d8de1aa2166efa3ce7d9961484"><div class="ttname"><a href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">ws::AuthResponse::~AuthResponse</a></div><div class="ttdeci">~AuthResponse() override=default</div></div>
 <div class="ttc" id="aclassws_1_1Response_html"><div class="ttname"><a href="classws_1_1Response.html">ws::Response</a></div><div class="ttdef"><b>Definition:</b> response.hpp:6</div></div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
 <div class="ttc" id="aresponse_8hpp_html"><div class="ttname"><a href="response_8hpp.html">response.hpp</a></div></div>
+<div class="ttc" id="astructws_1_1Response_1_1RequestInfo_html"><div class="ttname"><a href="structws_1_1Response_1_1RequestInfo.html">ws::Response::RequestInfo</a></div><div class="ttdef"><b>Definition:</b> response.hpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['files_139',['files',['../structws_1_1files.html',1,'ws']]]
+  ['errors_151',['errors',['../structws_1_1messages_1_1errors.html',1,'ws::messages']]]
 ];

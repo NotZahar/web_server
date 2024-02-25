@@ -1,8 +1,9 @@
 <map id="libs/WebServer/src/utility/messages.hpp" name="libs/WebServer/src/utility/messages.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="358,5,521,47"/>
-<area shape="rect" id="node2" href="$server__error_8cpp.html" title=" " alt="" coords="5,95,177,151"/>
-<area shape="rect" id="node3" href="$router_8cpp.html" title=" " alt="" coords="201,102,344,143"/>
-<area shape="rect" id="node4" href="$web__server_8cpp.html" title=" " alt="" coords="368,102,511,143"/>
-<area shape="rect" id="node5" href="$ws__logger_8cpp.html" title=" " alt="" coords="535,102,677,143"/>
-<area shape="rect" id="node6" href="$ws__options_8cpp.html" title=" " alt="" coords="701,102,844,143"/>
+<area shape="rect" id="node1" title=" " alt="" coords="451,5,613,47"/>
+<area shape="rect" id="node2" href="$not__found_8cpp.html" title=" " alt="" coords="5,95,157,151"/>
+<area shape="rect" id="node3" href="$server__error_8cpp.html" title=" " alt="" coords="182,95,354,151"/>
+<area shape="rect" id="node4" href="$router_8cpp.html" title=" " alt="" coords="378,102,521,143"/>
+<area shape="rect" id="node5" href="$web__server_8cpp.html" title=" " alt="" coords="545,102,687,143"/>
+<area shape="rect" id="node6" href="$ws__logger_8cpp.html" title=" " alt="" coords="711,102,854,143"/>
+<area shape="rect" id="node7" href="$ws__options_8cpp.html" title=" " alt="" coords="878,102,1021,143"/>
 </map>

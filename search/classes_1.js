@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['config_137',['config',['../structws_1_1config.html',1,'ws']]]
+  ['badrequestresponse_149',['BadRequestResponse',['../classws_1_1BadRequestResponse.html',1,'ws']]]
 ];

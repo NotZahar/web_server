@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['messages_141',['messages',['../structws_1_1messages.html',1,'ws']]]
+  ['general_153',['general',['../structws_1_1messages_1_1general.html',1,'ws::messages']]]
 ];

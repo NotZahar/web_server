@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_196',['main',['../libs_2WebServer_2tests_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['makeresponse_197',['makeResponse',['../classws_1_1Router.html#ace621c2acc3c5e8adaaaaddf0680a596',1,'ws::Router']]]
+  ['log_214',['log',['../classws_1_1WSLogger.html#a582a9806423eb5bbf9dea97d42e773ae',1,'ws::WSLogger']]],
+  ['loghelp_215',['logHelp',['../classws_1_1WSLogger.html#a19e4cb2d35d880c816847d465850f80e',1,'ws::WSLogger']]]
 ];

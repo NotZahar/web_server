@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['webserver_204',['WebServer',['../classws_1_1WebServer.html#a6e87b19ad576d7dfae2da03f632e6726',1,'ws::WebServer::WebServer()=delete'],['../classws_1_1WebServer.html#ade531f95fe40f6fd3c3d2655cfa0bb82',1,'ws::WebServer::WebServer(WSOptions wsOption) noexcept']]],
-  ['wsoptions_205',['WSOptions',['../classws_1_1WSOptions.html#a4ec55459ed122972d75db7646db5b760',1,'ws::WSOptions::WSOptions()=delete'],['../classws_1_1WSOptions.html#aa2da7d8847d2973c6eff78b698de29f8',1,'ws::WSOptions::WSOptions(int argc, char **argv)']]]
+  ['servererrorresponse_222',['ServerErrorResponse',['../classws_1_1ServerErrorResponse.html#a010686ad56159288946a77a9b5d5432e',1,'ws::ServerErrorResponse::ServerErrorResponse()=delete'],['../classws_1_1ServerErrorResponse.html#a55be2a53764b2dbb8050582543274f69',1,'ws::ServerErrorResponse::ServerErrorResponse(RequestInfo request, std::string_view what)']]],
+  ['ssl_223',['SSL',['../classws_1_1SSL.html#ada261171d44c69097cd5904ac324e61e',1,'ws::SSL']]]
 ];

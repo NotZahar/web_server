@@ -66,11 +66,8 @@ $(function() {
 <div class="textblock">Список всех членов классов со ссылками на классы, к которым они принадлежат.</div>
 
 <h3><a id="index__5F"></a>- _ -</h3><ul>
-<li>_httpVersion
-: <a class="el" href="classws_1_1Response.html#acafd0f1d3ff5b4bbf2b6377194aaadc1">ws::Response</a>
-</li>
-<li>_keepAlive
-: <a class="el" href="classws_1_1Response.html#aee1956e36a60473ab9f09ec6bb5a867b">ws::Response</a>
+<li>_request
+: <a class="el" href="classws_1_1Response.html#a706b5ffa7aff7c052b787d6785a98657">ws::Response</a>
 </li>
 </ul>
 
@@ -98,7 +95,14 @@ $(function() {
 : <a class="el" href="structws_1_1paths_1_1pages.html#a25832c78003c426d73a4eb4f7357e8b9">ws::paths::pages</a>
 </li>
 <li>AuthResponse()
-: <a class="el" href="classws_1_1AuthResponse.html#ab80a80f46d69f87c8b53714328d205f8">ws::AuthResponse</a>
+: <a class="el" href="classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734">ws::AuthResponse</a>
+</li>
+</ul>
+
+
+<h3><a id="index_b"></a>- b -</h3><ul>
+<li>BadRequestResponse()
+: <a class="el" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">ws::BadRequestResponse</a>
 </li>
 </ul>
 
@@ -112,7 +116,9 @@ $(function() {
 </li>
 <li>create()
 : <a class="el" href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">ws::AuthResponse</a>
-, <a class="el" href="classws_1_1Response.html#ad701675c5437ac2e99045ca0eb652335">ws::Response</a>
+, <a class="el" href="classws_1_1BadRequestResponse.html#acba5757221d1b116da967d7a36a6a9e4">ws::BadRequestResponse</a>
+, <a class="el" href="classws_1_1NotFoundResponse.html#ac6590b6a0db461f32cc3c4fd6f256e3c">ws::NotFoundResponse</a>
+, <a class="el" href="classws_1_1Response.html#a5605d2dfd9a81a7d6c8fbc6b72ca39f5">ws::Response</a>
 , <a class="el" href="classws_1_1ServerErrorResponse.html#aed05d34306b7ef97d10dae82bf106285">ws::ServerErrorResponse</a>
 </li>
 </ul>
@@ -161,6 +167,9 @@ $(function() {
 <li>getParams()
 : <a class="el" href="structws_1_1url.html#a13f26d3c772fdbeb8e2690e3d841968d">ws::url</a>
 </li>
+<li>getSegments()
+: <a class="el" href="structws_1_1url.html#a973000184f2ccbf08a2c3fd156ae60a3">ws::url</a>
+</li>
 </ul>
 
 
@@ -187,7 +196,7 @@ $(function() {
 : <a class="el" href="structws_1_1messages_1_1options.html#a343848bc5422e53c386d631c845fbd2c">ws::messages::options</a>
 </li>
 <li>httpVersion
-: <a class="el" href="structws_1_1config.html#ab427083a178df8cf6c2a75cfb555b00c">ws::config</a>
+: <a class="el" href="structws_1_1Response_1_1RequestInfo.html#a841dc58b73d6844074c88295ba7587a3">ws::Response::RequestInfo</a>
 </li>
 </ul>
 
@@ -222,7 +231,7 @@ $(function() {
 
 <h3><a id="index_k"></a>- k -</h3><ul>
 <li>keepAlive
-: <a class="el" href="structws_1_1config.html#ace3d3ba04a446fbad683b6a9f14e9813">ws::config</a>
+: <a class="el" href="structws_1_1Response_1_1RequestInfo.html#ac2747949caa7ffe3f02b123bf6777274">ws::Response::RequestInfo</a>
 </li>
 <li>key
 : <a class="el" href="structws_1_1paths_1_1ssl.html#a4ed1749bc7f3c4108b45994bd41a5af1">ws::paths::ssl</a>
@@ -243,6 +252,13 @@ $(function() {
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>makeResponse()
 : <a class="el" href="classws_1_1Router.html#ace621c2acc3c5e8adaaaaddf0680a596">ws::Router</a>
+</li>
+</ul>
+
+
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>NotFoundResponse()
+: <a class="el" href="classws_1_1NotFoundResponse.html#aad7714d00a05219c9b4e3e53a5afaddb">ws::NotFoundResponse</a>
 </li>
 </ul>
 
@@ -273,8 +289,8 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>rawUrl
-: <a class="el" href="structws_1_1url.html#acb936eb09f28f2e51e53e111faa8813b">ws::url</a>
+<li>relativeUrl
+: <a class="el" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">ws::url</a>
 </li>
 <li>resourcesPath
 : <a class="el" href="structws_1_1paths.html#abf6d19f87e52bfa6ab6b751b3913eb4b">ws::paths</a>
@@ -340,8 +356,17 @@ $(function() {
 <li>~AuthResponse()
 : <a class="el" href="classws_1_1AuthResponse.html#ae702e9d8de1aa2166efa3ce7d9961484">ws::AuthResponse</a>
 </li>
+<li>~BadRequestResponse()
+: <a class="el" href="classws_1_1BadRequestResponse.html#a880ea2d2aa67794a140a554a42656e3d">ws::BadRequestResponse</a>
+</li>
+<li>~NotFoundResponse()
+: <a class="el" href="classws_1_1NotFoundResponse.html#a6e456a5e504ef739816dec1956d95e70">ws::NotFoundResponse</a>
+</li>
 <li>~Response()
 : <a class="el" href="classws_1_1Response.html#ac229e8e1d22e0a3ed3ead03418ca529a">ws::Response</a>
+</li>
+<li>~Router()
+: <a class="el" href="classws_1_1Router.html#a3f0f32ec57838934dd53d0128e03012f">ws::Router</a>
 </li>
 <li>~ServerErrorResponse()
 : <a class="el" href="classws_1_1ServerErrorResponse.html#a6006a92e6407200deeb94f00bc8200ce">ws::ServerErrorResponse</a>

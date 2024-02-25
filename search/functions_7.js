@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['response_198',['Response',['../classws_1_1Response.html#aae875a54dba62188f8d80aabeb6e42f3',1,'ws::Response::Response()=delete'],['../classws_1_1Response.html#abc4488523aa46f724d5da75698732aa7',1,'ws::Response::Response(unsigned httpVersion, bool keepAlive)']]],
-  ['router_199',['Router',['../classws_1_1Router.html#a58c0e3e62dd843c99d954fc53ee8c931',1,'ws::Router::Router()=delete'],['../classws_1_1Router.html#a5c8550bacc42fcafabe4ccc14a6db902',1,'ws::Router::Router(http::request&lt; http::string_body &gt; request)']]],
-  ['run_200',['run',['../classws_1_1WebServer.html#a7fe76d2e189a2828830f59e75d66f55f',1,'ws::WebServer']]]
+  ['main_216',['main',['../libs_2WebServer_2tests_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
+  ['makeresponse_217',['makeResponse',['../classws_1_1Router.html#ace621c2acc3c5e8adaaaaddf0680a596',1,'ws::Router']]]
 ];

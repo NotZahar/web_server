@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['webserver_152',['WebServer',['../classws_1_1WebServer.html',1,'ws']]],
-  ['wslogger_153',['WSLogger',['../classws_1_1WSLogger.html',1,'ws']]],
-  ['wsoptions_154',['WSOptions',['../classws_1_1WSOptions.html',1,'ws']]]
+  ['servererrorresponse_163',['ServerErrorResponse',['../classws_1_1ServerErrorResponse.html',1,'ws']]],
+  ['ssl_164',['ssl',['../structws_1_1paths_1_1ssl.html',1,'ws::paths']]],
+  ['ssl_165',['SSL',['../classws_1_1SSL.html',1,'ws']]]
 ];
