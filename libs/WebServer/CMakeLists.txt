@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.22)
 
 project("WebServer" VERSION 0.0.1)
 
@@ -27,6 +27,13 @@ target_sources(${PROJECT_NAME}
         src/ws_logger.cpp
         src/router.cpp
         src/ssl.cpp
+
+        # response
+        src/responses/response.cpp        
+        src/responses/error/bad_request.cpp
+        src/responses/error/not_found.cpp
+        src/responses/error/server_error.cpp
+        src/responses/auth.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -60,7 +67,8 @@ target_link_libraries(${PROJECT_NAME}
         OpenSSL::SSL)
 target_link_libraries(${WS_TESTS_TARGET}
     PRIVATE 
-        ${GTEST_BOTH_LIBRARIES} ${PROJECT_NAME})
+        ${GTEST_BOTH_LIBRARIES} 
+        ${PROJECT_NAME})
 
 if(CMAKE_COMPILER_IS_GNUCXX)
     target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Werror -pedantic)

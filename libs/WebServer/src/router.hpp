@@ -8,6 +8,8 @@ namespace ws {
         Router() = delete;
         Router(http::request<http::string_body> request);
 
+        ~Router() = default;
+
         // Return a response for the given request
         http::message_generator makeResponse();
 
@@ -24,9 +26,9 @@ namespace ws {
             const fs::path& targetPath,
             http::file_body::value_type targetBody) const;
 
-        http::response<http::string_body> badRequestResponse(std::string_view reason) const; // TODO: make
-        http::response<http::string_body> notFoundResponse(std::string_view target) const; // TODO: make
-        http::response<http::string_body> serverErrorResponse(std::string_view what) const; // TODO: make
+        // http::response<http::string_body> badRequestResponse(std::string_view reason) const; // TODO: make
+        // http::response<http::string_body> notFoundResponse(std::string_view target) const; // TODO: make
+        // http::response<http::string_body> serverErrorResponse(std::string_view what) const; // TODO: make
 
         http::request<http::string_body> _request;
     };

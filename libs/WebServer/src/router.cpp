@@ -1,11 +1,13 @@
 #include "router.hpp"
 
 #include "responses/auth.hpp"
+#include "responses/error/bad_request.hpp"
+#include "responses/error/server_error.hpp"
 #include "utility/messages.hpp"
 #include "utility/config.hpp"
 #include "utility/net_helper.hpp"
 #include "utility/url.hpp"
-#include "utility/params.hpp"
+#include "utility/segments.hpp"
 
 namespace ws {
     Router::Router(http::request<http::string_body> request)
@@ -20,15 +22,16 @@ namespace ws {
 
         const auto requestMethod{ _request.method() };
         const url requestURL{ _request.target() };
+        const Response::RequestInfo requestInfo = { _request.version(), _request.keep_alive() };
 
         if (!allowedMethod(requestMethod))
-            return badRequestResponse(messages::errors::INVALID_METHOD);
+            return BadRequestResponse{ requestInfo, messages::errors::INVALID_METHOD }.create();
         if (requestURL.isEmpty())
-            return badRequestResponse(messages::errors::INVALID_REQUEST);
+            return BadRequestResponse{ requestInfo, messages::errors::INVALID_REQUEST }.create();
 
-        const auto requestParams = requestURL.getParams();
-        if (!requestParams.contains(params.left.find(param::auth)->second))
-            return AuthResponse().create();
+        const auto requestSegments = requestURL.getSegments();
+        if (!requestSegments.contains(segments.left.find(segment::auth)->second))
+            return AuthResponse({ _request.version(), _request.keep_alive() }).create();
         
         // fs::path targetPath = makeTargetPath(config::staticRootPath, requestTarget);
         // if (!fs::is_regular_file(targetPath))
@@ -49,7 +52,7 @@ namespace ws {
             // case http::verb::get: 
             //     return getResponse(targetBody.size(), targetPath, std::move(targetBody));    
             default:
-                return serverErrorResponse(messages::errors::INTERNAL_ERROR_GENERAL);
+                return ServerErrorResponse{ requestInfo, messages::errors::INTERNAL_ERROR_GENERAL }.create();
         }
     }
 
@@ -110,66 +113,66 @@ namespace ws {
         return response;
     }
 
-    http::response<http::string_body> Router::badRequestResponse(
-            std::string_view reason) const {
-        using namespace netHelper;
+    // http::response<http::string_body> Router::badRequestResponse(
+    //         std::string_view reason) const {
+    //     using namespace netHelper;
         
-        http::response<http::string_body> response{ 
-            http::status::bad_request, 
-            _request.version() 
-        };
+    //     http::response<http::string_body> response{ 
+    //         http::status::bad_request, 
+    //         _request.version() 
+    //     };
 
-        response.set(http::field::server, config::fieldServer);
-        response.set(
-            http::field::content_type, 
-            appendCharset(MIMEType.left.find(MIME::text_html)->second)
-        );
+    //     response.set(http::field::server, config::fieldServer);
+    //     response.set(
+    //         http::field::content_type, 
+    //         appendCharset(MIMEType.left.find(MIME::text_html)->second)
+    //     );
 
-        response.keep_alive(_request.keep_alive());
-        response.body() = std::string{ reason };
-        response.prepare_payload();
-        return response;
-    }
+    //     response.keep_alive(_request.keep_alive());
+    //     response.body() = std::string{ reason };
+    //     response.prepare_payload();
+    //     return response;
+    // }
 
-    http::response<http::string_body> Router::notFoundResponse(
-        std::string_view target) const {
-        using namespace netHelper;
+    // http::response<http::string_body> Router::notFoundResponse(
+    //     std::string_view target) const {
+    //     using namespace netHelper;
         
-        http::response<http::string_body> response{
-            http::status::not_found, 
-            _request.version()
-        };
+    //     http::response<http::string_body> response{
+    //         http::status::not_found, 
+    //         _request.version()
+    //     };
 
-        response.set(http::field::server, config::fieldServer);
-        response.set(
-            http::field::content_type, 
-            appendCharset(MIMEType.left.find(MIME::text_html)->second)
-        );
+    //     response.set(http::field::server, config::fieldServer);
+    //     response.set(
+    //         http::field::content_type, 
+    //         appendCharset(MIMEType.left.find(MIME::text_html)->second)
+    //     );
 
-        response.keep_alive(_request.keep_alive());
-        response.body() = messages::errors::INVALID_TARGET + std::string{ target };
-        response.prepare_payload();
-        return response;
-    }
+    //     response.keep_alive(_request.keep_alive());
+    //     response.body() = messages::errors::INVALID_TARGET + std::string{ target };
+    //     response.prepare_payload();
+    //     return response;
+    // }
     
-    http::response<http::string_body> Router::serverErrorResponse(
-        std::string_view what) const {
-        using namespace netHelper;
+    // http::response<http::string_body> Router::serverErrorResponse(
+    //     std::string_view what) const {
+    //     using namespace netHelper;
 
-        http::response<http::string_body> response{
-            http::status::internal_server_error, 
-            _request.version()
-        };
+    //     http::response<http::string_body> response{
+    //         http::status::internal_server_error, 
+    //         _request.version()
+    //     };
         
-        response.set(http::field::server, config::fieldServer);
-        response.set(
-            http::field::content_type, 
-            appendCharset(MIMEType.left.find(MIME::text_html)->second)
-        );
+    //     response.set(http::field::server, config::fieldServer);
+    //     response.set(
+    //         http::field::content_type, 
+    //         appendCharset(MIMEType.left.find(MIME::text_html)->second)
+    //     );
         
-        response.keep_alive(_request.keep_alive());
-        response.body() = messages::errors::INTERNAL_ERROR + std::string{ what };
-        response.prepare_payload();
-        return response;
-    }
+    //     response.keep_alive(_request.keep_alive());
+    //     response.body() = messages::errors::INTERNAL_ERROR + std::string{ what };
+    //     response.prepare_payload();
+    //     return response;
+    // }
 }

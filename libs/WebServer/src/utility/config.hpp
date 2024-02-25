@@ -16,13 +16,10 @@ namespace ws {
         inline static unsigned short port = defaultPort;
         inline static int threads = defaultThreads;
 
-        // session
+        // http
         inline static const std::chrono::milliseconds defaultSessionTimeout{ 10'000 };
         inline static std::chrono::milliseconds sessionTimeout = defaultSessionTimeout;
-        inline static unsigned httpVersion = ;
-        inline static bool keepAlive = ;
 
-        // http headers
         inline static const std::string fieldServer = "WebServer (Linux)";
     };
 }

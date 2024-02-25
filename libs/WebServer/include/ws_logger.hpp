@@ -18,6 +18,7 @@ namespace ws {
 
     private:
         WSLogger() = default;
+        
         ~WSLogger() = default;
     };
 }

@@ -1,33 +1,33 @@
-#include "server_error.hpp"
+#include "not_found.hpp"
 
 #include "../../utility/net_helper.hpp"
 #include "../../utility/config.hpp"
 #include "../../utility/messages.hpp"
 
 namespace ws {
-    ServerErrorResponse::ServerErrorResponse(
+    NotFoundResponse::NotFoundResponse(
         RequestInfo request,
-        std::string_view what)
+        std::string_view target)
         : Response(request),
-          _what(what)
+          _target(target)
     {}
 
-    http::message_generator ServerErrorResponse::create() const {
+    http::message_generator NotFoundResponse::create() const {
         using namespace netHelper;
-
+        
         http::response<http::string_body> response{
-            http::status::internal_server_error, 
+            http::status::not_found, 
             _request.httpVersion
         };
-        
+
         response.set(http::field::server, config::fieldServer);
         response.set(
             http::field::content_type, 
             inUTF8(MIMEType.left.find(MIME::text_html)->second)
         );
-        
+
         response.keep_alive(_request.keepAlive);
-        response.body() = messages::errors::INTERNAL_ERROR + _what;
+        response.body() = messages::errors::INVALID_TARGET + _target;
         response.prepare_payload();
         
         return response;

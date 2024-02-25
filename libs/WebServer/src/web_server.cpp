@@ -25,7 +25,7 @@ namespace ws {
         if (std::error_code code; !fs::is_directory(paths::resourcesPath, code))
             throw code;
         if (std::error_code code; !fs::is_directory(paths::publicPath, code))
-            throw std::runtime_error{ messages::server::INVALID_PATH };
+            throw std::runtime_error{ messages::errors::INVALID_PATH };
 
         asio::io_context ioContext{ config::threads };
         ssl::context sslContext{ ssl::context::tlsv12_server };

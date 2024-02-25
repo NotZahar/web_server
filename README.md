@@ -11,4 +11,4 @@
 
 
 ##### Docs:
-https://notzahar.github.io/https_server/
+https://notzahar.github.io/web_server/

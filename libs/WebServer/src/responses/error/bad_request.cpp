@@ -1,35 +1,34 @@
-#include "server_error.hpp"
+#include "bad_request.hpp"
 
 #include "../../utility/net_helper.hpp"
 #include "../../utility/config.hpp"
-#include "../../utility/messages.hpp"
 
 namespace ws {
-    ServerErrorResponse::ServerErrorResponse(
+    BadRequestResponse::BadRequestResponse(
         RequestInfo request,
-        std::string_view what)
+        std::string_view reason)
         : Response(request),
-          _what(what)
+          _reason(reason)
     {}
 
-    http::message_generator ServerErrorResponse::create() const {
+    http::message_generator BadRequestResponse::create() const {
         using namespace netHelper;
-
-        http::response<http::string_body> response{
-            http::status::internal_server_error, 
-            _request.httpVersion
-        };
         
+        http::response<http::string_body> response{ 
+            http::status::bad_request, 
+            _request.httpVersion 
+        };
+
         response.set(http::field::server, config::fieldServer);
         response.set(
             http::field::content_type, 
             inUTF8(MIMEType.left.find(MIME::text_html)->second)
         );
-        
+
         response.keep_alive(_request.keepAlive);
-        response.body() = messages::errors::INTERNAL_ERROR + _what;
+        response.body() = _reason;
         response.prepare_payload();
-        
+
         return response;
     }
 }

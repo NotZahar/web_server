@@ -5,14 +5,25 @@
         <title>Аутентификация</title>
     </head>
     <body>
-        <main>
-            <h5>Email:</h5>
-            <input id="email" type="text">
-            <h5>Пароль:</h5>
-            <input id="pass" type="password">
-            <button id="auth-btn">Войти</button>
-        </main>
+        <h5>Email:</h5>
+        <input id="email" type="text">
+        <h5>Пароль:</h5>
+        <input id="pass" type="password">
+        <button type="button" onclick="authClicked()">Войти</button>
 
-        <script src="scripts/auth.js"></script>
+        <script>    
+            const authClicked = () => {
+                fetch('/pass', {
+                    method: 'POST',
+                    body: {
+                        email: document.getElementById('email').value,
+                        password: document.getElementById('pass').value
+                    },
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
+            }
+        </script>
     </body>
 </html>
