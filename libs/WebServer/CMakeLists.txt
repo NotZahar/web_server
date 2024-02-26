@@ -34,6 +34,10 @@ target_sources(${PROJECT_NAME}
         src/responses/error/not_found.cpp
         src/responses/error/server_error.cpp
         src/responses/auth.cpp
+        src/responses/file.cpp
+
+        # services
+        src/services/auth_service.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

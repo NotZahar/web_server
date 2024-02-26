@@ -6,11 +6,13 @@
 #include <boost/assign.hpp>
 
 namespace ws {
-    enum class segment {
+    enum class urlKeySegment {
+        file,
         auth
     };
 
-    inline static const boost::bimap<segment, std::string> segments = 
-        boost::assign::list_of<boost::bimap<segment, std::string>::relation>
-        ( segment::auth, "auth" );
+    inline static const boost::bimap<urlKeySegment, std::string> urlSegments = 
+        boost::assign::list_of<boost::bimap<urlKeySegment, std::string>::relation>
+        ( urlKeySegment::file, "file" )
+        ( urlKeySegment::auth, "auth" );
 }

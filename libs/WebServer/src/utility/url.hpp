@@ -1,16 +1,16 @@
 #pragma once
 
-#include <set>
+#include <list>
 
 #include "types.hpp"
 
 namespace ws {
     struct url {
-        std::multiset<std::string> getSegments() const {
+        std::list<std::string> getSegments() const {
             auto urlView = urls::url_view{ relativeUrl };
-            std::multiset<std::string> segments;
+            std::list<std::string> segments;
             for (auto segment : urlView.segments())
-                segments.insert(segment);
+                segments.emplace_back(segment);
             return segments;
         }
 

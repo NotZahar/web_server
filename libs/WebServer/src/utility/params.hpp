@@ -6,13 +6,15 @@
 #include <boost/assign.hpp>
 
 namespace ws {
-    enum class param {
+    enum class urlParam {
         email,
-        password
+        password,
+        path
     };
 
-    inline static const boost::bimap<param, std::string> params = 
-        boost::assign::list_of<boost::bimap<param, std::string>::relation>
-        ( param::email, "email" )
-        ( param::password, "password" );
+    inline static const boost::bimap<urlParam, std::string> urlParams = 
+        boost::assign::list_of<boost::bimap<urlParam, std::string>::relation>
+        ( urlParam::email, "email" )
+        ( urlParam::password, "pass" )
+        ( urlParam::path, "path" );
 }

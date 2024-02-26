@@ -6,8 +6,8 @@ namespace ws {
     class Response {
     public:
         struct RequestInfo {
-            const unsigned httpVersion;
-            const bool keepAlive;
+            unsigned httpVersion;
+            bool keepAlive;
         };
 
         Response() = delete;

@@ -49,6 +49,7 @@ namespace ws {
             inline static const std::string INVALID_REQUEST = "Недопустимый запрос";
             inline static const std::string INVALID_PATH = "Недопустимый путь";
             inline static const std::string INVALID_TARGET = "Ресурс не был найден: ";
+            inline static const std::string INVALID_AUTH = "Ошибка аутентификации";
             inline static const std::string INTERNAL_ERROR_GENERAL = "Возникла ошибка";
             inline static const std::string INTERNAL_ERROR = "Возникла ошибка: ";
         };

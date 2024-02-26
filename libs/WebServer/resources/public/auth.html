@@ -11,17 +11,13 @@
         <input id="pass" type="password">
         <button type="button" onclick="authClicked()">Войти</button>
 
-        <script>    
+        <script>
+            let email = document.getElementById('email')
+            let pass = document.getElementById('pass')
+
             const authClicked = () => {
-                fetch('/pass', {
-                    method: 'POST',
-                    body: {
-                        email: document.getElementById('email').value,
-                        password: document.getElementById('pass').value
-                    },
-                    headers: {
-                        "Content-type": "application/json; charset=UTF-8"
-                    }
+                fetch(`/pass?email=${email.value}&pass=${pass.value}`, {
+                    method: 'POST'
                 })
             }
         </script>
