@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['getcontent_207',['getContent',['../structws_1_1files.html#aa3ef90895b777e5628df466087832daa',1,'ws::files']]],
-  ['getoptions_208',['getOptions',['../classws_1_1WSOptions.html#ac3646aee3a7b72238e4164c0d2b7ab52',1,'ws::WSOptions']]],
-  ['getparams_209',['getParams',['../structws_1_1url.html#a13f26d3c772fdbeb8e2690e3d841968d',1,'ws::url']]],
-  ['getsegments_210',['getSegments',['../structws_1_1url.html#a973000184f2ccbf08a2c3fd156ae60a3',1,'ws::url']]]
+  ['fileresponse_232',['FileResponse',['../classws_1_1FileResponse.html#aa8049a6cf3959d6d7bc3df7e668ed5ac',1,'ws::FileResponse::FileResponse()=delete'],['../classws_1_1FileResponse.html#ae2d2a6744247490e90750e054284e3d5',1,'ws::FileResponse::FileResponse(RequestInfo request, fs::path path)']]]
 ];

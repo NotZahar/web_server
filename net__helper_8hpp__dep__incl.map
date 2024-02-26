@@ -1,8 +1,9 @@
 <map id="libs/WebServer/src/utility/net_helper.hpp" name="libs/WebServer/src/utility/net_helper.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="354,5,518,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="447,5,611,47"/>
 <area shape="rect" id="node2" href="$auth_8cpp.html" title=" " alt="" coords="5,102,157,143"/>
 <area shape="rect" id="node3" href="$bad__request_8cpp.html" title=" " alt="" coords="181,95,336,151"/>
 <area shape="rect" id="node4" href="$not__found_8cpp.html" title=" " alt="" coords="360,95,512,151"/>
 <area shape="rect" id="node5" href="$server__error_8cpp.html" title=" " alt="" coords="537,95,709,151"/>
-<area shape="rect" id="node6" href="$router_8cpp.html" title=" " alt="" coords="733,102,875,143"/>
+<area shape="rect" id="node6" href="$file_8cpp.html" title=" " alt="" coords="733,102,875,143"/>
+<area shape="rect" id="node7" href="$router_8cpp.html" title=" " alt="" coords="899,102,1042,143"/>
 </map>

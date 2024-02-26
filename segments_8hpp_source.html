@@ -79,17 +79,20 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;boost/assign.hpp&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespacews.html#a3152da3a9d97483cb61e256ff016821b">    9</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacews.html#a3152da3a9d97483cb61e256ff016821b">segment</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="namespacews.html#a3152da3a9d97483cb61e256ff016821bafa53b91ccc1b78668d5af58e1ed3a485">auth</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    };</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> boost::bimap&lt;segment, std::string&gt; segments = </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        boost::assign::list_of&lt;boost::bimap&lt;segment, std::string&gt;::relation&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ( <a class="code" href="namespacews.html#a3152da3a9d97483cb61e256ff016821bafa53b91ccc1b78668d5af58e1ed3a485">segment::auth</a>, <span class="stringliteral">&quot;auth&quot;</span> );</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945">    9</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945">urlKeySegment</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945a8c7dd922ad47494fc02c388e12c00eac">file</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945afa53b91ccc1b78668d5af58e1ed3a485">auth</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> boost::bimap&lt;urlKeySegment, std::string&gt; urlSegments = </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        boost::assign::list_of&lt;boost::bimap&lt;urlKeySegment, std::string&gt;::relation&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        ( <a class="code" href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945a8c7dd922ad47494fc02c388e12c00eac">urlKeySegment::file</a>, <span class="stringliteral">&quot;file&quot;</span> )</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ( <a class="code" href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945afa53b91ccc1b78668d5af58e1ed3a485">urlKeySegment::auth</a>, <span class="stringliteral">&quot;auth&quot;</span> );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
-<div class="ttc" id="anamespacews_html_a3152da3a9d97483cb61e256ff016821b"><div class="ttname"><a href="namespacews.html#a3152da3a9d97483cb61e256ff016821b">ws::segment</a></div><div class="ttdeci">segment</div><div class="ttdef"><b>Definition:</b> segments.hpp:9</div></div>
-<div class="ttc" id="anamespacews_html_a3152da3a9d97483cb61e256ff016821bafa53b91ccc1b78668d5af58e1ed3a485"><div class="ttname"><a href="namespacews.html#a3152da3a9d97483cb61e256ff016821bafa53b91ccc1b78668d5af58e1ed3a485">ws::segment::auth</a></div><div class="ttdeci">@ auth</div></div>
+<div class="ttc" id="anamespacews_html_ab9bea40e4e050ebdc3018499c6f08945"><div class="ttname"><a href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945">ws::urlKeySegment</a></div><div class="ttdeci">urlKeySegment</div><div class="ttdef"><b>Definition:</b> segments.hpp:9</div></div>
+<div class="ttc" id="anamespacews_html_ab9bea40e4e050ebdc3018499c6f08945a8c7dd922ad47494fc02c388e12c00eac"><div class="ttname"><a href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945a8c7dd922ad47494fc02c388e12c00eac">ws::urlKeySegment::file</a></div><div class="ttdeci">@ file</div></div>
+<div class="ttc" id="anamespacews_html_ab9bea40e4e050ebdc3018499c6f08945afa53b91ccc1b78668d5af58e1ed3a485"><div class="ttname"><a href="namespacews.html#ab9bea40e4e050ebdc3018499c6f08945afa53b91ccc1b78668d5af58e1ed3a485">ws::urlKeySegment::auth</a></div><div class="ttdeci">@ auth</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

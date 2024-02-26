@@ -79,20 +79,23 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;boost/assign.hpp&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60">    9</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60">param</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60a0c83f57c786a0b4a39efab23731c7ebc">email</a>,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60a5f4dcc3b5aa765d61d8327deb882cf99">password</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> boost::bimap&lt;param, std::string&gt; params = </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        boost::assign::list_of&lt;boost::bimap&lt;param, std::string&gt;::relation&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        ( <a class="code" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60a0c83f57c786a0b4a39efab23731c7ebc">param::email</a>, <span class="stringliteral">&quot;email&quot;</span> )</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ( <a class="code" href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60a5f4dcc3b5aa765d61d8327deb882cf99">param::password</a>, <span class="stringliteral">&quot;password&quot;</span> );</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300">    9</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300">urlParam</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a0c83f57c786a0b4a39efab23731c7ebc">email</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a5f4dcc3b5aa765d61d8327deb882cf99">password</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300ad6fe1d0be6347b8ef2427fa629c04485">path</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> boost::bimap&lt;urlParam, std::string&gt; urlParams = </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        boost::assign::list_of&lt;boost::bimap&lt;urlParam, std::string&gt;::relation&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ( <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a0c83f57c786a0b4a39efab23731c7ebc">urlParam::email</a>, <span class="stringliteral">&quot;email&quot;</span> )</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        ( <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a5f4dcc3b5aa765d61d8327deb882cf99">urlParam::password</a>, <span class="stringliteral">&quot;pass&quot;</span> )</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        ( <a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300ad6fe1d0be6347b8ef2427fa629c04485">urlParam::path</a>, <span class="stringliteral">&quot;path&quot;</span> );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
-<div class="ttc" id="anamespacews_html_affdfbd26275d2d7c4ab6de2ce90d9b60"><div class="ttname"><a href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60">ws::param</a></div><div class="ttdeci">param</div><div class="ttdef"><b>Definition:</b> params.hpp:9</div></div>
-<div class="ttc" id="anamespacews_html_affdfbd26275d2d7c4ab6de2ce90d9b60a0c83f57c786a0b4a39efab23731c7ebc"><div class="ttname"><a href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60a0c83f57c786a0b4a39efab23731c7ebc">ws::param::email</a></div><div class="ttdeci">@ email</div></div>
-<div class="ttc" id="anamespacews_html_affdfbd26275d2d7c4ab6de2ce90d9b60a5f4dcc3b5aa765d61d8327deb882cf99"><div class="ttname"><a href="namespacews.html#affdfbd26275d2d7c4ab6de2ce90d9b60a5f4dcc3b5aa765d61d8327deb882cf99">ws::param::password</a></div><div class="ttdeci">@ password</div></div>
+<div class="ttc" id="anamespacews_html_aa28455db01ac5837d4cbc323d7e5d300"><div class="ttname"><a href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300">ws::urlParam</a></div><div class="ttdeci">urlParam</div><div class="ttdef"><b>Definition:</b> params.hpp:9</div></div>
+<div class="ttc" id="anamespacews_html_aa28455db01ac5837d4cbc323d7e5d300a0c83f57c786a0b4a39efab23731c7ebc"><div class="ttname"><a href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a0c83f57c786a0b4a39efab23731c7ebc">ws::urlParam::email</a></div><div class="ttdeci">@ email</div></div>
+<div class="ttc" id="anamespacews_html_aa28455db01ac5837d4cbc323d7e5d300a5f4dcc3b5aa765d61d8327deb882cf99"><div class="ttname"><a href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a5f4dcc3b5aa765d61d8327deb882cf99">ws::urlParam::password</a></div><div class="ttdeci">@ password</div></div>
+<div class="ttc" id="anamespacews_html_aa28455db01ac5837d4cbc323d7e5d300ad6fe1d0be6347b8ef2427fa629c04485"><div class="ttname"><a href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300ad6fe1d0be6347b8ef2427fa629c04485">ws::urlParam::path</a></div><div class="ttdeci">@ path</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

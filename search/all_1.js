@@ -8,8 +8,13 @@ var searchData=
   ['application_5fjavascript_6',['application_javascript',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba2f556edd0f900c109be5b8b08041ad86',1,'ws::netHelper']]],
   ['application_5fjson_7',['application_json',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba8bad3ad011d8d51bf9559945ee1ee61c',1,'ws::netHelper']]],
   ['application_5fxml_8',['application_xml',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebad7ca99d2c1c2ba5bb6e0af419e9b260d',1,'ws::netHelper']]],
-  ['auth_9',['auth',['../structws_1_1paths_1_1pages.html#a25832c78003c426d73a4eb4f7357e8b9',1,'ws::paths::pages::auth()'],['../namespacews.html#a3152da3a9d97483cb61e256ff016821bafa53b91ccc1b78668d5af58e1ed3a485',1,'ws::auth()']]],
+  ['auth_9',['auth',['../namespacews.html#ab9bea40e4e050ebdc3018499c6f08945afa53b91ccc1b78668d5af58e1ed3a485',1,'ws::auth()'],['../structws_1_1paths_1_1pages.html#a25832c78003c426d73a4eb4f7357e8b9',1,'ws::paths::pages::auth()']]],
   ['auth_2ecpp_10',['auth.cpp',['../auth_8cpp.html',1,'']]],
   ['auth_2ehpp_11',['auth.hpp',['../auth_8hpp.html',1,'']]],
-  ['authresponse_12',['AuthResponse',['../classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734',1,'ws::AuthResponse::AuthResponse()=delete'],['../classws_1_1AuthResponse.html#a938e953909c57d5708c230ee774362b4',1,'ws::AuthResponse::AuthResponse(RequestInfo request)'],['../classws_1_1AuthResponse.html',1,'ws::AuthResponse']]]
+  ['auth_5fservice_2ecpp_12',['auth_service.cpp',['../auth__service_8cpp.html',1,'']]],
+  ['auth_5fservice_2ehpp_13',['auth_service.hpp',['../auth__service_8hpp.html',1,'']]],
+  ['authdataexists_14',['authDataExists',['../classws_1_1AuthService.html#a5d82315f03405c1465925a4d0f9bdeb9',1,'ws::AuthService']]],
+  ['authenticate_15',['authenticate',['../classws_1_1AuthService.html#ab767972014e9f87b0b9de643514cdaed',1,'ws::AuthService']]],
+  ['authresponse_16',['AuthResponse',['../classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734',1,'ws::AuthResponse::AuthResponse()=delete'],['../classws_1_1AuthResponse.html#a938e953909c57d5708c230ee774362b4',1,'ws::AuthResponse::AuthResponse(RequestInfo request)'],['../classws_1_1AuthResponse.html',1,'ws::AuthResponse']]],
+  ['authservice_17',['AuthService',['../classws_1_1AuthService.html#a03858b85f92eb54c4096158d6c61245d',1,'ws::AuthService::AuthService()'],['../classws_1_1AuthService.html',1,'ws::AuthService']]]
 ];
