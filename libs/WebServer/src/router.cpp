@@ -31,10 +31,10 @@ namespace ws {
             }.create();
 
         const auto requestSegments = requestURL.getSegments();
-        if (urlSegments.right.count(requestSegments.front()) == 0)
+        if (requestSegments.empty() || routeSegments.right.count(requestSegments.front()) == 0)
             return BadRequestResponse{ _requestInfo }.create();
 
-        const routeSegment route = urlSegments.right.find(requestSegments.front())->second;
+        const routeSegment route = routeSegments.right.find(requestSegments.front())->second;
         switch (route) {
             case routeSegment::file: {
                 const auto& pathParam = urlParams.left.find(urlParam::path)->second;
