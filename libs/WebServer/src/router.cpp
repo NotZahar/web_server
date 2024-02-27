@@ -1,5 +1,6 @@
 #include "router.hpp"
 
+#include "responses/get.hpp"
 #include "responses/auth.hpp"
 #include "responses/file.hpp"
 #include "responses/error/bad_request.hpp"
@@ -8,6 +9,7 @@
 #include "utility/net_helper.hpp"
 #include "utility/url.hpp"
 #include "utility/params.hpp"
+#include "utility/segments.hpp"
 
 namespace ws {
     Router::Router(http::request<http::string_body> request)
@@ -23,33 +25,31 @@ namespace ws {
         if (!AuthService::authDataExists(_requestParams))
             return AuthResponse{ _requestInfo }.create();
         if (!AuthService::authenticate(_requestParams))
-            return BadRequestResponse{ _requestInfo, messages::errors::INVALID_AUTH }.create();
+            return BadRequestResponse{ 
+                _requestInfo, 
+                messages::errors::INVALID_AUTH 
+            }.create();
 
         const auto requestSegments = requestURL.getSegments();
         if (urlSegments.right.count(requestSegments.front()) == 0)
-            return BadRequestResponse{ _requestInfo, messages::errors::INVALID_REQUEST }.create();
+            return BadRequestResponse{ _requestInfo }.create();
 
-        const urlKeySegment keySegment = urlSegments.right.find(requestSegments.front())->second;
-        switch (requestMethod) {
-            case http::verb::get:
-                return get(keySegment);
-            case http::verb::post:
-                [[fallthrough]];
-            default:
-                return BadRequestResponse{ _requestInfo, messages::errors::INVALID_METHOD }.create();
-        }
-    }
-
-    http::message_generator Router::get(const urlKeySegment keySegment) const {
-        switch (keySegment) {
-            case urlKeySegment::file: {
+        const routeSegment route = urlSegments.right.find(requestSegments.front())->second;
+        switch (route) {
+            case routeSegment::file: {
                 const auto& pathParam = urlParams.left.find(urlParam::path)->second;
                 if (!_requestParams.contains(pathParam))
-                    return BadRequestResponse{ _requestInfo, messages::errors::INVALID_REQUEST }.create();
-                return FileResponse{ _requestInfo, _requestParams.at(pathParam) }.create();
+                    return BadRequestResponse{ _requestInfo }.create();
+                
+                return GetResponse{ 
+                    requestMethod, 
+                    std::make_unique<FileResponse>(
+                        _requestInfo, 
+                        _requestParams.at(pathParam)) 
+                    }.response();
             }
             default: 
-                return BadRequestResponse{ _requestInfo, messages::errors::INVALID_REQUEST }.create();
+                return BadRequestResponse{ _requestInfo }.create();
         }
     }
 }

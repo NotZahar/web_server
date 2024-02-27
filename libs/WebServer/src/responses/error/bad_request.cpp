@@ -6,7 +6,7 @@
 namespace ws {
     BadRequestResponse::BadRequestResponse(
         RequestInfo request,
-        std::string_view reason)
+        std::string_view reason) noexcept
         : Response(request),
           _reason(reason)
     {}

@@ -1,12 +1,15 @@
 #pragma once
 
 #include "../response.hpp"
+#include "utility/messages.hpp"
 
 namespace ws {
     class BadRequestResponse final : public Response {
     public:
         BadRequestResponse() = delete;
-        BadRequestResponse(RequestInfo request, std::string_view reason);
+        BadRequestResponse(
+            RequestInfo request, 
+            std::string_view reason = messages::errors::INVALID_REQUEST) noexcept;
         
         ~BadRequestResponse() override = default;
 

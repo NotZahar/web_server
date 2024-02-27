@@ -6,7 +6,7 @@ namespace ws {
     class ServerErrorResponse final : public Response {
     public:
         ServerErrorResponse() = delete;
-        ServerErrorResponse(RequestInfo request, std::string_view what);
+        ServerErrorResponse(RequestInfo request, std::string_view what) noexcept;
         
         ~ServerErrorResponse() override = default;
 

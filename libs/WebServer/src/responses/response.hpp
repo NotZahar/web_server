@@ -11,12 +11,13 @@ namespace ws {
         };
 
         Response() = delete;
-        explicit Response(RequestInfo request);
+        explicit Response(RequestInfo request) noexcept;
 
         virtual ~Response() = default;
 
         virtual http::message_generator create() const = 0;
-    
+        RequestInfo getRequestInfo() const noexcept;
+
     protected:
         RequestInfo _request;
     };

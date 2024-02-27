@@ -6,7 +6,7 @@ namespace ws {
     class NotFoundResponse final : public Response {
     public:
         NotFoundResponse() = delete;
-        NotFoundResponse(RequestInfo request, std::string_view target);
+        NotFoundResponse(RequestInfo request, std::string_view target) noexcept;
         
         ~NotFoundResponse() override = default;
 

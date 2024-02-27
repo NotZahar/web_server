@@ -7,7 +7,7 @@
 namespace ws {
     ServerErrorResponse::ServerErrorResponse(
         RequestInfo request,
-        std::string_view what)
+        std::string_view what) noexcept
         : Response(request),
           _what(what)
     {}

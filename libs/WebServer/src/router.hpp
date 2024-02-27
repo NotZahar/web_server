@@ -3,7 +3,6 @@
 #include <unordered_map>
 
 #include "responses/response.hpp"
-#include "utility/segments.hpp"
 
 namespace ws {
     class Router {
@@ -17,8 +16,6 @@ namespace ws {
         http::message_generator makeResponse();
 
     private:
-        http::message_generator get(const urlKeySegment keySegment) const;
-
         http::request<http::string_body> _request;
         Response::RequestInfo _requestInfo;
         std::unordered_map<std::string, std::string> _requestParams;

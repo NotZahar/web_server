@@ -29,7 +29,9 @@ target_sources(${PROJECT_NAME}
         src/ssl.cpp
 
         # response
-        src/responses/response.cpp        
+        src/responses/response.cpp
+        src/responses/response_handler.cpp
+        src/responses/get.cpp
         src/responses/error/bad_request.cpp
         src/responses/error/not_found.cpp
         src/responses/error/server_error.cpp

@@ -7,7 +7,7 @@
 namespace ws {
     NotFoundResponse::NotFoundResponse(
         RequestInfo request,
-        std::string_view target)
+        std::string_view target) noexcept
         : Response(request),
           _target(target)
     {}
