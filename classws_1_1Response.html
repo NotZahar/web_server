@@ -110,12 +110,14 @@ $(function() {
 Открытые члены</h2></td></tr>
 <tr class="memitem:aae875a54dba62188f8d80aabeb6e42f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html#aae875a54dba62188f8d80aabeb6e42f3">Response</a> ()=delete</td></tr>
 <tr class="separator:aae875a54dba62188f8d80aabeb6e42f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5f7b70ee0ae352999ee12d76180404f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html#ac5f7b70ee0ae352999ee12d76180404f">Response</a> (<a class="el" href="structws_1_1Response_1_1RequestInfo.html">RequestInfo</a> request)</td></tr>
-<tr class="separator:ac5f7b70ee0ae352999ee12d76180404f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88569595e4bd464d9b2ae615e9d056cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html#a88569595e4bd464d9b2ae615e9d056cf">Response</a> (<a class="el" href="structws_1_1Response_1_1RequestInfo.html">RequestInfo</a> request) noexcept</td></tr>
+<tr class="separator:a88569595e4bd464d9b2ae615e9d056cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac229e8e1d22e0a3ed3ead03418ca529a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html#ac229e8e1d22e0a3ed3ead03418ca529a">~Response</a> ()=default</td></tr>
 <tr class="separator:ac229e8e1d22e0a3ed3ead03418ca529a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5605d2dfd9a81a7d6c8fbc6b72ca39f5"><td class="memItemLeft" align="right" valign="top">virtual http::message_generator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html#a5605d2dfd9a81a7d6c8fbc6b72ca39f5">create</a> () const =0</td></tr>
 <tr class="separator:a5605d2dfd9a81a7d6c8fbc6b72ca39f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048edd6417ad9649437e24ea09289ac1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structws_1_1Response_1_1RequestInfo.html">RequestInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Response.html#a048edd6417ad9649437e24ea09289ac1">getRequestInfo</a> () const noexcept</td></tr>
+<tr class="separator:a048edd6417ad9649437e24ea09289ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Защищенные данные</h2></td></tr>
@@ -148,8 +150,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ac5f7b70ee0ae352999ee12d76180404f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5f7b70ee0ae352999ee12d76180404f">&#9670;&nbsp;</a></span>Response() <span class="overload">[2/2]</span></h2>
+<a id="a88569595e4bd464d9b2ae615e9d056cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88569595e4bd464d9b2ae615e9d056cf">&#9670;&nbsp;</a></span>Response() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +169,7 @@ $(function() {
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -224,6 +226,31 @@ $(function() {
 </div><div class="memdoc">
 
 <p>Замещается в <a class="el" href="classws_1_1FileResponse.html#a2b7353249be97a24a3bc11a2b78abb80">ws::FileResponse</a>, <a class="el" href="classws_1_1ServerErrorResponse.html#aed05d34306b7ef97d10dae82bf106285">ws::ServerErrorResponse</a>, <a class="el" href="classws_1_1NotFoundResponse.html#ac6590b6a0db461f32cc3c4fd6f256e3c">ws::NotFoundResponse</a>, <a class="el" href="classws_1_1BadRequestResponse.html#acba5757221d1b116da967d7a36a6a9e4">ws::BadRequestResponse</a> и <a class="el" href="classws_1_1AuthResponse.html#a2c18b844875f9de2eb378300283c30e4">ws::AuthResponse</a>.</p>
+
+</div>
+</div>
+<a id="a048edd6417ad9649437e24ea09289ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048edd6417ad9649437e24ea09289ac1">&#9670;&nbsp;</a></span>getRequestInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structws_1_1Response_1_1RequestInfo.html">Response::RequestInfo</a> ws::Response::getRequestInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

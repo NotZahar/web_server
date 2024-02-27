@@ -3,11 +3,11 @@ var indexSectionsWithContent =
   0: "_abcdefghiklmnoprstuvw~В",
   1: "abcefgmnoprsuw",
   2: "w",
-  3: "abcfmnprstuw",
+  3: "abcfgmnprstuw",
   4: "abcefgilmnrstw~",
   5: "_acdfhikprst",
   6: "ot",
-  7: "mu",
+  7: "mru",
   8: "aefiptv",
   9: "w",
   10: "В"

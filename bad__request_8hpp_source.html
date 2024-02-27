@@ -74,28 +74,33 @@ $(function() {
 <a href="bad__request_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../response.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classws_1_1BadRequestResponse.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1BadRequestResponse.html">BadRequestResponse</a> final : <span class="keyword">public</span> <a class="code" href="classws_1_1Response.html">Response</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">    8</a></span>&#160;        <a class="code" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">BadRequestResponse</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">BadRequestResponse</a>(<a class="code" href="structws_1_1Response_1_1RequestInfo.html">RequestInfo</a> request, std::string_view reason);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classws_1_1BadRequestResponse.html#a880ea2d2aa67794a140a554a42656e3d">   11</a></span>&#160;        <a class="code" href="classws_1_1BadRequestResponse.html#a880ea2d2aa67794a140a554a42656e3d">~BadRequestResponse</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        http::message_generator <a class="code" href="classws_1_1BadRequestResponse.html#acba5757221d1b116da967d7a36a6a9e4">create</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::string _reason;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="aclassws_1_1BadRequestResponse_html"><div class="ttname"><a href="classws_1_1BadRequestResponse.html">ws::BadRequestResponse</a></div><div class="ttdef"><b>Definition:</b> bad_request.hpp:6</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="messages_8hpp.html">utility/messages.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classws_1_1BadRequestResponse.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1BadRequestResponse.html">BadRequestResponse</a> final : <span class="keyword">public</span> <a class="code" href="classws_1_1Response.html">Response</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">    9</a></span>&#160;        <a class="code" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">BadRequestResponse</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">BadRequestResponse</a>(</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="structws_1_1Response_1_1RequestInfo.html">RequestInfo</a> request, </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            std::string_view reason = <a class="code" href="structws_1_1messages_1_1errors.html#af41762cc4ef471b824547fb0d8b32541">messages::errors::INVALID_REQUEST</a>) noexcept;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classws_1_1BadRequestResponse.html#a880ea2d2aa67794a140a554a42656e3d">   14</a></span>&#160;        <a class="code" href="classws_1_1BadRequestResponse.html#a880ea2d2aa67794a140a554a42656e3d">~BadRequestResponse</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        http::message_generator <a class="code" href="classws_1_1BadRequestResponse.html#acba5757221d1b116da967d7a36a6a9e4">create</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::string _reason;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="ttc" id="aclassws_1_1BadRequestResponse_html"><div class="ttname"><a href="classws_1_1BadRequestResponse.html">ws::BadRequestResponse</a></div><div class="ttdef"><b>Definition:</b> bad_request.hpp:7</div></div>
 <div class="ttc" id="aclassws_1_1BadRequestResponse_html_a59e3a3a47f044f48f0b31b7eeed12ada"><div class="ttname"><a href="classws_1_1BadRequestResponse.html#a59e3a3a47f044f48f0b31b7eeed12ada">ws::BadRequestResponse::BadRequestResponse</a></div><div class="ttdeci">BadRequestResponse()=delete</div></div>
 <div class="ttc" id="aclassws_1_1BadRequestResponse_html_a880ea2d2aa67794a140a554a42656e3d"><div class="ttname"><a href="classws_1_1BadRequestResponse.html#a880ea2d2aa67794a140a554a42656e3d">ws::BadRequestResponse::~BadRequestResponse</a></div><div class="ttdeci">~BadRequestResponse() override=default</div></div>
 <div class="ttc" id="aclassws_1_1BadRequestResponse_html_acba5757221d1b116da967d7a36a6a9e4"><div class="ttname"><a href="classws_1_1BadRequestResponse.html#acba5757221d1b116da967d7a36a6a9e4">ws::BadRequestResponse::create</a></div><div class="ttdeci">http::message_generator create() const override</div><div class="ttdef"><b>Definition:</b> bad_request.cpp:14</div></div>
 <div class="ttc" id="aclassws_1_1Response_html"><div class="ttname"><a href="classws_1_1Response.html">ws::Response</a></div><div class="ttdef"><b>Definition:</b> response.hpp:6</div></div>
+<div class="ttc" id="amessages_8hpp_html"><div class="ttname"><a href="messages_8hpp.html">messages.hpp</a></div></div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
 <div class="ttc" id="astructws_1_1Response_1_1RequestInfo_html"><div class="ttname"><a href="structws_1_1Response_1_1RequestInfo.html">ws::Response::RequestInfo</a></div><div class="ttdef"><b>Definition:</b> response.hpp:8</div></div>
+<div class="ttc" id="astructws_1_1messages_1_1errors_html_af41762cc4ef471b824547fb0d8b32541"><div class="ttname"><a href="structws_1_1messages_1_1errors.html#af41762cc4ef471b824547fb0d8b32541">ws::messages::errors::INVALID_REQUEST</a></div><div class="ttdeci">static const std::string INVALID_REQUEST</div><div class="ttdef"><b>Definition:</b> messages.hpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
