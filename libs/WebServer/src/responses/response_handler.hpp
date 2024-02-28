@@ -8,15 +8,16 @@ namespace ws {
     class ResponseHandler {
     public:
         ResponseHandler() = delete;
-        explicit ResponseHandler(
+        ResponseHandler(
             const http::verb requestMethod, std::unique_ptr<Response> response) noexcept;
 
         virtual ~ResponseHandler() = default;
 
         http::message_generator response() const;
+        Response::RequestInfo getRequestInfo() const noexcept;
 
     protected:
-        virtual bool isValid() const noexcept = 0;
+        virtual bool methodIsValid() const noexcept = 0;
 
         const http::verb _requestMethod;
         std::unique_ptr<Response> _response;

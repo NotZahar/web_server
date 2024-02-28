@@ -24,6 +24,11 @@ namespace ws {
             inline static const std::string THREADS_S = "t";
             inline static const std::string THREADS = std::format("{},{}", THREADS_F, THREADS_S);
             inline static const std::string THREADS_DESCR = "кол-во потоков";
+
+            inline static const std::string AUTH_SECRET_F = "secret";
+            inline static const std::string AUTH_SECRET_S = "s";
+            inline static const std::string AUTH_SECRET = std::format("{},{}", AUTH_SECRET_F, AUTH_SECRET_S);
+            inline static const std::string AUTH_SECRET_DESCR = "секретное слово для jwt";
         };
 
         struct general {
@@ -34,12 +39,14 @@ namespace ws {
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
     -{} [ --{:8} ] arg    {}\n \
+    -{} [ --{:8} ] arg    {}\n \
                 ",
                 HELP_HEADER,
                 options::HELP_S, options::HELP_F, options::HELP_DESCR,
                 options::ADDRESS_S, options::ADDRESS_F, options::ADDRESS_DESCR,
                 options::PORT_S, options::PORT_F, options::PORT_DESCR,
-                options::THREADS_S, options::THREADS_F, options::THREADS_DESCR
+                options::THREADS_S, options::THREADS_F, options::THREADS_DESCR,
+                options::AUTH_SECRET_S, options::AUTH_SECRET_F, options::AUTH_SECRET_DESCR
             );
         };
 

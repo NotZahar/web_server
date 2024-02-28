@@ -11,7 +11,7 @@ namespace ws {
     {}
 
     http::message_generator ResponseHandler::response() const {
-        if (!isValid()) {
+        if (!methodIsValid()) {
             return BadRequestResponse{ 
                 _response->getRequestInfo(), 
                 messages::errors::INVALID_METHOD 
@@ -20,4 +20,8 @@ namespace ws {
 
         return _response->create();
     }
+
+    Response::RequestInfo ResponseHandler::getRequestInfo() const noexcept {
+        return _response->getRequestInfo();
+    }  
 }

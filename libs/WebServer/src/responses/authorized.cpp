@@ -1,0 +1,31 @@
+#include "authorized.hpp"
+
+#include "auth.hpp"
+#include "error/bad_request.hpp"
+#include "../services/auth_service.hpp"
+#include "../utility/messages.hpp"
+
+namespace ws {
+    Authorized::Authorized(
+        const std::unordered_map<std::string, std::string>& requestParams, 
+        std::unique_ptr<ResponseHandler> handler) noexcept 
+        : _requestParams(requestParams),
+          _handler(std::move(handler))
+    {}
+
+    http::message_generator Authorized::response() const {
+        AuthService::errorCode authErrorCode;
+        AuthService::authenticate(_requestParams, authErrorCode);
+        switch (authErrorCode) {
+            case AuthService::errorCode::noData:
+                return AuthResponse{ _handler->getRequestInfo() }.create();
+            case AuthService::errorCode::badData:
+                return BadRequestResponse{ 
+                    _handler->getRequestInfo(), 
+                    messages::errors::INVALID_AUTH 
+                }.create();
+            default:
+                return _handler->response();        
+        }
+    }
+}

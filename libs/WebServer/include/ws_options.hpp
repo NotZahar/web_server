@@ -11,6 +11,7 @@ namespace ws {
             std::string address = config::defaultAddress;
             unsigned short port = config::defaultPort;
             int threads = config::defaultThreads;
+            std::string authSecret = config::defaultAuthSecret;
         };
 
         WSOptions() = delete;

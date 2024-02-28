@@ -10,6 +10,7 @@ namespace ws {
         inline static const fs::path resourcesPath = fs::current_path() / "resources";
         inline static const fs::path publicPath = resourcesPath / "public";
         inline static const fs::path storagePath = publicPath / "storage";
+        inline static const fs::path dbPath = resourcesPath / "db/ws.db3";
 
         struct pages {
             inline static const fs::path auth = publicPath / "auth.html";

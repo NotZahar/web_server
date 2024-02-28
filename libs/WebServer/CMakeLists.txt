@@ -12,7 +12,9 @@ find_package(Boost 1.82 REQUIRED
         program_options
         url)
 find_package(OpenSSL REQUIRED)
+find_package(SQLiteCpp REQUIRED)
 find_package(GTest REQUIRED)
+find_package(cpp-jwt REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC)
 
@@ -31,6 +33,7 @@ target_sources(${PROJECT_NAME}
         # response
         src/responses/response.cpp
         src/responses/response_handler.cpp
+        src/responses/authorized.cpp
         src/responses/get.cpp
         src/responses/error/bad_request.cpp
         src/responses/error/not_found.cpp
@@ -70,7 +73,9 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC 
         ${Boost_LIBRARIES} 
         OpenSSL::Crypto
-        OpenSSL::SSL)
+        OpenSSL::SSL
+        SQLiteCpp
+        cpp-jwt::cpp-jwt)
 target_link_libraries(${WS_TESTS_TARGET}
     PRIVATE 
         ${GTEST_BOTH_LIBRARIES} 

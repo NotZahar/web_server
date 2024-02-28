@@ -19,6 +19,7 @@ namespace ws {
         config::address = ip::make_address(options.address);
         config::port = options.port;
         config::threads = options.threads;
+        config::authSecret = options.authSecret;
     }
 
     void WebServer::run() {
@@ -99,8 +100,7 @@ namespace ws {
                 http::request<http::string_body> request;
                 co_await http::async_read(stream, buffer, request);
                 
-                Router router{ std::move(request) };
-                auto response = router.makeResponse();
+                auto response = Router::makeResponse(std::move(request));
                 const bool keepAlive = response.keep_alive();
 
                 co_await beast::async_write(stream, std::move(response), asio::use_awaitable);
