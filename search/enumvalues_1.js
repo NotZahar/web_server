@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['email_348',['email',['../namespacews.html#aa28455db01ac5837d4cbc323d7e5d300a0c83f57c786a0b4a39efab23731c7ebc',1,'ws']]]
+  ['baddata_397',['badData',['../classws_1_1AuthService.html#ae6e77cd900ecd50cbc554809915ce346a834bd983f7baa524f9ef91c1e8fa7630',1,'ws::AuthService']]]
 ];

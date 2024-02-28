@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['video_5fx_5fflv_149',['video_x_flv',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eba547c9acbd9bbbeffd3c8b73806c558f2',1,'ws::netHelper']]],
-  ['video_5fx_5fmatroska_150',['video_x_matroska',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2ebaed4b2d83fc069e3fbf8290c0831ccb10',1,'ws::netHelper']]]
+  ['url_169',['url',['../structws_1_1url.html',1,'ws']]],
+  ['url_2ehpp_170',['url.hpp',['../url_8hpp.html',1,'']]],
+  ['urlparam_171',['urlParam',['../namespacews.html#aa28455db01ac5837d4cbc323d7e5d300',1,'ws']]]
 ];

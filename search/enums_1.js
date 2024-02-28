@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['routesegment_342',['routeSegment',['../namespacews.html#a3c8abfa60ff272c3b0cbac95a0997d2b',1,'ws']]]
+  ['mime_390',['MIME',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eb',1,'ws::netHelper']]]
 ];

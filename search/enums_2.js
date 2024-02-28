@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['urlparam_343',['urlParam',['../namespacews.html#aa28455db01ac5837d4cbc323d7e5d300',1,'ws']]]
+  ['routesegment_391',['routeSegment',['../namespacews.html#a3c8abfa60ff272c3b0cbac95a0997d2b',1,'ws']]]
 ];

@@ -84,7 +84,7 @@ $(function() {
 <div class="center"><img src="classws_1_1ResponseHandler__inherit__graph.png" border="0" usemap="#aws_1_1ResponseHandler_inherit__map" alt="Inheritance graph"/></div>
 <map name="aws_1_1ResponseHandler_inherit__map" id="aws_1_1ResponseHandler_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect" href="classws_1_1GetResponse.html" title=" " alt="" coords="19,80,154,107"/>
+<area shape="rect" href="classws_1_1Get.html" title=" " alt="" coords="51,80,122,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
 <table class="memberdecls">
@@ -98,11 +98,13 @@ $(function() {
 <tr class="separator:a9797bd2a6fdb34a17f82012ed8118ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cccee1f14ed568799444f8113629a0b"><td class="memItemLeft" align="right" valign="top">http::message_generator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1ResponseHandler.html#a0cccee1f14ed568799444f8113629a0b">response</a> () const</td></tr>
 <tr class="separator:a0cccee1f14ed568799444f8113629a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c2d7f7487e9bafcc9212e285305637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structws_1_1Response_1_1RequestInfo.html">Response::RequestInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1ResponseHandler.html#a71c2d7f7487e9bafcc9212e285305637">getRequestInfo</a> () const noexcept</td></tr>
+<tr class="separator:a71c2d7f7487e9bafcc9212e285305637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Защищенные члены</h2></td></tr>
-<tr class="memitem:a5a13e9cb51223f32021fc96eaba01441"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1ResponseHandler.html#a5a13e9cb51223f32021fc96eaba01441">isValid</a> () const noexcept=0</td></tr>
-<tr class="separator:a5a13e9cb51223f32021fc96eaba01441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47d1a10fc22665d8b6005cf8927217b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1ResponseHandler.html#aa47d1a10fc22665d8b6005cf8927217b">methodIsValid</a> () const noexcept=0</td></tr>
+<tr class="separator:aa47d1a10fc22665d8b6005cf8927217b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Защищенные данные</h2></td></tr>
@@ -166,7 +168,7 @@ $(function() {
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -199,8 +201,8 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
-<a id="a5a13e9cb51223f32021fc96eaba01441"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a13e9cb51223f32021fc96eaba01441">&#9670;&nbsp;</a></span>isValid()</h2>
+<a id="a71c2d7f7487e9bafcc9212e285305637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c2d7f7487e9bafcc9212e285305637">&#9670;&nbsp;</a></span>getRequestInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +211,32 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool ws::ResponseHandler::isValid </td>
+          <td class="memname"><a class="el" href="structws_1_1Response_1_1RequestInfo.html">Response::RequestInfo</a> ws::ResponseHandler::getRequestInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa47d1a10fc22665d8b6005cf8927217b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47d1a10fc22665d8b6005cf8927217b">&#9670;&nbsp;</a></span>methodIsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ws::ResponseHandler::methodIsValid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -222,7 +249,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>Замещается в <a class="el" href="classws_1_1GetResponse.html#a3d06fed0612239fdc8aa59a7653d52a0">ws::GetResponse</a>.</p>
+<p>Замещается в <a class="el" href="classws_1_1Get.html#a2adf6fe21868e6e5b8f21f9aba13c2ed">ws::Get</a>.</p>
 
 </div>
 </div>

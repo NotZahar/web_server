@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['general_184',['general',['../structws_1_1messages_1_1general.html',1,'ws::messages']]],
-  ['getresponse_185',['GetResponse',['../classws_1_1GetResponse.html',1,'ws']]]
+  ['fileresponse_209',['FileResponse',['../classws_1_1FileResponse.html',1,'ws']]],
+  ['files_210',['files',['../structws_1_1files.html',1,'ws']]]
 ];

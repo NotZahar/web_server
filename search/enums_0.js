@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mime_341',['MIME',['../namespacews_1_1netHelper.html#abf1d932d31f33b686e213dfef5cdc2eb',1,'ws::netHelper']]]
+  ['errorcode_389',['errorCode',['../classws_1_1AuthService.html#ae6e77cd900ecd50cbc554809915ce346',1,'ws::AuthService']]]
 ];

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['internal_5ferror_315',['INTERNAL_ERROR',['../structws_1_1messages_1_1errors.html#ad69c98dd26319c63984e3851a20393a6',1,'ws::messages::errors']]],
-  ['internal_5ferror_5fgeneral_316',['INTERNAL_ERROR_GENERAL',['../structws_1_1messages_1_1errors.html#a480381d0ec430eacfcb241d1d74dca63',1,'ws::messages::errors']]],
-  ['invalid_5fauth_317',['INVALID_AUTH',['../structws_1_1messages_1_1errors.html#aec2015fa74132af4181a9e80a52f8e13',1,'ws::messages::errors']]],
-  ['invalid_5fmethod_318',['INVALID_METHOD',['../structws_1_1messages_1_1errors.html#a0453ba138c01f845afddcb26371558fd',1,'ws::messages::errors']]],
-  ['invalid_5fpath_319',['INVALID_PATH',['../structws_1_1messages_1_1errors.html#a6bd0aa026e56574d3f3e062c72913377',1,'ws::messages::errors']]],
-  ['invalid_5frequest_320',['INVALID_REQUEST',['../structws_1_1messages_1_1errors.html#af41762cc4ef471b824547fb0d8b32541',1,'ws::messages::errors']]],
-  ['invalid_5ftarget_321',['INVALID_TARGET',['../structws_1_1messages_1_1errors.html#a37a32388fcadf22c86e757b4875896ed',1,'ws::messages::errors']]]
+  ['help_355',['help',['../structws_1_1WSOptions_1_1Options.html#ac61c2fc362af5bd0aa246d8351b58aa5',1,'ws::WSOptions::Options']]],
+  ['help_356',['HELP',['../structws_1_1messages_1_1options.html#aa7a42ff82c64fe5d3443ee398fceb10e',1,'ws::messages::options']]],
+  ['help_5fdescr_357',['HELP_DESCR',['../structws_1_1messages_1_1options.html#a1f0430efe848e23fc9ebb6569376b5e0',1,'ws::messages::options']]],
+  ['help_5ff_358',['HELP_F',['../structws_1_1messages_1_1options.html#aaba37a735ebdd2f1e8e0b05e1fb5c5fa',1,'ws::messages::options']]],
+  ['help_5fheader_359',['HELP_HEADER',['../structws_1_1messages_1_1general.html#a6aa05963457e1691b721d62d13cc53a9',1,'ws::messages::general']]],
+  ['help_5fmessage_360',['HELP_MESSAGE',['../structws_1_1messages_1_1general.html#acdaf7512a0447294b75274fd547e8aed',1,'ws::messages::general']]],
+  ['help_5fs_361',['HELP_S',['../structws_1_1messages_1_1options.html#a343848bc5422e53c386d631c845fbd2c',1,'ws::messages::options']]],
+  ['httpversion_362',['httpVersion',['../structws_1_1Response_1_1RequestInfo.html#a37e13b9e46a44f84f4852061e0f9f0c7',1,'ws::Response::RequestInfo']]]
 ];

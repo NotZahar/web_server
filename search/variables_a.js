@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sessiontimeout_332',['sessionTimeout',['../structws_1_1config.html#ac1fe8f262bb824fadd1e84b568562291',1,'ws::config']]],
-  ['storagepath_333',['storagePath',['../structws_1_1paths.html#a6dc42f87882dddcea9ae2c59f0d4001d',1,'ws::paths']]]
+  ['relativeurl_378',['relativeUrl',['../structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a',1,'ws::url']]],
+  ['resourcespath_379',['resourcesPath',['../structws_1_1paths.html#abf6d19f87e52bfa6ab6b751b3913eb4b',1,'ws::paths']]]
 ];

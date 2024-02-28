@@ -69,6 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
 <a href="classws_1_1Router-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle">
 <div class="title">Класс ws::Router</div>  </div>
@@ -79,18 +80,19 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a58c0e3e62dd843c99d954fc53ee8c931"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html#a58c0e3e62dd843c99d954fc53ee8c931">Router</a> ()=delete</td></tr>
-<tr class="separator:a58c0e3e62dd843c99d954fc53ee8c931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c8550bacc42fcafabe4ccc14a6db902"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html#a5c8550bacc42fcafabe4ccc14a6db902">Router</a> (http::request&lt; http::string_body &gt; request)</td></tr>
-<tr class="separator:a5c8550bacc42fcafabe4ccc14a6db902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acecc89b2dfc49a71ff5b33b1f4f21d95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html#acecc89b2dfc49a71ff5b33b1f4f21d95">Router</a> ()=default</td></tr>
+<tr class="separator:acecc89b2dfc49a71ff5b33b1f4f21d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f0f32ec57838934dd53d0128e03012f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html#a3f0f32ec57838934dd53d0128e03012f">~Router</a> ()=default</td></tr>
 <tr class="separator:a3f0f32ec57838934dd53d0128e03012f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace621c2acc3c5e8adaaaaddf0680a596"><td class="memItemLeft" align="right" valign="top">http::message_generator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html#ace621c2acc3c5e8adaaaaddf0680a596">makeResponse</a> ()</td></tr>
-<tr class="separator:ace621c2acc3c5e8adaaaaddf0680a596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ad580979e6be52eefb705ea4fded805be"><td class="memItemLeft" align="right" valign="top">static http::message_generator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classws_1_1Router.html#ad580979e6be52eefb705ea4fded805be">makeResponse</a> (http::request&lt; http::string_body &gt; request)</td></tr>
+<tr class="separator:ad580979e6be52eefb705ea4fded805be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Конструктор(ы)</h2>
-<a id="a58c0e3e62dd843c99d954fc53ee8c931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58c0e3e62dd843c99d954fc53ee8c931">&#9670;&nbsp;</a></span>Router() <span class="overload">[1/2]</span></h2>
+<a id="acecc89b2dfc49a71ff5b33b1f4f21d95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecc89b2dfc49a71ff5b33b1f4f21d95">&#9670;&nbsp;</a></span>Router()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,27 +109,9 @@ $(function() {
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5c8550bacc42fcafabe4ccc14a6db902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c8550bacc42fcafabe4ccc14a6db902">&#9670;&nbsp;</a></span>Router() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ws::Router::Router </td>
-          <td>(</td>
-          <td class="paramtype">http::request&lt; http::string_body &gt;&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>
@@ -158,19 +142,28 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
-<a id="ace621c2acc3c5e8adaaaaddf0680a596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace621c2acc3c5e8adaaaaddf0680a596">&#9670;&nbsp;</a></span>makeResponse()</h2>
+<a id="ad580979e6be52eefb705ea4fded805be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad580979e6be52eefb705ea4fded805be">&#9670;&nbsp;</a></span>makeResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">http::message_generator ws::Router::makeResponse </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">http::request&lt; http::string_body &gt;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

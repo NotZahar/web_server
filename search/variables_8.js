@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['port_324',['port',['../structws_1_1WSOptions_1_1Options.html#a919ede6e5ca1819471a0b52a1c9fa525',1,'ws::WSOptions::Options::port()'],['../structws_1_1config.html#ad61e2fe6506af4e0b76f831e4c6cb583',1,'ws::config::port()']]],
-  ['port_325',['PORT',['../structws_1_1messages_1_1options.html#ad1ac6bc935e01cec9f9a6536bb5cae22',1,'ws::messages::options']]],
-  ['port_5fdescr_326',['PORT_DESCR',['../structws_1_1messages_1_1options.html#afe77d3649b59f25fb6529a07213cdef5',1,'ws::messages::options']]],
-  ['port_5ff_327',['PORT_F',['../structws_1_1messages_1_1options.html#af26aafae35fcc4e0e165f400a4738498',1,'ws::messages::options']]],
-  ['port_5fs_328',['PORT_S',['../structws_1_1messages_1_1options.html#a24dd42f062e5f73c591b493310c8a861',1,'ws::messages::options']]],
-  ['publicpath_329',['publicPath',['../structws_1_1paths.html#ad36b5c8022c043e77af869bafbb40a0d',1,'ws::paths']]]
+  ['keepalive_370',['keepAlive',['../structws_1_1Response_1_1RequestInfo.html#ac2563109860fc57e14c221a00a1f833a',1,'ws::Response::RequestInfo']]],
+  ['key_371',['key',['../structws_1_1paths_1_1ssl.html#a4ed1749bc7f3c4108b45994bd41a5af1',1,'ws::paths::ssl']]]
 ];
