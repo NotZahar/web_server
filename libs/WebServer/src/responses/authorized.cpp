@@ -1,6 +1,6 @@
 #include "authorized.hpp"
 
-#include "auth.hpp"
+#include "login.hpp"
 #include "error/bad_request.hpp"
 #include "../services/auth_service.hpp"
 #include "../utility/messages.hpp"
@@ -18,7 +18,7 @@ namespace ws {
         AuthService::authenticate(_requestParams, authErrorCode);
         switch (authErrorCode) {
             case AuthService::errorCode::noData:
-                return AuthResponse{ _handler->getRequestInfo() }.create();
+                return LoginResponse{ _handler->getRequestInfo() }.create();
             case AuthService::errorCode::badData:
                 return BadRequestResponse{ 
                     _handler->getRequestInfo(), 

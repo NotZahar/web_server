@@ -1,11 +1,15 @@
 #include "auth_service.hpp"
 
+#include <exception>
+
 #include <jwt/jwt.hpp>
 
 #include "db_service.hpp"
 #include "../utility/params.hpp"
 #include "../utility/db.hpp"
 #include "../utility/config.hpp"
+
+#include <iostream> // TODO: delete
 
 namespace ws {
     void AuthService::authenticate(
@@ -28,6 +32,18 @@ namespace ws {
         if (jwtErrorCode) {
             code = errorCode::badData;
             return;
+        }
+
+        auto payload = token.payload();
+        std::cout << payload << '\n';
+        
+        try {
+            const auto email = payload.get_claim_value<std::string>("emil"); 
+            const auto password = payload.get_claim_value<std::string>("password");
+            std::cout << email << '\n';
+            std::cout << password << '\n';
+        } catch (const std::exception& error) {
+            std::cout << error.what() << '\n';
         }
 
         // TODO: [here]

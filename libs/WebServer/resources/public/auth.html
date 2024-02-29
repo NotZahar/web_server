@@ -16,7 +16,7 @@
             let pass = document.getElementById('pass')
 
             const authClicked = () => {
-                fetch(`/pass?email=${email.value}&pass=${pass.value}`, {
+                fetch(`/auth?email=${email.value}&pass=${pass.value}`, {
                     method: 'POST'
                 })
             }

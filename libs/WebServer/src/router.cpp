@@ -2,7 +2,9 @@
 
 #include "responses/authorized.hpp"
 #include "responses/get.hpp"
+#include "responses/post.hpp"
 #include "responses/file.hpp"
+#include "responses/auth.hpp"
 #include "responses/error/bad_request.hpp"
 #include "utility/net_helper.hpp"
 #include "utility/url.hpp"
@@ -23,8 +25,7 @@ namespace ws {
         const routeSegment route = routeSegments.right.find(requestSegments.front())->second;
         switch (route) {
             case routeSegment::file: {
-                const auto& pathParam = urlParams.left.find(urlParam::path)->second;
-                if (!requestParams.contains(pathParam))
+                if (!url::paramsExists(requestParams, { urlParam::path }))
                     return BadRequestResponse{ requestInfo }.create();
                 
                 return Authorized{ 
@@ -33,13 +34,26 @@ namespace ws {
                         requestMethod, 
                         std::make_unique<FileResponse>(
                             requestInfo, 
-                            requestParams.at(pathParam))
+                            requestParams.at(urlParams.left.find(urlParam::path)->second))
                     )
                 }.response();
-            }
-            // TODO: [here]
-            default: 
+            } case routeSegment::auth: {
+                if (!url::paramsExists(requestParams, { urlParam::email, urlParam::password }))
+                    return BadRequestResponse{ requestInfo }.create();
+                
+                return Post{
+                    requestMethod, 
+                    std::make_unique<AuthResponse>(
+                        requestInfo,
+                        AuthResponse::AuthData{
+                            requestParams.at(urlParams.left.find(urlParam::email)->second),
+                            requestParams.at(urlParams.left.find(urlParam::password)->second)
+                        }
+                    )
+                }.response();
+            } default: { 
                 return BadRequestResponse{ requestInfo }.create();
+            }
         }
     }
 }

@@ -35,9 +35,11 @@ target_sources(${PROJECT_NAME}
         src/responses/response_handler.cpp
         src/responses/authorized.cpp
         src/responses/get.cpp
+        src/responses/post.cpp
         src/responses/error/bad_request.cpp
         src/responses/error/not_found.cpp
         src/responses/error/server_error.cpp
+        src/responses/login.cpp
         src/responses/auth.cpp
         src/responses/file.cpp
 
@@ -49,6 +51,7 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE
         # where the library itself will look for its internal headers
         ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/Bcrypt/include
     PUBLIC
         # where top-level project will look for the library's public headers
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -75,7 +78,8 @@ target_link_libraries(${PROJECT_NAME}
         OpenSSL::Crypto
         OpenSSL::SSL
         SQLiteCpp
-        cpp-jwt::cpp-jwt)
+        cpp-jwt::cpp-jwt
+        ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/Bcrypt/lib/libbcrypt.a)
 target_link_libraries(${WS_TESTS_TARGET}
     PRIVATE 
         ${GTEST_BOTH_LIBRARIES} 
