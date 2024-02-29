@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['messages_213',['messages',['../structws_1_1messages.html',1,'ws']]]
+  ['loginresponse_228',['LoginResponse',['../classws_1_1LoginResponse.html',1,'ws']]]
 ];

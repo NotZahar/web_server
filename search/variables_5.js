@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getuser_354',['getUser',['../structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816',1,'ws::query']]]
+  ['fieldserver_384',['fieldServer',['../structws_1_1config.html#a2f9867072c6b821a8d3071135d177f30',1,'ws::config']]]
 ];

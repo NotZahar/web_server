@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fieldserver_353',['fieldServer',['../structws_1_1config.html#a2f9867072c6b821a8d3071135d177f30',1,'ws::config']]]
+  ['email_383',['email',['../structws_1_1AuthResponse_1_1AuthData.html#ae33dea2737c4efe79dff3b4405a1440c',1,'ws::AuthResponse::AuthData']]]
 ];

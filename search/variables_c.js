@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['threads_382',['THREADS',['../structws_1_1messages_1_1options.html#a20a573cf0a1f37d47adf56d5a770d391',1,'ws::messages::options']]],
-  ['threads_383',['threads',['../structws_1_1WSOptions_1_1Options.html#a6daf5a69fe511969d727032c291be683',1,'ws::WSOptions::Options::threads()'],['../structws_1_1config.html#a703bfcb2e47fc5f1a5fe9d713d6c7a81',1,'ws::config::threads()']]],
-  ['threads_5fdescr_384',['THREADS_DESCR',['../structws_1_1messages_1_1options.html#acabe4b2e840be21486e2fd3ff5b0411e',1,'ws::messages::options']]],
-  ['threads_5ff_385',['THREADS_F',['../structws_1_1messages_1_1options.html#a49598fe0807812b7a8c200a87a82288f',1,'ws::messages::options']]],
-  ['threads_5fs_386',['THREADS_S',['../structws_1_1messages_1_1options.html#a179c68b78d2490b311e918cbbe59bc08',1,'ws::messages::options']]]
+  ['sessiontimeout_412',['sessionTimeout',['../structws_1_1config.html#ac1fe8f262bb824fadd1e84b568562291',1,'ws::config']]],
+  ['storagepath_413',['storagePath',['../structws_1_1paths.html#a6dc42f87882dddcea9ae2c59f0d4001d',1,'ws::paths']]]
 ];

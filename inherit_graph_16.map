@@ -1,3 +1,5 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$classws_1_1Router.html" title=" " alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node1" href="$classws_1_1ResponseHandler.html" title=" " alt="" coords="5,31,168,57"/>
+<area shape="rect" id="node2" href="$classws_1_1Get.html" title=" " alt="" coords="219,5,289,32"/>
+<area shape="rect" id="node3" href="$classws_1_1Post.html" title=" " alt="" coords="216,56,292,83"/>
 </map>

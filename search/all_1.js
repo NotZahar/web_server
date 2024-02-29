@@ -18,11 +18,12 @@ var searchData=
   ['auth_5fservice_2ecpp_20',['auth_service.cpp',['../auth__service_8cpp.html',1,'']]],
   ['auth_5fservice_2ehpp_21',['auth_service.hpp',['../auth__service_8hpp.html',1,'']]],
   ['authalgorithm_22',['authAlgorithm',['../structws_1_1config.html#a0ab4a8acf7c38bfb7efc5d706f9b6a2b',1,'ws::config']]],
-  ['authenticate_23',['authenticate',['../classws_1_1AuthService.html#a2492e036d0b75a1542900bab802062bc',1,'ws::AuthService']]],
-  ['authorized_24',['Authorized',['../classws_1_1Authorized.html#a7e17d67321c7206b44b82ae8b711cf75',1,'ws::Authorized::Authorized(const std::unordered_map&lt; std::string, std::string &gt; &amp;requestParams, std::unique_ptr&lt; ResponseHandler &gt; handler) noexcept'],['../classws_1_1Authorized.html#a1e894ae7e5e863d5d811d902ab322a1b',1,'ws::Authorized::Authorized()=delete'],['../classws_1_1Authorized.html',1,'ws::Authorized']]],
-  ['authorized_2ecpp_25',['authorized.cpp',['../authorized_8cpp.html',1,'']]],
-  ['authorized_2ehpp_26',['authorized.hpp',['../authorized_8hpp.html',1,'']]],
-  ['authresponse_27',['AuthResponse',['../classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734',1,'ws::AuthResponse::AuthResponse()=delete'],['../classws_1_1AuthResponse.html#a938e953909c57d5708c230ee774362b4',1,'ws::AuthResponse::AuthResponse(RequestInfo request)'],['../classws_1_1AuthResponse.html',1,'ws::AuthResponse']]],
-  ['authsecret_28',['authSecret',['../structws_1_1WSOptions_1_1Options.html#ae66ead2cd732b691cc58afdd1ed692d5',1,'ws::WSOptions::Options::authSecret()'],['../structws_1_1config.html#a038ab54b1302d26145644c8bee2c4365',1,'ws::config::authSecret()']]],
-  ['authservice_29',['AuthService',['../classws_1_1AuthService.html#a03858b85f92eb54c4096158d6c61245d',1,'ws::AuthService::AuthService()'],['../classws_1_1AuthService.html',1,'ws::AuthService']]]
+  ['authdata_23',['AuthData',['../structws_1_1AuthResponse_1_1AuthData.html',1,'ws::AuthResponse']]],
+  ['authenticate_24',['authenticate',['../classws_1_1AuthService.html#a2492e036d0b75a1542900bab802062bc',1,'ws::AuthService']]],
+  ['authorized_25',['Authorized',['../classws_1_1Authorized.html#a7e17d67321c7206b44b82ae8b711cf75',1,'ws::Authorized::Authorized(const std::unordered_map&lt; std::string, std::string &gt; &amp;requestParams, std::unique_ptr&lt; ResponseHandler &gt; handler) noexcept'],['../classws_1_1Authorized.html#a1e894ae7e5e863d5d811d902ab322a1b',1,'ws::Authorized::Authorized()=delete'],['../classws_1_1Authorized.html',1,'ws::Authorized']]],
+  ['authorized_2ecpp_26',['authorized.cpp',['../authorized_8cpp.html',1,'']]],
+  ['authorized_2ehpp_27',['authorized.hpp',['../authorized_8hpp.html',1,'']]],
+  ['authresponse_28',['AuthResponse',['../classws_1_1AuthResponse.html#a5e29bfeb7be6e3f21f85f38d37819734',1,'ws::AuthResponse::AuthResponse()=delete'],['../classws_1_1AuthResponse.html#a7f0a44ba2338e80901d1cff458a82178',1,'ws::AuthResponse::AuthResponse(RequestInfo request, AuthData authData)'],['../classws_1_1AuthResponse.html',1,'ws::AuthResponse']]],
+  ['authsecret_29',['authSecret',['../structws_1_1WSOptions_1_1Options.html#ae66ead2cd732b691cc58afdd1ed692d5',1,'ws::WSOptions::Options::authSecret()'],['../structws_1_1config.html#a038ab54b1302d26145644c8bee2c4365',1,'ws::config::authSecret()']]],
+  ['authservice_30',['AuthService',['../classws_1_1AuthService.html#a03858b85f92eb54c4096158d6c61245d',1,'ws::AuthService::AuthService()'],['../classws_1_1AuthService.html',1,'ws::AuthService']]]
 ];

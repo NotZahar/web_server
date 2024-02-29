@@ -74,40 +74,54 @@ $(function() {
 <a href="url_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8hpp.html">types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structws_1_1url.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structws_1_1url.html">url</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structws_1_1url.html#aeff2259a68de91ba1f8744216b34ba34">    9</a></span>&#160;        std::list&lt;std::string&gt; <a class="code" href="structws_1_1url.html#aeff2259a68de91ba1f8744216b34ba34">getSegments</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keyword">auto</span> urlView = urls::url_view{ <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a> };</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            std::list&lt;std::string&gt; segments;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> segment : urlView.segments())</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                segments.emplace_back(segment);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">return</span> segments;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structws_1_1url.html#a13f26d3c772fdbeb8e2690e3d841968d">   17</a></span>&#160;        std::unordered_map&lt;std::string, std::string&gt; <a class="code" href="structws_1_1url.html#a13f26d3c772fdbeb8e2690e3d841968d">getParams</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">auto</span> urlView = urls::url_view{ <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a> };</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            std::unordered_map&lt;std::string, std::string&gt; params;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> param : urlView.params())</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                params.insert({ param.key, param.value });</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">return</span> params;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structws_1_1url.html#aa1060002042719efbbf3a8a782ed32ce">   25</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structws_1_1url.html#aa1060002042719efbbf3a8a782ed32ce">isEmpty</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> urls::url_view{ <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a> }.empty();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">   29</a></span>&#160;        std::string <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="types_8hpp.html">types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="params_8hpp.html">params.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structws_1_1url.html">   11</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structws_1_1url.html">url</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structws_1_1url.html#a90dad4ba4324144dff4f41d7b8f5ed5b">   12</a></span>&#160;        std::list&lt;std::string&gt; <a class="code" href="structws_1_1url.html#a90dad4ba4324144dff4f41d7b8f5ed5b">getSegments</a>() const noexcept {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keyword">auto</span> urlView = urls::url_view{ <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a> };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            std::list&lt;std::string&gt; segments;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> segment : urlView.segments())</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                segments.emplace_back(segment);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span> segments;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structws_1_1url.html#aa5ca574acc94ac12e845046c261c9788">   20</a></span>&#160;        std::unordered_map&lt;std::string, std::string&gt; <a class="code" href="structws_1_1url.html#aa5ca574acc94ac12e845046c261c9788">getParams</a>() const noexcept {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">auto</span> urlView = urls::url_view{ <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a> };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            std::unordered_map&lt;std::string, std::string&gt; params;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> param : urlView.params())</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                params.insert({ param.key, param.value });</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> params;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structws_1_1url.html#a30556aaf843473b3f84ae0b8b0a08617">   28</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structws_1_1url.html#a30556aaf843473b3f84ae0b8b0a08617">isEmpty</a>() const noexcept {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">return</span> urls::url_view{ <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a> }.empty();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structws_1_1url.html#a882392a31e2ea16a8e25a41c24381eb9">   32</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="structws_1_1url.html#a882392a31e2ea16a8e25a41c24381eb9">paramsExists</a>(</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">const</span> std::unordered_map&lt;std::string, std::string&gt;&amp; params, </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            std::unordered_set&lt;urlParam&gt; paramsToCheck) noexcept {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">return</span> std::ranges::all_of(paramsToCheck, [&amp;params](<a class="code" href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300">urlParam</a> param) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <span class="keywordflow">return</span> params.contains(urlParams.left.find(param)-&gt;second);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                });</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">   40</a></span>&#160;        std::string <a class="code" href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">relativeUrl</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
-<div class="ttc" id="astructws_1_1url_html"><div class="ttname"><a href="structws_1_1url.html">ws::url</a></div><div class="ttdef"><b>Definition:</b> url.hpp:8</div></div>
-<div class="ttc" id="astructws_1_1url_html_a13f26d3c772fdbeb8e2690e3d841968d"><div class="ttname"><a href="structws_1_1url.html#a13f26d3c772fdbeb8e2690e3d841968d">ws::url::getParams</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::string &gt; getParams() const</div><div class="ttdef"><b>Definition:</b> url.hpp:17</div></div>
-<div class="ttc" id="astructws_1_1url_html_aa1060002042719efbbf3a8a782ed32ce"><div class="ttname"><a href="structws_1_1url.html#aa1060002042719efbbf3a8a782ed32ce">ws::url::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition:</b> url.hpp:25</div></div>
-<div class="ttc" id="astructws_1_1url_html_ac4da7f600a7832c239e694ba27e66e7a"><div class="ttname"><a href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">ws::url::relativeUrl</a></div><div class="ttdeci">std::string relativeUrl</div><div class="ttdef"><b>Definition:</b> url.hpp:29</div></div>
-<div class="ttc" id="astructws_1_1url_html_aeff2259a68de91ba1f8744216b34ba34"><div class="ttname"><a href="structws_1_1url.html#aeff2259a68de91ba1f8744216b34ba34">ws::url::getSegments</a></div><div class="ttdeci">std::list&lt; std::string &gt; getSegments() const</div><div class="ttdef"><b>Definition:</b> url.hpp:9</div></div>
+<div class="ttc" id="anamespacews_html_aa28455db01ac5837d4cbc323d7e5d300"><div class="ttname"><a href="namespacews.html#aa28455db01ac5837d4cbc323d7e5d300">ws::urlParam</a></div><div class="ttdeci">urlParam</div><div class="ttdef"><b>Definition:</b> params.hpp:9</div></div>
+<div class="ttc" id="aparams_8hpp_html"><div class="ttname"><a href="params_8hpp.html">params.hpp</a></div></div>
+<div class="ttc" id="astructws_1_1url_html"><div class="ttname"><a href="structws_1_1url.html">ws::url</a></div><div class="ttdef"><b>Definition:</b> url.hpp:11</div></div>
+<div class="ttc" id="astructws_1_1url_html_a30556aaf843473b3f84ae0b8b0a08617"><div class="ttname"><a href="structws_1_1url.html#a30556aaf843473b3f84ae0b8b0a08617">ws::url::isEmpty</a></div><div class="ttdeci">bool isEmpty() const noexcept</div><div class="ttdef"><b>Definition:</b> url.hpp:28</div></div>
+<div class="ttc" id="astructws_1_1url_html_a882392a31e2ea16a8e25a41c24381eb9"><div class="ttname"><a href="structws_1_1url.html#a882392a31e2ea16a8e25a41c24381eb9">ws::url::paramsExists</a></div><div class="ttdeci">static bool paramsExists(const std::unordered_map&lt; std::string, std::string &gt; &amp;params, std::unordered_set&lt; urlParam &gt; paramsToCheck) noexcept</div><div class="ttdef"><b>Definition:</b> url.hpp:32</div></div>
+<div class="ttc" id="astructws_1_1url_html_a90dad4ba4324144dff4f41d7b8f5ed5b"><div class="ttname"><a href="structws_1_1url.html#a90dad4ba4324144dff4f41d7b8f5ed5b">ws::url::getSegments</a></div><div class="ttdeci">std::list&lt; std::string &gt; getSegments() const noexcept</div><div class="ttdef"><b>Definition:</b> url.hpp:12</div></div>
+<div class="ttc" id="astructws_1_1url_html_aa5ca574acc94ac12e845046c261c9788"><div class="ttname"><a href="structws_1_1url.html#aa5ca574acc94ac12e845046c261c9788">ws::url::getParams</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::string &gt; getParams() const noexcept</div><div class="ttdef"><b>Definition:</b> url.hpp:20</div></div>
+<div class="ttc" id="astructws_1_1url_html_ac4da7f600a7832c239e694ba27e66e7a"><div class="ttname"><a href="structws_1_1url.html#ac4da7f600a7832c239e694ba27e66e7a">ws::url::relativeUrl</a></div><div class="ttdeci">std::string relativeUrl</div><div class="ttdef"><b>Definition:</b> url.hpp:40</div></div>
 <div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="types_8hpp.html">types.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

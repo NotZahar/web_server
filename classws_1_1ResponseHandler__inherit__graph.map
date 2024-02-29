@@ -1,4 +1,5 @@
 <map id="ws::ResponseHandler" name="ws::ResponseHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$classws_1_1Get.html" title=" " alt="" coords="51,80,122,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="7,5,170,32"/>
+<area shape="rect" id="node2" href="$classws_1_1Get.html" title=" " alt="" coords="5,80,76,107"/>
+<area shape="rect" id="node3" href="$classws_1_1Post.html" title=" " alt="" coords="100,80,176,107"/>
 </map>
