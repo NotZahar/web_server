@@ -19,6 +19,14 @@ jobs:
           owner: 'SRombauts'
           repository: 'SQLiteCpp'
 
+      - name: Clone arun11299/cpp-jwt repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          depth: 1
+          branch: 'master'
+          owner: 'arun11299'
+          repository: 'cpp-jwt'
+
       - name: Install Boost
         uses: MarkusJx/install-boost@v2.4.4
         id: install_boost
