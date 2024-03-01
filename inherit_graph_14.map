@@ -1,5 +1,5 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$classws_1_1Response.html" title=" " alt="" coords="5,132,116,159"/>
+<area shape="rect" id="node1" href="$classws_1_1Response.html" title="Класс&#45;родитель для всех http&#45;ответов" alt="" coords="5,132,116,159"/>
 <area shape="rect" id="node2" href="$classws_1_1AuthResponse.html" title=" " alt="" coords="188,5,329,32"/>
 <area shape="rect" id="node3" href="$classws_1_1BadRequestResponse.html" title=" " alt="" coords="164,56,353,83"/>
 <area shape="rect" id="node4" href="$classws_1_1FileResponse.html" title=" " alt="" coords="191,107,326,133"/>

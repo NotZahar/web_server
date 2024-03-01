@@ -78,28 +78,28 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string_view&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1DBService.html">DBService</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">   10</a></span>&#160;        <span class="keyword">enum class</span> <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">errorCode</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64af85f07b4585cce70e6e3bd3407bfa7fb">noError</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64a5e55103fc58fb1781ec522784fc76936">readError</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        };</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html#adf77adaa08f8f87ffea9a8f734d1d6e6">   15</a></span>&#160;        <a class="code" href="classws_1_1DBService.html#adf77adaa08f8f87ffea9a8f734d1d6e6">DBService</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html#a6cee221394d09ea04fecedb161d3aa98">   17</a></span>&#160;        <a class="code" href="classws_1_1DBService.html#a6cee221394d09ea04fecedb161d3aa98">~DBService</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">static</span> std::list&lt;std::string&gt; <a class="code" href="classws_1_1DBService.html#a46ae50ce8c8cf4e370137d79c7030955">select</a>(</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            std::string_view rawQuery, </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            std::vector&lt;std::string&gt; values,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">int</span> schemaSize,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">errorCode</a>&amp; error) noexcept;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="ttc" id="aclassws_1_1DBService_html"><div class="ttname"><a href="classws_1_1DBService.html">ws::DBService</a></div><div class="ttdef"><b>Definition:</b> db_service.hpp:8</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classws_1_1DBService.html">DBService</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">   15</a></span>&#160;        <span class="keyword">enum class</span> <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">errorCode</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64af85f07b4585cce70e6e3bd3407bfa7fb">noError</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64a5e55103fc58fb1781ec522784fc76936">readError</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html#adf77adaa08f8f87ffea9a8f734d1d6e6">   20</a></span>&#160;        <a class="code" href="classws_1_1DBService.html#adf77adaa08f8f87ffea9a8f734d1d6e6">DBService</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classws_1_1DBService.html#a6cee221394d09ea04fecedb161d3aa98">   22</a></span>&#160;        <a class="code" href="classws_1_1DBService.html#a6cee221394d09ea04fecedb161d3aa98">~DBService</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">static</span> std::list&lt;std::string&gt; <a class="code" href="classws_1_1DBService.html#a46ae50ce8c8cf4e370137d79c7030955">select</a>(</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            std::string_view rawQuery, </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            std::vector&lt;std::string&gt; values,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">int</span> schemaSize,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">errorCode</a>&amp; error) noexcept;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="aclassws_1_1DBService_html"><div class="ttname"><a href="classws_1_1DBService.html">ws::DBService</a></div><div class="ttdoc">Отвечает за обращения к БД</div><div class="ttdef"><b>Definition:</b> db_service.hpp:13</div></div>
 <div class="ttc" id="aclassws_1_1DBService_html_a46ae50ce8c8cf4e370137d79c7030955"><div class="ttname"><a href="classws_1_1DBService.html#a46ae50ce8c8cf4e370137d79c7030955">ws::DBService::select</a></div><div class="ttdeci">static std::list&lt; std::string &gt; select(std::string_view rawQuery, std::vector&lt; std::string &gt; values, const int schemaSize, errorCode &amp;error) noexcept</div><div class="ttdef"><b>Definition:</b> db_service.cpp:10</div></div>
 <div class="ttc" id="aclassws_1_1DBService_html_a6cee221394d09ea04fecedb161d3aa98"><div class="ttname"><a href="classws_1_1DBService.html#a6cee221394d09ea04fecedb161d3aa98">ws::DBService::~DBService</a></div><div class="ttdeci">~DBService()=default</div></div>
-<div class="ttc" id="aclassws_1_1DBService_html_abf5cf8cbcbba06691620933b1e5c1e64"><div class="ttname"><a href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">ws::DBService::errorCode</a></div><div class="ttdeci">errorCode</div><div class="ttdef"><b>Definition:</b> db_service.hpp:10</div></div>
+<div class="ttc" id="aclassws_1_1DBService_html_abf5cf8cbcbba06691620933b1e5c1e64"><div class="ttname"><a href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64">ws::DBService::errorCode</a></div><div class="ttdeci">errorCode</div><div class="ttdef"><b>Definition:</b> db_service.hpp:15</div></div>
 <div class="ttc" id="aclassws_1_1DBService_html_abf5cf8cbcbba06691620933b1e5c1e64a5e55103fc58fb1781ec522784fc76936"><div class="ttname"><a href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64a5e55103fc58fb1781ec522784fc76936">ws::DBService::errorCode::readError</a></div><div class="ttdeci">@ readError</div></div>
 <div class="ttc" id="aclassws_1_1DBService_html_abf5cf8cbcbba06691620933b1e5c1e64af85f07b4585cce70e6e3bd3407bfa7fb"><div class="ttname"><a href="classws_1_1DBService.html#abf5cf8cbcbba06691620933b1e5c1e64af85f07b4585cce70e6e3bd3407bfa7fb">ws::DBService::errorCode::noError</a></div><div class="ttdeci">@ noError</div></div>
 <div class="ttc" id="aclassws_1_1DBService_html_adf77adaa08f8f87ffea9a8f734d1d6e6"><div class="ttname"><a href="classws_1_1DBService.html#adf77adaa08f8f87ffea9a8f734d1d6e6">ws::DBService::DBService</a></div><div class="ttdeci">DBService()=default</div></div>
