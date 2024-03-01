@@ -5,7 +5,7 @@
 #include "../utility/net_helper.hpp"
 #include "../utility/files.hpp"
 #include "../utility/messages.hpp"
-#include "utility/messages.hpp"
+#include "../utility/config.hpp"
 
 namespace ws {
     FileResponse::FileResponse(RequestInfo request, fs::path path)

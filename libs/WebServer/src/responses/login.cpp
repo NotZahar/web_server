@@ -3,6 +3,7 @@
 #include <cassert>
 
 #include "error/server_error.hpp"
+#include "../utility/config.hpp"
 #include "../utility/net_helper.hpp"
 #include "../utility/files.hpp"
 
