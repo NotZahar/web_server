@@ -25,8 +25,8 @@ namespace ws {
             inline static const std::string THREADS = std::format("{},{}", THREADS_F, THREADS_S);
             inline static const std::string THREADS_DESCR = "кол-во потоков";
 
-            inline static const std::string AUTH_SECRET_F = "secret";
-            inline static const std::string AUTH_SECRET_S = "s";
+            inline static const std::string AUTH_SECRET_F = "jwt";
+            inline static const std::string AUTH_SECRET_S = "j";
             inline static const std::string AUTH_SECRET = std::format("{},{}", AUTH_SECRET_F, AUTH_SECRET_S);
             inline static const std::string AUTH_SECRET_DESCR = "секретное слово для jwt";
         };

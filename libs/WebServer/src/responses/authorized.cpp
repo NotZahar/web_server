@@ -14,7 +14,7 @@ namespace ws {
     {}
 
     http::message_generator Authorized::response() const {
-        AuthService::errorCode authErrorCode;
+        AuthService::errorCode authErrorCode{};
         AuthService::authenticate(_requestParams, authErrorCode);
         switch (authErrorCode) {
             case AuthService::errorCode::noData:

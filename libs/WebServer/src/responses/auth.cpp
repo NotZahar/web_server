@@ -1,46 +1,22 @@
 #include "auth.hpp"
 
-#include <chrono>
-
-#include <jwt/jwt.hpp>
-#include <bcrypt.h>
-
+#include "error/bad_request.hpp"
 #include "../utility/net_helper.hpp"
 #include "../utility/config.hpp"
 
-#include <iostream> // TODO: delete
-
 namespace ws {
-    AuthResponse::AuthResponse(RequestInfo request, AuthData authData)
+    AuthResponse::AuthResponse(RequestInfo request, AuthService::AuthData authData)
         : Response(request),
           _authData(authData)
     {}
 
     http::message_generator AuthResponse::create() const {
         using namespace netHelper;
-        
-        // TODO: [here]
-    std::string password = "top_secret";
 
-    std::string hash = bcrypt::generateHash(password);
-
-    std::cout << "Hash: " << hash << std::endl;
-
-    std::cout << "\"" << password << "\" : " << bcrypt::validatePassword(password,hash) << std::endl;
-    std::cout << "\"wrong\" : " << bcrypt::validatePassword("wrong",hash) << std::endl;
-
-        jwt::jwt_object token{
-            jwt::params::algorithm(config::authAlgorithm), 
-            jwt::params::secret(config::authSecret), 
-            jwt::params::payload({
-                { "email", "example@example.com" },
-                { "password", "1234" }
-            })
-        };
-
-        const auto now = std::chrono::system_clock::now(); 
-        token.add_claim("iat", now)
-            .add_claim("exp", now + std::chrono::hours{ 24 });
+        AuthService::errorCode error{};
+        const auto token = AuthService::createToken(_authData, error);
+        if (error != AuthService::errorCode::noError)
+            return BadRequestResponse{ _request, messages::errors::INVALID_AUTH }.create();
 
         http::response<http::string_body> response{ 
             http::status::created, 
@@ -54,7 +30,7 @@ namespace ws {
         );
 
         response.keep_alive(_request.keepAlive);
-        response.body() = token.signature();
+        response.body() = token;
         response.prepare_payload();
 
         return response;

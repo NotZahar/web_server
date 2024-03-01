@@ -6,6 +6,7 @@
 #include "responses/file.hpp"
 #include "responses/auth.hpp"
 #include "responses/error/bad_request.hpp"
+#include "services/auth_service.hpp"
 #include "utility/net_helper.hpp"
 #include "utility/url.hpp"
 #include "utility/params.hpp"
@@ -45,7 +46,7 @@ namespace ws {
                     requestMethod, 
                     std::make_unique<AuthResponse>(
                         requestInfo,
-                        AuthResponse::AuthData{
+                        AuthService::AuthData{
                             requestParams.at(urlParams.left.find(urlParam::email)->second),
                             requestParams.at(urlParams.left.find(urlParam::password)->second)
                         }

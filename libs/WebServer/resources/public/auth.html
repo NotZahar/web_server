@@ -15,10 +15,18 @@
             let email = document.getElementById('email')
             let pass = document.getElementById('pass')
 
-            const authClicked = () => {
-                fetch(`/auth?email=${email.value}&pass=${pass.value}`, {
+            const authClicked = async () => {
+                const response = await fetch(`/auth?email=${email.value}&pass=${pass.value}`, {
                     method: 'POST'
                 })
+
+                if (response.ok) {
+                    const token = await response.text();
+                    alert(token)
+                    return
+                } 
+
+                alert("Ошибка: " + response.status);
             }
         </script>
     </body>

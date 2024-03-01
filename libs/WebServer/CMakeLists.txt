@@ -45,6 +45,7 @@ target_sources(${PROJECT_NAME}
 
         # services
         src/services/auth_service.cpp
+        src/services/db_service.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
