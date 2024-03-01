@@ -19,6 +19,14 @@ jobs:
           owner: 'SRombauts'
           repository: 'SQLiteCpp'
 
+      - name: Build SQLiteCpp
+        run: |
+          cd SQLiteCpp
+          mkdir build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE_RELEASE ..
+          cmake --build . --target install
+
       - name: Clone arun11299/cpp-jwt repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2.3
         with:
@@ -26,6 +34,14 @@ jobs:
           branch: 'master'
           owner: 'arun11299'
           repository: 'cpp-jwt'
+
+      - name: Build cpp-jwt
+        run: |
+          cd cpp-jwt
+          mkdir build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE_RELEASE ..
+          cmake --build . --target install
 
       - name: Install Boost
         uses: MarkusJx/install-boost@v2.4.4
