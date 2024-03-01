@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['email_383',['email',['../structws_1_1AuthResponse_1_1AuthData.html#ae33dea2737c4efe79dff3b4405a1440c',1,'ws::AuthResponse::AuthData']]]
+  ['email_391',['email',['../structws_1_1AuthService_1_1AuthData.html#a47fd524437155a7cc4451ac2c85918e2',1,'ws::AuthService::AuthData']]]
 ];

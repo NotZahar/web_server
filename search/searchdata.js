@@ -8,7 +8,7 @@ var indexSectionsWithContent =
   5: "_acdefghikprst",
   6: "ot",
   7: "emru",
-  8: "abefinptv",
+  8: "abefinprtv",
   9: "w",
   10: "В"
 };

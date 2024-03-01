@@ -1,7 +1,8 @@
 <map id="libs/WebServer/src/utility/files.hpp" name="libs/WebServer/src/utility/files.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="265,5,408,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="371,5,513,47"/>
 <area shape="rect" id="node2" href="$file_8cpp.html" title=" " alt="" coords="5,95,148,136"/>
 <area shape="rect" id="node3" href="$login_8cpp.html" title=" " alt="" coords="173,95,327,136"/>
-<area shape="rect" id="node4" href="$ssl_8cpp.html" title=" " alt="" coords="352,95,495,136"/>
-<area shape="rect" id="node5" href="$web__server_8cpp.html" title=" " alt="" coords="519,95,661,136"/>
+<area shape="rect" id="node4" href="$db__service_8cpp.html" title=" " alt="" coords="351,95,533,136"/>
+<area shape="rect" id="node5" href="$ssl_8cpp.html" title=" " alt="" coords="557,95,700,136"/>
+<area shape="rect" id="node6" href="$web__server_8cpp.html" title=" " alt="" coords="724,95,867,136"/>
 </map>

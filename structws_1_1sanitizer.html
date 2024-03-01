@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WebServer: Структура ws::AuthResponse::AuthData</title>
+<title>WebServer: Структура ws::sanitizer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,58 +63,54 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacews.html">ws</a></li><li class="navelem"><a class="el" href="classws_1_1AuthResponse.html">AuthResponse</a></li><li class="navelem"><a class="el" href="structws_1_1AuthResponse_1_1AuthData.html">AuthData</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacews.html">ws</a></li><li class="navelem"><a class="el" href="structws_1_1sanitizer.html">sanitizer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Открытые атрибуты</a> &#124;
-<a href="structws_1_1AuthResponse_1_1AuthData-members.html">Полный список членов класса</a>  </div>
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="structws_1_1sanitizer-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle">
-<div class="title">Структура ws::AuthResponse::AuthData</div>  </div>
+<div class="title">Структура ws::sanitizer</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="auth_8hpp_source.html">auth.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="db_8hpp_source.html">db.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Открытые атрибуты</h2></td></tr>
-<tr class="memitem:ae33dea2737c4efe79dff3b4405a1440c"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1AuthResponse_1_1AuthData.html#ae33dea2737c4efe79dff3b4405a1440c">email</a></td></tr>
-<tr class="separator:ae33dea2737c4efe79dff3b4405a1440c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5bef21b8261d560d9d6bad98b282025"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1AuthResponse_1_1AuthData.html#ac5bef21b8261d560d9d6bad98b282025">password</a></td></tr>
-<tr class="separator:ac5bef21b8261d560d9d6bad98b282025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a2515a4de2af12c36d562725c523fba51"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws_1_1sanitizer.html#a2515a4de2af12c36d562725c523fba51">check</a> (std::string_view value)</td></tr>
+<tr class="separator:a2515a4de2af12c36d562725c523fba51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Данные класса</h2>
-<a id="ae33dea2737c4efe79dff3b4405a1440c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae33dea2737c4efe79dff3b4405a1440c">&#9670;&nbsp;</a></span>email</h2>
+<h2 class="groupheader">Методы</h2>
+<a id="a2515a4de2af12c36d562725c523fba51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2515a4de2af12c36d562725c523fba51">&#9670;&nbsp;</a></span>check()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string_view ws::AuthResponse::AuthData::email</td>
+          <td class="memname">static bool ws::sanitizer::check </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5bef21b8261d560d9d6bad98b282025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5bef21b8261d560d9d6bad98b282025">&#9670;&nbsp;</a></span>password</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string_view ws::AuthResponse::AuthData::password</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <hr/>Объявления и описания членов структуры находятся в файле:<ul>
-<li>libs/WebServer/src/responses/<a class="el" href="auth_8hpp_source.html">auth.hpp</a></li>
+<li>libs/WebServer/src/utility/<a class="el" href="db_8hpp_source.html">db.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

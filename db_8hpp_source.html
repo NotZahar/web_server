@@ -74,23 +74,36 @@ $(function() {
 <a href="db_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="structws_1_1query.html">    6</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structws_1_1query.html">query</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816">    7</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code" href="structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816">getUser</a> = </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            R<span class="stringliteral">&quot;(</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">                SELECT </span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">                    email, password </span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">                FROM </span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">                    user</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">                WHERE</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">                    email IS ?</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">            )&quot;;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">    };</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">}</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacews.html">ws</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structws_1_1sanitizer.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structws_1_1sanitizer.html">sanitizer</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structws_1_1sanitizer.html#a2515a4de2af12c36d562725c523fba51">    9</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="structws_1_1sanitizer.html#a2515a4de2af12c36d562725c523fba51">check</a>(std::string_view value) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> std::regex queryRegex(<span class="stringliteral">&quot;^[a-zA-Z0-9.@ ]+$&quot;</span>);    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keywordflow">return</span> std::regex_match(value.cbegin(), value.cend(), queryRegex);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structws_1_1query.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structws_1_1query.html">query</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structws_1_1query.html#a9fe88159d8c582bb5fce4097072dafbb">   16</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="structws_1_1query.html#a9fe88159d8c582bb5fce4097072dafbb">getUserSizeResult</a> = 2;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816">   17</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code" href="structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816">getUser</a> = </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            R<span class="stringliteral">&quot;(</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="stringliteral">                SELECT </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="stringliteral">                    email, password </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral">                FROM </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="stringliteral">                    user</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral">                WHERE</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">                    email IS ?</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">            )&quot;;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="stringliteral">    };</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral">}</span></div>
 <div class="ttc" id="anamespacews_html"><div class="ttname"><a href="namespacews.html">ws</a></div><div class="ttdef"><b>Definition:</b> web_server.hpp:6</div></div>
-<div class="ttc" id="astructws_1_1query_html"><div class="ttname"><a href="structws_1_1query.html">ws::query</a></div><div class="ttdef"><b>Definition:</b> db.hpp:6</div></div>
-<div class="ttc" id="astructws_1_1query_html_ade143c8279c1ba386871f8ba1d189816"><div class="ttname"><a href="structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816">ws::query::getUser</a></div><div class="ttdeci">static const std::string getUser</div><div class="ttdef"><b>Definition:</b> db.hpp:7</div></div>
+<div class="ttc" id="astructws_1_1query_html"><div class="ttname"><a href="structws_1_1query.html">ws::query</a></div><div class="ttdef"><b>Definition:</b> db.hpp:15</div></div>
+<div class="ttc" id="astructws_1_1query_html_a9fe88159d8c582bb5fce4097072dafbb"><div class="ttname"><a href="structws_1_1query.html#a9fe88159d8c582bb5fce4097072dafbb">ws::query::getUserSizeResult</a></div><div class="ttdeci">static const int getUserSizeResult</div><div class="ttdef"><b>Definition:</b> db.hpp:16</div></div>
+<div class="ttc" id="astructws_1_1query_html_ade143c8279c1ba386871f8ba1d189816"><div class="ttname"><a href="structws_1_1query.html#ade143c8279c1ba386871f8ba1d189816">ws::query::getUser</a></div><div class="ttdeci">static const std::string getUser</div><div class="ttdef"><b>Definition:</b> db.hpp:17</div></div>
+<div class="ttc" id="astructws_1_1sanitizer_html"><div class="ttname"><a href="structws_1_1sanitizer.html">ws::sanitizer</a></div><div class="ttdef"><b>Definition:</b> db.hpp:8</div></div>
+<div class="ttc" id="astructws_1_1sanitizer_html_a2515a4de2af12c36d562725c523fba51"><div class="ttname"><a href="structws_1_1sanitizer.html#a2515a4de2af12c36d562725c523fba51">ws::sanitizer::check</a></div><div class="ttdeci">static bool check(std::string_view value)</div><div class="ttdef"><b>Definition:</b> db.hpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
