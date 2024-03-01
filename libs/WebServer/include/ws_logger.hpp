@@ -5,6 +5,11 @@
 #include "../src/utility/types.hpp"
 
 namespace ws {
+    /*!
+        \brief Логгер
+
+        Синглтон
+    */
     class WSLogger final {
     public:
         WS_NCM(WSLogger)

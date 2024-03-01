@@ -4,6 +4,11 @@
 #include "../src/utility/config.hpp"
 
 namespace ws {
+    /*!
+        \brief Опции приложения
+
+        Настройка производится на этапе запуска сервера
+    */
     class WSOptions {
     public:
         struct Options {

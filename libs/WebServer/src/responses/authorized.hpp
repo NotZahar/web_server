@@ -3,6 +3,11 @@
 #include "response_handler.hpp"
 
 namespace ws {
+    /*!
+        \brief Авторизующий декоратор
+
+        Если http-ответ не должен получить неавторизованный пользователь
+    */
     class Authorized {
     public:
         Authorized() = delete;

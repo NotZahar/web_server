@@ -3,6 +3,9 @@
 #include "../utility/types.hpp"
 
 namespace ws {
+    /*!
+        \brief Класс-родитель для всех http-ответов
+    */
     class Response {
     public:
         struct RequestInfo {

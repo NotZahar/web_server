@@ -5,6 +5,9 @@
 #include "response.hpp"
 
 namespace ws {
+    /*!
+        \brief Декоратор-родитель для проверки валидности http-запроса
+    */
     class ResponseHandler {
     public:
         ResponseHandler() = delete;

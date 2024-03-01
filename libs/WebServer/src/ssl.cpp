@@ -1,6 +1,5 @@
 #include "ssl.hpp"
 
-#include "utility/config.hpp"
 #include "utility/files.hpp"
 
 namespace ws {

@@ -5,6 +5,11 @@
 #include <chrono>
 
 namespace ws {
+    /*!
+        \brief Модуль аутентификации
+
+        Аутентификация основана на стандарте JWT
+    */
     class AuthService {
     public:
         enum class errorCode {

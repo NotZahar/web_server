@@ -5,6 +5,11 @@
 #include <string_view>
 
 namespace ws {
+    /*!
+        \brief Отвечает за обращения к БД
+
+        На данном этапе есть возможность лишь читать данные из БД
+    */
     class DBService {
     public:
         enum class errorCode {

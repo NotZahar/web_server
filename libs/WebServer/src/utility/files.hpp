@@ -3,7 +3,6 @@
 #include <filesystem>
 
 #include "types.hpp"
-#include "config.hpp"
 
 namespace ws {
     struct paths {
