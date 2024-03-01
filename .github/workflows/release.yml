@@ -25,7 +25,7 @@ jobs:
           mkdir build
           cd build
           cmake -DCMAKE_BUILD_TYPE=RELEASE ..
-          cmake --build . --target install
+          sudo cmake --build . --target install
 
       - name: Clone arun11299/cpp-jwt repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2.3
@@ -41,7 +41,7 @@ jobs:
           mkdir build
           cd build
           cmake -DCMAKE_BUILD_TYPE=RELEASE ..
-          cmake --build . --target install
+          sudo cmake --build . --target install
 
       - name: Install Boost
         uses: MarkusJx/install-boost@v2.4.4
