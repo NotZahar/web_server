@@ -4,6 +4,12 @@
 #include "../src/utility/types.hpp"
 
 namespace ws {
+    /*!
+        \brief Родительский класс, не несущий никакой смысловой нагрузки
+
+        Данный класс имеет только одну простую цель: проиллюстрировать то,
+        как Doxygen документирует наследование 
+    */
     class WebServer {
     public:
         WebServer() = delete;
@@ -14,10 +20,7 @@ namespace ws {
         void run();
     
     private:
-        // Accepts incoming connections and launches the sessions
         asio::awaitable<void> makeListener(ssl::context& sslContext) const;
-        
-        // Handles an HTTP server connection
         asio::awaitable<void> makeSession(beast::ssl_stream<tcp_stream> stream) const;
     };
 }
