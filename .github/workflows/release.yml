@@ -11,6 +11,14 @@ jobs:
     runs-on: ubuntu-22.04
     permissions: write-all
     steps:
+      - name: Clone SRombauts/SQLiteCpp repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+        with:
+          depth: 1
+          branch: 'master'
+          owner: 'SRombauts'
+          repository: 'SQLiteCpp'
+
       - name: Install Boost
         uses: MarkusJx/install-boost@v2.4.4
         id: install_boost
