@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-22.04
     permissions: write-all
     steps:
+      - run: sudo apt update && sudo apt install software-properties-common -y
+      - run: sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+      - run: sudo apt update
+      - run: sudo apt install gcc-13 g++-13 cmake libgtest-dev -y
+      - run: sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 13 --slave /usr/bin/g++ g++ /usr/bin/g++-13
+      
       - name: Clone SRombauts/SQLiteCpp repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2.3
         with:
@@ -53,11 +59,6 @@ jobs:
             toolset: gcc
 
       - uses: actions/checkout@v3
-      - run: sudo apt update && sudo apt install software-properties-common -y
-      - run: sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-      - run: sudo apt update
-      - run: sudo apt install gcc-13 g++-13 cmake libgtest-dev -y
-      - run: sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 13 --slave /usr/bin/g++ g++ /usr/bin/g++-13
       - run: cmake . -DCMAKE_BUILD_TYPE=Release -DPATCH_VERSION=${{ github.run_number }}
             -DBoost_INCLUDE_DIR=${{steps.install_boost.outputs.BOOST_ROOT}}/include
             -DBoost_LIBRARY_DIRS=${{steps.install_boost.outputs.BOOST_ROOT}}/lib
