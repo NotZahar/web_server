@@ -24,7 +24,7 @@ jobs:
           cd SQLiteCpp
           mkdir build
           cd build
-          cmake -DCMAKE_BUILD_TYPE_RELEASE ..
+          cmake -DCMAKE_BUILD_TYPE=RELEASE ..
           cmake --build . --target install
 
       - name: Clone arun11299/cpp-jwt repository
@@ -40,7 +40,7 @@ jobs:
           cd cpp-jwt
           mkdir build
           cd build
-          cmake -DCMAKE_BUILD_TYPE_RELEASE ..
+          cmake -DCMAKE_BUILD_TYPE=RELEASE ..
           cmake --build . --target install
 
       - name: Install Boost
